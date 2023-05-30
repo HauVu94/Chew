@@ -1,4 +1,4 @@
-export const MyFrigde = () => {  
+export const MyFridge = () => {  
     return (
         <>
             <div className="page-title">
@@ -7,4 +7,3 @@ export const MyFrigde = () => {
         </>
     )
 }
-

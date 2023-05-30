@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@Chew_Database" uuid="9e1393db-5787-4c69-8f2d-bd29fdf0422b">
+    <data-source source="LOCAL" name="chew_db@localhost" uuid="7e02b14d-8c53-497b-8239-4b49f06d631b">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/chew_db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

@@ -1,12 +1,16 @@
 import React from "react";
 import NavbarProps from "../interface/NavbarProps";
 
+import "../styles/Navbar.css"
+
 const Navbar: React.FC<NavbarProps> = (props) => {
-    const {title} = props;
+    const {avatarSrc} = props;
 
     return(
-        <div>
-            <h1>{title}</h1>
+        <div className="navbar">
+            <img className="burger-menu" src="burger-menu.png"/>
+            <img className="chew-logo" src="chew-logo.png"/>
+            <img className="profile-btn" src={avatarSrc}/>
         </div>
     )
 }

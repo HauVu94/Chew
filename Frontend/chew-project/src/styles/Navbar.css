@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+}
+
+h1{
+    margin: 0;
+}
+
+.navbar{
+    padding: 10px;
+    /*kun for testing, skal fjernes */
+    /* background-color: rgb(255, 203, 184);*/
+    display: grid;
+    grid-template-columns: 2fr, 8fr, 2fr;
+    height: 75px;
+    justify-items: center;
+    align-items: center;
+}
+
+.burger-menu{
+    grid-column: 1 / 2;
+    height: 50px;
+}
+
+.chew-logo{
+    grid-column: 3 / 10;
+    
+    height: 75px;
+}
+
+.profile-btn{
+    grid-column: 11 / 12;
+    height: 50px;
+}

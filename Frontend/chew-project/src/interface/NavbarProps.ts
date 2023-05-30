@@ -1,7 +1,7 @@
 // Props for Navbar
 
 interface NavbarProps {
-    title: string;
+    avatarSrc: string;
 }
 
 export default NavbarProps;

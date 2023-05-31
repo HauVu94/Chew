@@ -1,4 +1,4 @@
-import { MyFrigdeTitleBar } from "../components/MyFrigdeComponents/MyFrigdeTitleBar"
+import { MyFrigdeTitleBar } from "../components/MyFrigdeComponents/MyFridgeTitleBar"
 import Navbar from "../components/Navbar"
 import MyFridgeIngredientsList from "../components/MyFrigdeComponents/MyFridgeIngredientsList"
 

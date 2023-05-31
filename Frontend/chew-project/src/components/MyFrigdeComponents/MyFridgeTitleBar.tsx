@@ -5,10 +5,24 @@ import "../../styles/MyFrigdeTitleBar.css"
 export const MyFrigdeTitleBar  = () => {
 
     return(
-        <div className="page-title">
-                <h2>Knapp</h2>
+        <div className="tab-wrapper">
+            <div className="sidetab left">
+
+                <img className="sidetab-icon" alt="calendar-icon" src="images/calendar-icon.png"/>
+
+            </div>
+
+            <div className="page-title">
+
                 <h2>Ditt Kjøleskap</h2>
-                <h2>Knapp</h2>
+
+            </div>
+
+            <div className="sidetab right">
+
+                <img className="sidetab-icon" alt="calendar-icon" src="images/calendar-icon.png"/>
+
+            </div>
         </div>
     )
 }

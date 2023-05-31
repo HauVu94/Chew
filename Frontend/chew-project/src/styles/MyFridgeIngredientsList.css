@@ -2,7 +2,7 @@
     /* Does this work OK with flex or grid? */
     margin-left: auto; 
     margin-right: auto;
-    margin-top: 5em;
+    margin-top: 10em;
 
     /* H and W needs to be relative to screen size */
     max-height: 10em;

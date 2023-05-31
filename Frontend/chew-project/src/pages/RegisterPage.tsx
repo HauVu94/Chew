@@ -23,7 +23,7 @@ export const RegisterPage = () => {
                 <input type="text" placeholder="Skriv ønsket brukernavn"/>
                 <label>Skriv ønsket passord:</label>
                 <input type="password" placeholder="Skriv inn ønsket passord"/>
-                <button>Lagre endringer</button>
+                <button className="save-btn-reg">Lagre endringer</button>
             </div>
         </div>
     )

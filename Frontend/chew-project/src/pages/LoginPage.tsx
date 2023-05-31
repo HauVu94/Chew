@@ -23,7 +23,7 @@ export const LoginPage = () => {
             </div>
             <div className="register">
                 <label className="register-lbl">Registrer deg</label>
-                <Link to="/RegisterPage"><button>Registrer</button></Link>
+                <Link to="/RegisterPage"><button className="register-btn">Registrer</button></Link>
             </div>
             <div className="forgot-password">
                 <label className="forgot-lbl">Glemt passord?</label>

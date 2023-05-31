@@ -19,6 +19,7 @@
 
 .main-menu button{
     height: 50px;
+    letter-spacing: 3px;
     font-size: large;
     border-radius: 15px;
     box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);

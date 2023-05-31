@@ -1,12 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "../styles/MainMenu.css"
 
 const MainMenu = () => {
-    const [button1Text, setButton1Text] = useState("Delta i skoletime")
-    const [button2Text, setButton2Text] = useState("Kunngjøringer og meldinger")
-    const [button3Text, setButton3Text] = useState("Utfordringer og spill")
-    const [button4Text, setButton4Text] = useState("Trenger du hjelp?")
+    const [button1Text, setButton1Text] = useState("")
+    const [button2Text, setButton2Text] = useState("")
+    const [button3Text, setButton3Text] = useState("")
+    const [button4Text, setButton4Text] = useState("")
+
+    useEffect(() => {
+        const mode = localStorage.getItem("Mode")
+
+        if(mode === "School"){
+            setButton1Text("Delta i skoletime")
+            setButton2Text("Kunngjøringer og meldinger")
+            setButton3Text("Utfordringer og spill")
+            setButton4Text("Trenger du hjelp?") 
+        } else {
+            setButton1Text("Oppskrifter")
+            setButton2Text("Handleliste")
+            setButton3Text("Videoleksjoner")
+            setButton4Text("Trenger du hjelp?")
+        }
+    }, []);
 
     const btn1Click = () => {
         console.log("Trykket på 'Delta i skoletime'")
@@ -32,7 +48,7 @@ const MainMenu = () => {
             <button className="main-menu-btn btn3" onClick={btn3Click}>{button3Text}</button>
             <button className="main-menu-btn btn4" onClick={btn4Click}>{button4Text}</button>
         </div>
-    )
-}
+    );
+};
 
 export default MainMenu;

@@ -1,4 +1,5 @@
 .tap-wrapper{
+    display: grid;
 }
 
 .page-title{
@@ -6,6 +7,8 @@
 }
 
 .sidetab{
+    position: absolute;
+
     display: grid;
     justify-items: center;
     align-items: center;

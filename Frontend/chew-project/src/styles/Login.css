@@ -1,0 +1,13 @@
+.chew-logo{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.form-group{
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

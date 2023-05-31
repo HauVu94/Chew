@@ -19,10 +19,11 @@ export const RegisterPage = () => {
                 <input type="text" placeholder="Skriv inn epost"/>
                 <label>Telefonnummer:</label>
                 <input type="tel" placeholder="12 345 678"/>
-                <label>Epostadresse:</label>
+                <label>Brukernavn:</label>
                 <input type="text" placeholder="Skriv ønsket brukernavn"/>
                 <label>Skriv ønsket passord:</label>
                 <input type="password" placeholder="Skriv inn ønsket passord"/>
+                <button>Lagre endringer</button>
             </div>
         </div>
     )

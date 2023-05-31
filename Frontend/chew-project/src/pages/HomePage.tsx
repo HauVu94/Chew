@@ -8,7 +8,7 @@ export const HomePage = () => {
             <Navbar avatarSrc="default-avatar.png"/>
             
             {/* Midlertidig link til pages/MyFridge.tsx */}
-            <Link to="/MyFridge">My Fridge</Link>
+            <Link to="/RecipePage">RecipePage</Link>
         </>
     )
 }

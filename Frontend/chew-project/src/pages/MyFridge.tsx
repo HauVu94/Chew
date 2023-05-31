@@ -4,12 +4,8 @@ import Navbar from "../components/Navbar"
 export const MyFridge = () => {  
     return (
         <> 
-            <Navbar avatarSrc="default-avatar.png"/>   
-
+            <Navbar avatarSrc="default-avatar.png"/>
             <MyFrigdeTitleBar />
-
-
-            
         </>
     )
 }

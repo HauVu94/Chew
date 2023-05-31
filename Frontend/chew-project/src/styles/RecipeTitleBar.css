@@ -1,29 +1,24 @@
-.title-bar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2rem;
+.tap-wrapper{
 }
 
-.sidetab-left{
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    width: 85px;
-    height: 65px;
-    visibility: hidden;
+.page-title{
+    justify-self: center;
 }
 
-.sidetab-right{
+.sidetab{
     display: grid;
     justify-items: center;
     align-items: center;
     width: 85px;
     height: 65px;
     background-color: #ff5b2e;
-    border-radius: 50px 0px 0px 50px;
 }
 
 .sidetab-icon{
     height: 40px;
+}
+
+.fridge{
+    border-radius: 50px 0px 0px 50px;
+    justify-self: end;
 }

@@ -1,3 +1,4 @@
+
 .chew-logo-login{
     display: grid;
     grid-template-columns: 2fr, 8fr, 2fr;
@@ -6,9 +7,10 @@
     height: 75px;
 }
 
-.form-body {
-    width: 50%;
-    padding: 2rem;
+.form-body {}
+
+.form-group{
+    margin: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -1,3 +1,8 @@
+/*
+ READ ME!
+ Remeber to log in to the chew_db@localhost and then create the schema for chew_db
+ */
+
 #Run if no schema exists
 create schema chew_db;
 

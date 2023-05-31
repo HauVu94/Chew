@@ -1,12 +1,14 @@
 /*
  READ ME!
- Remeber to log in to the chew_db@localhost and then create the schema for chew_db
- When you run the code remember to select the appropriate datasource for the execution
+ - Remeber to log in to the @localhost
+ - When you run the code remember to select the appropriate datasource for the execution
+ - Code should be run as a whole, select create_db.sql and 'run'
  */
 
-#Run if no schema exists
-create database chew_db;
-create schema chew_db;
+CREATE schema if not exists chew_db_schema;
+USE chew_db_schema;
+CREATE database if not exists chew_db;
+USE chew_db;
 
 #Code to create tables for the user side of the database incl. Member, Family, Institute
 create table User(

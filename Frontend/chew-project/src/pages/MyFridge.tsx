@@ -7,7 +7,7 @@ export const MyFridge = () => {
         <> 
             <Navbar avatarSrc="default-avatar.png"/>
             <MyFrigdeTitleBar />
-
+            <MyFridgeIngredientsList />
 
             
         </>

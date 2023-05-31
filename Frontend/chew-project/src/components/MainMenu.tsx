@@ -9,19 +9,19 @@ const MainMenu = () => {
     const [button4Text, setButton4Text] = useState("Trenger du hjelp?")
 
     const btn1Click = () => {
-        console.log("Delta i skoletime")
+        console.log("Trykket på 'Delta i skoletime'")
     }
 
     const btn2Click = () => {
-        console.log("Kunngjøringer og meldinger")
+        console.log("Trykket på 'Kunngjøringer og meldinger'")
     }
 
     const btn3Click = () => {
-        console.log("Utfordringer og spill")
+        console.log("Trykket på 'Utfordringer og spill'")
     }
 
     const btn4Click = () => {
-        console.log("Trenger du hjelp?")
+        console.log("Trykket på 'Trenger du hjelp?'")
     }
 
     return(

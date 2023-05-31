@@ -4,8 +4,8 @@ import "../styles/RegisterPage.css"
 export const RegisterPage = () => {
     return(
         <div className="register-body">
-            <div>
-                <img className="chew-logo-login" src="images/chew-logo.png"/>
+            <div className="reg-logo">
+                <img className="chew-logo-reg" src="images/chew-logo.png"/>
             </div>
 
             <div className="form-registration">

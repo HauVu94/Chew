@@ -5,7 +5,8 @@
  - Code should be run as a whole, select create_db.sql and 'run'
  */
 
-CREATE database if not exists chew_db;
+DROP TABLE IF EXISTS chew_db;
+CREATE database if not exists chew_db DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE chew_db;
 
 #Code to create tables for the user side of the database incl. Member, Family, Institute

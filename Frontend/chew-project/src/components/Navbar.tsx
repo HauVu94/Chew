@@ -1,7 +1,7 @@
 import React from "react";
-import NavbarProps from "../../interface/NavbarProps";
+import NavbarProps from "../interface/NavbarProps";
 
-import "../../styles/Navbar.css"
+import "../styles/Navbar.css"
 
 const Navbar: React.FC<NavbarProps> = (props) => {
     const {avatarSrc} = props;

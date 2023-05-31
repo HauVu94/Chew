@@ -14,6 +14,7 @@ export const HomePage = () => {
             {/* Midlertidig link til pages/MyFridge.tsx */}
             <Link to="/MyFridge">My Fridge</Link>
             <Link to="/RecipePage">RecipePage</Link>
+            <Link to="/LoginPage">Logg inn</Link>
 
         </>
     )

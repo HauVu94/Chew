@@ -1,12 +1,12 @@
 /*
  READ ME!
- Remeber to log in to the chew_db@localhost and then create the schema for chew_db
- When you run the code remember to select the appropriate datasource for the execution
+ - Remeber to log in to the @localhost
+ - When you run the code remember to select the appropriate datasource for the execution
+ - Code should be run as a whole, select create_db.sql and 'run'
  */
 
-#Run if no schema exists
-create database chew_db;
-create schema chew_db;
+CREATE database if not exists chew_db;
+USE chew_db;
 
 #Code to create tables for the user side of the database incl. Member, Family, Institute
 create table User(
@@ -15,11 +15,11 @@ create table User(
     firstName   char(10) not null,
     lastName    char(10) null,
     birthDate   int      not null,
-    email       int      not null,
-    phone       int      null
-        unique,
-    role        char(8)  null,
-    profBildeId int      null
+    email       char     null,
+    phone       int(8)   not null,
+    profBildeId int      null,
+    username    char(10) not null,
+    password    int      not null
 );
 
 create table Member(

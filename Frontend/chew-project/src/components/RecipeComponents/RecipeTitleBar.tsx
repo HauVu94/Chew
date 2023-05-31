@@ -5,18 +5,15 @@ import { Link } from 'react-router-dom';
 export const RecipeTitleBar  = () => {
 
     return(
-        <div className="title-bar">
-            <div className="sidetab-left">
-                <img className="sidetab-icon" src="frigde.png" alt="frigde-sprite"/>
-            </div>
+        <div className="tab-wrapper">
 
             <h2 className="page-title">Oppskrifter basert på ditt kjøleskap</h2>
 
-            <Link to="/MyFridge">
-                <div className="sidetab-right">
-                    <img className="sidetab-icon" src="frigde.png" alt="frigde-sprite"/>
-                </div>
-            </Link>
+            <div className="sidetab fridge">
+                <Link to="/MyFridge">
+                    <img className="sidetab-icon" src="/images/frigde.png" alt="frigde-sprite"/>
+                </Link>
+            </div>
 
         </div>
     )

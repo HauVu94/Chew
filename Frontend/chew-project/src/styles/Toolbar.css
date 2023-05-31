@@ -1,0 +1,39 @@
+.toolbar{
+    position: absolute;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.tool{
+    height: 45px;
+    width: 200px;
+    border: none;
+    box-shadow: 2px 2px 6px 1px rgba(128, 128, 128, 0.411);
+    font-size: large;
+    color: #ff5b2e;
+}
+
+.my-fridge{
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.search{
+    padding: 16px;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-color: rgb(255, 114, 63);
+    
+}
+
+    .search:focus{
+        border-color: coral;
+    }
+
+    .search::placeholder{
+        color: #ff370083;
+    }

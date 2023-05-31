@@ -1,5 +1,6 @@
 import { MyFrigdeTitleBar } from "../components/MyFrigdeComponents/MyFridgeTitleBar"
 import Navbar from "../components/Navbar"
+import NavbarProps from "../interface/NavbarProps"
 import MyFridgeIngredientsList from "../components/MyFrigdeComponents/MyFridgeIngredientsList"
 
 export const MyFridge = () => {  
@@ -8,8 +9,6 @@ export const MyFridge = () => {
             <Navbar avatarSrc="default-avatar.png"/>
             <MyFrigdeTitleBar />
             <MyFridgeIngredientsList />
-
-            
         </>
     )
 }

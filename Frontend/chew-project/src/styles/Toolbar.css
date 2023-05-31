@@ -20,6 +20,10 @@
     border-radius: 25px;
 }
 
+    .my-fridge:hover{
+        transform: scale(1.03);
+    }
+
 .search{
     padding: 16px;
     outline: none;
@@ -27,12 +31,7 @@
     box-sizing: border-box;
     border-radius: 10px;
     border-color: rgb(255, 114, 63);
-    
 }
-
-    .search:focus{
-        border-color: coral;
-    }
 
     .search::placeholder{
         color: #ff370083;

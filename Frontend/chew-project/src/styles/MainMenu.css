@@ -1,0 +1,43 @@
+.main-menu{
+    display: grid;
+    grid-template-rows: 4 1fr;
+    gap: 25px;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    text-align: center;
+}
+
+.main-menu h1{
+    font-style: italic;
+    margin-bottom: 30px;
+    font-size: 40px;
+    color: #ff5b2e;
+}
+
+.main-menu button{
+    height: 50px;
+    font-size: large;
+    border-radius: 15px;
+    box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);
+}
+
+.btn1, .btn2, .btn3{
+    background-color: #ff5b2e;
+    color: white;
+    border: none;
+}
+    .btn1:hover, .btn2:hover, .btn3:hover{
+        border: 2px solid #ff5b2e;
+        transform: scale(1.025)
+    }
+
+.btn4{
+    border: none;
+    color: #ff5b2e;
+}
+    .btn4:hover{
+        transform: scale(1.025)
+    }

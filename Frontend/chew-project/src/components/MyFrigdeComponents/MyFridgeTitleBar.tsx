@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/MyFrigdeTitleBar.css"
+import "../../styles/Sidetab.css"
 
 
 export const MyFrigdeTitleBar  = () => {

@@ -1,13 +1,24 @@
-.chew-logo{
+.chew-logo-login{
     display: flex;
     justify-content: center;
     margin-top: 3rem;
 }
 
-.form-group{
+.form-body {
     margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-group{
+    margin: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.btn-group{
+    margin: 0.5rem;
 }

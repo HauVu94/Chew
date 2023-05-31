@@ -2,7 +2,12 @@ import "../styles/Login.css"
 
 export const LoginPage = () => {
     return(
+
+
         <div className="form-body">
+            <div>
+            <img className="chew-logo-login" src="images/chew-logo.png"/>
+            </div>
             <div className="form-group">
                 <label className="form-label">Brukernavn</label>
                 <input className="form-input" type="text" placeholder="Skriv ditt brukernavn" />

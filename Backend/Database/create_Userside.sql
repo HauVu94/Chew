@@ -14,7 +14,7 @@ create table User(
 );
 
 create table Member(
-    userId      int null
+    userId      int not null
         primary key,
     instituteId int null,
     familyId    int null

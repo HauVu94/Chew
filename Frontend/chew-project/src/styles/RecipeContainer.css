@@ -1,0 +1,7 @@
+.recipe-container{
+    margin: 5rem;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: grid;
+}

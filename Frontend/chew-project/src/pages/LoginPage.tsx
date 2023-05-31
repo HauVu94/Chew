@@ -3,36 +3,25 @@ import { Link } from 'react-router-dom';
 
 export const LoginPage = () => {
     return(
-
-
-        <div className="form-body">
+        <div className="login-body">
             <div>
-                <img className="chew-logo-login" src="images/chew-logo.png"/>
+                <img className="login-logo" src="images/chew-logo.png"/>
             </div>
 
-            <div className="form-group">
-                <label className="form-label">Brukernavn</label>
-                <input className="form-input" type="text" placeholder="Skriv ditt brukernavn" />
-            </div>
-            <div className="form-group">
-                <label className="form-label">Passord</label>
-                <input className="form-input" type="password" placeholder="Skriv passord" />
-            </div>
-            <div className="login">
-                <button className="login-btn">Logg Inn</button>
-            </div>
-            <div className="register">
+            <div className="form-login">
+                <label className="form-txt">Brukernavn</label>
+                    <input className="" type="text" placeholder="Skriv ditt brukernavn" />
+                <label className="form-txt">Passord</label>
+                    <input className="form-input" type="password" placeholder="Skriv passord" />
+                    <button className="login-btn">Logg Inn</button>
+
                 <label className="register-lbl">Registrer deg</label>
-                <Link to="/RegisterPage"><button className="register-btn">Registrer</button></Link>
-            </div>
-            <div className="forgot-password">
+                    <Link to="/RegisterPage"><button className="register-btn">Registrer</button></Link>
+
                 <label className="forgot-lbl">Glemt passord?</label>
                 <button className="btn-group">Nullstill</button>
             </div>
         </div>
-        
-
-
     )
 
 }

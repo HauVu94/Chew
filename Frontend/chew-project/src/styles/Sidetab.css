@@ -1,13 +1,30 @@
+.tab-wrapper{
+    display: grid;
+    position: absolute;
+    width: 100vw;
+    margin-top: 50px;
+}
+
 .sidetab{
     display: grid;
+    position: absolute;
     justify-items: center;
     align-items: center;
     width: 85px;
     height: 65px;
     background-color: #ff5b2e;
-    border-radius: 0px 50px 50px 0px;
 }
 
 .sidetab-icon{
     height: 40px;
+}
+
+.calendar{
+    border-radius: 0px 50px 50px 0px;
+    justify-self: start;
+}
+
+.social{
+    border-radius: 50px 0px 0px 50px;
+    justify-self: end;
 }

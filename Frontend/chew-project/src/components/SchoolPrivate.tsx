@@ -1,28 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "../styles/SchoolPrivate.css"
 
 const SchoolPrivate = () => {
-    const [button1Text, setButton1Text] = useState("Skole");
-    const [button2Text, setButton2Text] = useState("Privat");
-    const [activeButton, setActiveButton] = useState("Skole");
+    const [activeMode, setActiveMode] = useState(localStorage.getItem("mode") || "School"); // track across pages?
+
+    useEffect(() => {
+        localStorage.setItem("mode", activeMode)
+    }, [activeMode]);
 
     const schoolClick = () => {
         console.log("Trykket på 'Delta i skoletime'")
-        setActiveButton("School")
+        setActiveMode("School")
     }
 
     const privateClick = () => {
         console.log("Trykket på 'Kunngjøringer og meldinger'")
-        setActiveButton("Private")
+        setActiveMode("Private")
     }
-
 
     return(
         <>
             <div className="school-private">
-                <button className={`swap-btn school-btn ${activeButton === "School" ? "clicked" : ""}`} onClick={schoolClick}>{button1Text}</button>
-                <button className={`swap-btn private-btn ${activeButton === "Private" ? "clicked" : ""}`} onClick={privateClick}>{button2Text}</button>
+                <button className={`swap-btn school-btn ${activeMode === "School" ? "clicked" : ""}`} onClick={schoolClick}>Skole</button>
+                <button className={`swap-btn private-btn ${activeMode === "Private" ? "clicked" : ""}`} onClick={privateClick}>Privat</button>
             </div>
         </>
     )

@@ -24,7 +24,7 @@
     border-radius: 0px 10px 10px 0px;
 }
 
-.active{
+.clicked{
     background-color: rgb(88, 201, 88);
     color: rgb(1, 77, 0);
     transform: scale(1.1);

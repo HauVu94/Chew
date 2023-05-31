@@ -5,7 +5,7 @@ import { RecipeTitleBar } from "../components/RecipeComponents/RecipeTitleBar";
 export const RecipePage = () => {  
     return (
         <> 
-            <Navbar avatarSrc="default-avatar.png"/>   
+            <Navbar avatarSrc="images/default-avatar.png"/>   
 
             <RecipeTitleBar />     
 

@@ -9,11 +9,17 @@ const MyFridgeIngredientsList = () => {
 
 
   return (
-    <div className='ingredient-container'>
-      <ul>
-        {ingredientsList.map(ingredient => <li key={ingredient}>{ingredient}</li>)}
-      </ul>
-    </div>
+    <>
+      <div className='title-container'>
+        <h2 className='page-title'>Ditt Kjøleskap</h2>
+      </div>
+
+      <div className='ingredient-container'>
+        <ul>
+          {ingredientsList.map(ingredient => <li key={ingredient}>{ingredient}</li>)}
+        </ul>
+      </div>
+    </>
   )
 }
 

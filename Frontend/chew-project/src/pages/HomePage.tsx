@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from '../components/Navigation/Navbar';
 import Sidetabs from '../components/Sidetabs';
 import { Link } from 'react-router-dom';

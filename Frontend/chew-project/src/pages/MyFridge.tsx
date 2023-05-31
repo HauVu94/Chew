@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar"
 export const MyFridge = () => {  
     return (
         <> 
-            <Navbar avatarSrc="default-avatar.png"/>   
+            <Navbar avatarSrc="default-avatar.png"/>
             <div className="page-title">
                 <h2>Knapp</h2>
                 <h2>Ditt Kjøleskap</h2>

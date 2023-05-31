@@ -10,7 +10,9 @@ export const RecipeTitleBar  = () => {
             <h2 className="page-title">Oppskrifter basert på ditt kjøleskap</h2>
 
             <div className="sidetab fridge">
-                <img className="sidetab-icon" src="frigde.png" alt="frigde-sprite"/>
+                <Link to="/MyFridge">
+                    <img className="sidetab-icon" src="/images/frigde.png" alt="frigde-sprite"/>
+                </Link>
             </div>
 
         </div>

@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 .chew-logo-login{
     display: flex;
     justify-content: center;
 }
 
 .form-body {
+=======
+.form-group{
+>>>>>>> 4c7b7ed (xcss fix)
     margin: 2rem;
     display: flex;
     flex-direction: column;

@@ -1,6 +1,5 @@
 import { MyFrigdeTitleBar } from "../components/MyFrigdeComponents/MyFridgeTitleBar"
-import Navbar from "../components/Navbar"
-import NavbarProps from "../interface/NavbarProps"
+import Navbar from "../components/Navigation/Navbar"
 import MyFridgeIngredientsList from "../components/MyFrigdeComponents/MyFridgeIngredientsList"
 
 export const MyFridge = () => {  

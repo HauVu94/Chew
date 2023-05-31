@@ -1,5 +1,5 @@
 import { MyFrigdeTitleBar } from "../components/MyFrigdeComponents/MyFrigdeTitleBar"
-import { MyFrigdeContainer } from "../components/MyFrigdeComponents/MyFrigdeContainer"
+import { MyFrigdeRecipes} from "../components/MyFrigdeComponents/MyFrigdeRecipes"
 import Navbar from "../components/Navbar"
 
 export const MyFridge = () => {  
@@ -9,7 +9,7 @@ export const MyFridge = () => {
 
             <MyFrigdeTitleBar />
 
-            <MyFrigdeContainer />
+            <MyFrigdeRecipes />
 
             
         </>

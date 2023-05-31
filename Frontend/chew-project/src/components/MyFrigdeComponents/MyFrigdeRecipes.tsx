@@ -1,4 +1,6 @@
-export const MyFrigdeContainer  = () => {
+import "../../styles/MyFrigdeRecipes.css"
+
+export const MyFrigdeRecipes  = () => {
 
     return(
         <div className="container">

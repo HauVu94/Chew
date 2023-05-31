@@ -1,3 +1,5 @@
+#Run if no schema exists
+create schema chew_db;
 
 #Code to create tables for the user side of the database incl. Member, Family, Institute
 create table User(

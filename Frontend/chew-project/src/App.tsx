@@ -1,9 +1,11 @@
 import { HomePage } from './pages/HomePage';
 import { MyFridge } from './pages/MyFridge';
+import { LoginPage } from './pages/LoginPage';
+import { RecipePage } from './pages/RecipePage';
+import './styles/App.css';
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import './styles/App.css';
-import { RecipePage } from './pages/RecipePage';
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
             <Route path="/" element={ <HomePage/> }></Route>
             <Route path="/RecipePage" element={ <RecipePage/> }></Route>
             <Route path="/MyFrigde" element={ <MyFridge/> }></Route>
+            <Route path="/LoginPage" element={ <LoginPage/> }></Route>
           </Routes>
       </Router>
     </div>

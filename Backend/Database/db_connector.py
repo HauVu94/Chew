@@ -7,6 +7,5 @@ chewDb = mysql.connector.connect(
     user='root',
     password='Ditt_Passord_Her',
     port='3306',
-    database='chew_db' #Pass på at DB navnet stemmer med det på MySQL
+    database='chew_db'  # Pass på at DB navnet stemmer med det på MySQL
 )
-

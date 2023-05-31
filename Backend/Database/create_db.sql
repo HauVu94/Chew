@@ -5,8 +5,6 @@
  - Code should be run as a whole, select create_db.sql and 'run'
  */
 
-CREATE schema if not exists chew_db_schema;
-USE chew_db_schema;
 CREATE database if not exists chew_db;
 USE chew_db;
 
@@ -17,11 +15,11 @@ create table User(
     firstName   char(10) not null,
     lastName    char(10) null,
     birthDate   int      not null,
-    email       int      not null,
-    phone       int      null
-        unique,
-    role        char(8)  null,
-    profBildeId int      null
+    email       char     null,
+    phone       int(8)   not null,
+    profBildeId int      null,
+    username    char(10) not null,
+    password    int      not null
 );
 
 create table Member(

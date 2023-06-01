@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import "../styles/Login.css"
 
 
 export const LoginPage = () => {
@@ -43,7 +44,7 @@ export const LoginPage = () => {
       <div className="form-login">
         <label className="form-txt">Brukernavn</label>
         <input
-          className=""
+          className="form-input"
           type="text"
           placeholder="Skriv ditt brukernavn"
           value={username}

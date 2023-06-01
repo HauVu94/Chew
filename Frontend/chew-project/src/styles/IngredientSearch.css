@@ -1,0 +1,30 @@
+.ingredient-search-container{
+    /* background-color: blue; */
+
+    margin-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 30em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.ingredeients-search-field{
+    height: 3em;
+    width: 25em;
+    margin: 1em;
+
+    border-radius: 2em;
+
+padding: .2em 2em;
+}
+
+
+
+
+
+

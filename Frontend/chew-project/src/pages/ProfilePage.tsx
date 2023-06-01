@@ -1,4 +1,4 @@
-import Navbar from '../components/Navigation/Navbar';
+import Navbar from '../components/NavigationComponents/Navbar';
 import Toolbar from '../components/Toolbar';
 import "../styles/Profilepage.css";
 

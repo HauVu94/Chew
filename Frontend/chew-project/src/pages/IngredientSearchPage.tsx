@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../components/Navigation/Navbar';
+import Navbar from '../components/NavigationComponents/Navbar';
 import Sidetabs from '../components/Sidetabs';
 import { Link } from 'react-router-dom';
 // import Toolbar from '../components/Toolbar';
@@ -12,7 +12,6 @@ const IngredientSearchPage = () => {
             <Navbar avatarSrc="images/default-avatar.png"/>
             <Sidetabs />
             
-
             {/* Midlertidig link til pages/MyFridge.tsx */}
             <Link to="/MyFridge">My Fridge</Link>
             <Link to="/RecipePage">RecipePage</Link>

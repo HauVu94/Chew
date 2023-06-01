@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/RecipeContainer.css"
+import { PageTitle } from "../PageComponents/PageTitle";
 
 
 export const RecipeContainer  = () => {

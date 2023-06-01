@@ -8,3 +8,31 @@ body{
     font-family: 'Poppins', sans-serif;
     color: #ff5b2e;
 }
+
+
+/* Title CSS */
+.title-container{
+    display: grid;
+    justify-content: center;
+}
+
+.page-title{
+    font-size: 2rem;
+}
+
+/* Icon CSS */
+.nav-text svg{
+    font-size: 2rem;
+}
+
+.sidetab svg{
+    font-size: 2.5rem;
+    color: white;
+}
+
+.shoppinglist-container svg{
+    font-size: 2rem;
+    color: #ff5b2e;
+}
+
+

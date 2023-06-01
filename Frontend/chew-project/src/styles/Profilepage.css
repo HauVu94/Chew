@@ -1,0 +1,38 @@
+.profilecard-container{
+    width: 95%;
+    height: 60vh;
+    display: flex;
+    position: relative;
+    top: 100px;
+    left: 30px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: solid #C8BCAC 2px;
+    border-radius: 2rem;
+    box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);
+}
+
+.banner-orange{
+background-color: orangered;
+height: 100px;
+max-width: 100%;
+}
+
+.profile-picture{
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top: 207px;
+    left: 50px;
+    background-image: url(../../public/images/child-avatar.png);
+    background-size: 200px;
+    border: #C8BCAC 4px;
+    border-radius: 3rem;
+    box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);
+}
+
+.background-blue{
+    width: 100%;
+}

@@ -2,10 +2,6 @@
     display: grid;
 }
 
-.page-title{
-    justify-self: center;
-}
-
 .sidetab{
     position: absolute;
 

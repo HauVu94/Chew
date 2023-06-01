@@ -1,4 +1,4 @@
-import Navbar from '../components/Navigation/Navbar';
+import Navbar from '../components/NavigationComponents/Navbar';
 import Sidetabs from '../components/Sidetabs';
 import Toolbar from '../components/Toolbar';
 import MainMenu from '../components/MainMenu';

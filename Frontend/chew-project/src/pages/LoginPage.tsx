@@ -35,10 +35,11 @@ export const LoginPage = () => {
 
   return (
     <div className="login-body">
+        <div className="back-icon">
+        <Link to="/"><img className="x-btn" src="images/cross.png"/></Link>
+      </div>
       <div>
-        <Link to="/">
-          <img className="login-logo" src="images/chew-logo.png" alt="Logo" />
-        </Link>
+        <Link to="/"><img className="login-logo" src="images/chew-logo.png" alt="Logo" /></Link>
       </div>
 
       <div className="form-login">
@@ -62,10 +63,7 @@ export const LoginPage = () => {
           Logg Inn
         </button>
 
-        <label className="register-lbl">Registrer deg</label>
-        <Link to="/RegisterPage">
-          <button className="register-btn">Registrer</button>
-        </Link>
+
                 <label className="register-lbl">Registrer deg</label>
                     <Link to="/LoginTPP"><button className="register-btn">Registrer</button></Link>
 

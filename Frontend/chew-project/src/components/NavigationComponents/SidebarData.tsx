@@ -1,21 +1,28 @@
+import * as BiIcons from 'react-icons/bi';
 
 export const SidebarData = [
     {
         title: 'Hjem',
         path: '/',
-        icon: "images/home.png",
+        icon: <BiIcons.BiHome/>,
         cName: 'nav-text'
     },
     {
         title: 'Profil',
         path: '/Profile',
-        icon: "images/profile.png",
+        icon: <BiIcons.BiUser/>,
         cName: 'nav-text'
     },
     {
-        title: 'Mitt Kjøleskap',
+        title: 'Kjøleskap',
         path: '/MyFridge',
-        icon: "images/fridge.png",
+        icon: <BiIcons.BiFridge/>,
+        cName: 'nav-text'
+    },
+    {
+        title: 'Handleliste',
+        path: '/ShoppingListPage',
+        icon: <BiIcons.BiShoppingBag/>,
         cName: 'nav-text'
     },
 ]

@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/RecipeTitleBar.css"
 import { Link } from 'react-router-dom';
-import NavbarProps from "../../interface/NavbarProps";
+import {BiFridge} from 'react-icons/bi'
 
 export const RecipeTitleBar  = () => {
 
@@ -10,7 +10,7 @@ export const RecipeTitleBar  = () => {
 
             <div className="sidetab fridge">
                 <Link to="/MyFridge">
-                    <img className="sidetab-icon" src="/images/fridge-white.png" alt="frigde-sprite"/>
+                    <BiFridge/>
                 </Link>
             </div>
 

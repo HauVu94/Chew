@@ -1,0 +1,18 @@
+.input-field{
+    width: 15rem;
+    margin: 1rem;
+    height: 50px;
+    font-size: large;
+    border-radius: 15px;
+    box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);
+    border: none;
+    align-items: center;
+    text-align: center;
+}
+::placeholder{
+    text-align: center;
+}
+
+.form-registration{
+    text-align: center;
+}

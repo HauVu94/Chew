@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import "../styles/Login.css"
+
 
 export const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -42,7 +44,7 @@ export const LoginPage = () => {
       <div className="form-login">
         <label className="form-txt">Brukernavn</label>
         <input
-          className=""
+          className="form-input"
           type="text"
           placeholder="Skriv ditt brukernavn"
           value={username}
@@ -64,10 +66,12 @@ export const LoginPage = () => {
         <Link to="/RegisterPage">
           <button className="register-btn">Registrer</button>
         </Link>
+                <label className="register-lbl">Registrer deg</label>
+                    <Link to="/LoginTPP"><button className="register-btn">Registrer</button></Link>
 
-        <label className="forgot-lbl">Glemt passord?</label>
-        <button className="btn-group">Nullstill</button>
-      </div>
-    </div>
-  );
-};
+                <label className="forgot-lbl">Glemt passord?</label>
+                <button className="reset-btn">Nullstill</button>
+            </div>
+        </div>
+    );
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 // Dummy data, import from database
+
 const ingredientsList = [{id: 1, name: 'Hodekål'}, {id: 2, ingr: 'Grønnkål'}, {id: 3, ingr: 'Spisskål'}, {id: 4, ingr: 'Kålrabi'}, {id: 5, ingr: 'Rødkål'}]
 
 const getFilteredItems = (query, items) => {

@@ -7,6 +7,8 @@ import './styles/App.css';
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { RegisterPage } from './pages/RegisterPage';
+import IngredientSearch from './components/SearchComponents/IngredientSearch';
+import IngredientSearchPage from './pages/IngredientSearchPage';
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
             <Route path="/LoginPage" element={ <LoginPage/> }></Route>
             <Route path="/RegisterPage" element={ <RegisterPage/> }></Route>
             <Route path="/ProfilePage" element={ <ProfilePage/> }></Route>
+            <Route path="/IngredientSearchPage" element={ <IngredientSearchPage/> }></Route>
           </Routes>
       </Router>
     </div>

@@ -32,7 +32,7 @@ create table Member(
 
 create table Family(
     familyId int  null,
-    lastName char null
+    lastName char(10) null
 );
 
 create table Institute(

@@ -12,6 +12,7 @@ const IngredientSearchPage = () => {
             <Navbar avatarSrc="images/default-avatar.png"/>
             <Sidetabs />
             
+
             {/* Midlertidig link til pages/MyFridge.tsx */}
             <Link to="/MyFridge">My Fridge</Link>
             <Link to="/RecipePage">RecipePage</Link>

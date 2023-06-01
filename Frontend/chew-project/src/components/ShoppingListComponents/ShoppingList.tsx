@@ -1,5 +1,7 @@
 import "../../styles/ShoppingListPage.css"
 import { PageTitle } from "../PageComponents/PageTitle"
+import {Link} from "react-router-dom";
+import * as BiIcons from 'react-icons/bi';
 
 export const ShoppingList = () => {
 
@@ -8,18 +10,37 @@ export const ShoppingList = () => {
             <div className="shoppinglist-container">
 
                 <div className="cross-container">
-                    <img className="cross-icon" src="images/cross.png" />
+                    <Link to="/MyFridge">
+                        <BiIcons.BiX />
+                    </Link>
                 </div>
                 
                 <PageTitle pageTitle="Din Handleliste"/>
 
                 <div className="grocery-container">
 
-                    <input className="number-input" type="number" placeholder="0" />
-                    <label className="grocery-label">Banan</label>
+                    <div className="grocery-item">
+                        <input className="number-input" type="number" placeholder="0" />
+                        <label className="grocery-label">Banan</label>
+                        <input className="checkbox-input" type="checkbox"></input>
+                        <BiIcons.BiTrash />
+                    </div>
 
-                    <input className="number-input" type="number" placeholder="0" />
-                    <label className="grocery-label">Banan</label>
+                    <div className="grocery-item">
+                        <input className="number-input" type="number" placeholder="0" />
+                        <label className="grocery-label">Banan</label>
+                        <input className="checkbox-input" type="checkbox"></input>
+                        <BiIcons.BiTrash />
+                    </div>
+
+                    <div className="grocery-item">
+                        <input className="number-input" type="number" placeholder="0" />
+                        <label className="grocery-label">Banan</label>
+                        <input className="checkbox-input" type="checkbox"></input>
+                        <BiIcons.BiTrash />
+                    </div>
+
+    
 
 
                    
@@ -27,7 +48,7 @@ export const ShoppingList = () => {
                 </div>
 
                 <div className="pluss-container">
-                    <img className="pluss-icon" src="images/pluss.png" />
+                    <BiIcons.BiPlus />
                 </div>
 
 

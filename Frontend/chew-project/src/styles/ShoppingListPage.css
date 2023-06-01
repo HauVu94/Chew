@@ -3,7 +3,7 @@
     background-color: white;
     margin: 2rem 2rem 0 2rem;
     border-radius: 25px;
-    height: 75vh;
+    max-height: 75vh;
     overflow-y: scroll;
 }
 
@@ -21,15 +21,33 @@
 }
 
 .grocery-container{
+    margin: 0 2rem 3rem 3rem;
+    gap: 3rem 1rem;
+}
+
+.grocery-item{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 2rem 2rem 0;
 }
 
 .number-input{
-    grid-column: auto/ span 2;
+    grid-column: auto/ span 1;
     height: 1rem;
 }
 
 .grocery-label{
-    grid-column: auto/ span 10;
+    grid-column: auto/ span 9;
+}
+
+.checkbox-input{
+    grid-column: auto/ span 1;
+    width: 2rem;
+    height: 2rem;
+}
+
+.trashcan-icon{
+    grid-column: auto/ span 1;
 }

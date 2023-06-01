@@ -19,8 +19,6 @@ export const HomePage = () => {
             <Link to="/ProfilePage">Profile Page</Link>
             <Link to="/LoginPage">Logg inn</Link>
             <Link to="/IngredientSearchPage">Ingredient Search</Link>
-            
-
         </>
     )
 }

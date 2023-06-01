@@ -40,7 +40,8 @@
 .recipe-card{
     background-color: rgb(248, 244, 244);
     height: auto;
-    max-height: 386px;
+    max-height: 425px;
+    max-width: 600px;
     grid-column: auto /span 4;
     display: grid;
     border-radius: 10px;

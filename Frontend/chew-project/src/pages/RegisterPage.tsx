@@ -1,4 +1,5 @@
 import "../styles/RegisterPage.css"
+import { Link } from "react-router-dom"
 
 
 export const RegisterPage = () => {
@@ -6,6 +7,9 @@ export const RegisterPage = () => {
         <div className="register-body">
             <div className="reg-logo">
                 <img className="chew-logo-reg" src="images/chew-logo.png"/>
+            </div>
+            <div className="back-icon">
+                <Link to="/"><img className="x-btn" src="images/cross.png"/></Link>
             </div>
 
             <div className="form-registration">
@@ -23,7 +27,7 @@ export const RegisterPage = () => {
                     <input type="text" placeholder="Skriv ønsket brukernavn"/>
                 <label className="form-txt">Skriv ønsket passord:</label>
                     <input type="password" placeholder="Skriv inn ønsket passord"/>
-                <button className="save-btn-reg">Lagre endringer</button>
+                <button className="save-btn-reg">Lagre endringer</button> 
             </div>
         </div>
     )

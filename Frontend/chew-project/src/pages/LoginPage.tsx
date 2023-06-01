@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+
 export const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -64,10 +65,12 @@ export const LoginPage = () => {
         <Link to="/RegisterPage">
           <button className="register-btn">Registrer</button>
         </Link>
+                <label className="register-lbl">Registrer deg</label>
+                    <Link to="/LoginTPP"><button className="register-btn">Registrer</button></Link>
 
-        <label className="forgot-lbl">Glemt passord?</label>
-        <button className="btn-group">Nullstill</button>
-      </div>
-    </div>
-  );
-};
+                <label className="forgot-lbl">Glemt passord?</label>
+                <button className="reset-btn">Nullstill</button>
+            </div>
+        </div>
+    );
+}

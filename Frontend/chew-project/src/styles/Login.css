@@ -30,6 +30,7 @@
 .form-txt{
     font-size: x-large;
     font-weight: light;
+    
 }
 .register-btn{
     margin: 1rem;
@@ -63,4 +64,43 @@
 }
 .forgot-lbl{
     margin: 1rem;
+}
+.feide-login{
+    width: 50vh;
+}
+.form-input{
+    margin: 1rem;
+    width: 15rem;
+    margin: 1rem;
+    height: 50px;
+    font-size: large;
+    border-radius: 15px;
+    box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);
+    border: none;
+    align-items: center;
+    text-align: center;
+}
+.reset-btn{
+    margin: 1rem;
+    width: 15rem;
+    margin: 1rem;
+    height: 50px;
+    font-size: large;
+    border-radius: 15px;
+    box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);
+    border: none;
+    align-items: center;
+    text-align: center;
+}
+.reset-btn:hover{
+    border: 2px solid #ff5b2e;
+    transform: scale(1.025)
+}
+.x-btn{
+    width: 3rem;
+    display: flex;
+      position: fixed;
+  top: 0;
+  right: 0;
+  transform: translate(-50%, 50%);
 }

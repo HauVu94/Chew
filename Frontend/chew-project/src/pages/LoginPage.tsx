@@ -5,7 +5,9 @@ export const LoginPage = () => {
     return(
         <div className="login-body">
             <div>
-                <img className="login-logo" src="images/chew-logo.png"/>
+                <Link to="/">
+                    <img className="login-logo" src="images/chew-logo.png"/>
+                </Link>
             </div>
 
             <div className="form-login">

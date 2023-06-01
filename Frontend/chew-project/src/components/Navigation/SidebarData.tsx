@@ -1,19 +1,19 @@
 
 export const SidebarData = [
     {
-        title: 'Home',
+        title: 'Hjem',
         path: '/',
         icon: "images/home.png",
         cName: 'nav-text'
     },
     {
-        title: 'Profile',
+        title: 'Profil',
         path: '/Profile',
         icon: "images/profile.png",
         cName: 'nav-text'
     },
     {
-        title: 'Fridge',
+        title: 'Mitt Kjøleskap',
         path: '/MyFridge',
         icon: "images/fridge.png",
         cName: 'nav-text'

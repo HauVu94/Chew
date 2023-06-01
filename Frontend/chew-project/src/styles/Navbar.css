@@ -35,7 +35,7 @@ h1{
 
 .nav-menu{
     background-color: antiquewhite;
-    width: 40vw;
+    width: 30vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -46,7 +46,7 @@ h1{
     z-index: 999;
 }
 .nav-menu.active{
-    right: 60%;
+    right: 70%;
     transition: 850ms;
 }
 
@@ -64,7 +64,7 @@ h1{
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: start;
     padding: 0 16px;
     border-radius: 4px;
 }

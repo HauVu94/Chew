@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {Link} from "react-router-dom";
 
 import "../styles/MainMenu.css"
 
@@ -44,8 +45,13 @@ const MainMenu = () => {
         <div className="main-menu">
             <h1>Kom i gang!</h1>
             <button className="main-menu-btn btn1" onClick={btn1Click}>{button1Text}</button>
-            <button className="main-menu-btn btn2" onClick={btn2Click}>{button2Text}</button>
+
+            <Link to="ShoppingListPage" className="main-menu-btn btn2">
+                <button className="main-menu-btn btn2" onClick={btn2Click}>{button2Text}</button>
+            </Link>
+
             <button className="main-menu-btn btn3" onClick={btn3Click}>{button3Text}</button>
+
             <button className="main-menu-btn btn4" onClick={btn4Click}>{button4Text}</button>
         </div>
     );

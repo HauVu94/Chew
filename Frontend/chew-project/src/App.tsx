@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { RegisterPage } from './pages/RegisterPage';
 import IngredientSearch from './components/SearchComponents/IngredientSearch';
 import IngredientSearchPage from './pages/IngredientSearchPage';
+import { ShoppingListPage } from './pages/ShoppingListPage';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/RegisterPage" element={ <RegisterPage/> }></Route>
             <Route path="/ProfilePage" element={ <ProfilePage/> }></Route>
             <Route path="/IngredientSearchPage" element={ <IngredientSearchPage/> }></Route>
+            <Route path="/ShoppingListPage" element={ <ShoppingListPage/> }></Route>
           </Routes>
       </Router>
     </div>

@@ -1,0 +1,35 @@
+.shoppinglist-container{
+    display: grid;
+    background-color: white;
+    margin: 2rem 2rem 0 2rem;
+    border-radius: 25px;
+    height: 75vh;
+    overflow-y: scroll;
+}
+
+.cross-container{
+    justify-self: end;
+    margin: 1rem 1rem 0 0;
+    position: absolute;
+}
+
+.pluss-container{
+    justify-self: end;
+    align-self: flex-end;
+    margin: 0 1rem 1rem 0;
+    position: absolute;
+}
+
+.grocery-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.number-input{
+    grid-column: auto/ span 2;
+    height: 1rem;
+}
+
+.grocery-label{
+    grid-column: auto/ span 10;
+}

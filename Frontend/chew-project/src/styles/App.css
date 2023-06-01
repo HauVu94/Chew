@@ -8,3 +8,25 @@ body{
     font-family: 'Poppins', sans-serif;
     color: #ff5b2e;
 }
+
+
+/* Title CSS */
+.title-container{
+    display: grid;
+    justify-content: center;
+}
+
+.page-title{
+    font-size: 2rem;
+}
+
+/* Icon CSS */
+.cross-icon{
+    height: 30px;
+}
+
+.pluss-icon{
+    height: 30px;
+}
+
+

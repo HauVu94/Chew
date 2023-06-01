@@ -6,6 +6,7 @@
         <list>
           <option value="builtins.format.celsius" />
           <option value="float.append" />
+          <option value="mysql.connection.cursor" />
         </list>
       </option>
     </inspection_tool>

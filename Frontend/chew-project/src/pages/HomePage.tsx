@@ -1,9 +1,10 @@
 import Navbar from '../components/Navigation/Navbar';
 import Sidetabs from '../components/Sidetabs';
-import { Link } from 'react-router-dom';
 import Toolbar from '../components/Toolbar';
 import MainMenu from '../components/MainMenu';
 import SchoolPrivate from '../components/SchoolPrivate';
+
+import { Link } from 'react-router-dom';
 
 export const HomePage = () => {  
     return (
@@ -15,8 +16,7 @@ export const HomePage = () => {
             <SchoolPrivate />
 
             {/* Midlertidig link til pages/MyFridge.tsx */}
-            <Link to="/MyFridge">My Fridge</Link>
-            <Link to="/RecipePage">RecipePage</Link>
+            <Link to="/ProfilePage">Profile Page</Link>
             <Link to="/LoginPage">Logg inn</Link>
 
         </>

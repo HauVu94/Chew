@@ -4,7 +4,7 @@ import MySQLdb
 import mysql
 from flask import Flask, session, render_template
 
-app = Flask(name)
+app = Flask(__name__)
 
 app.secret_key = 'Dette er en test nøkkel, jeg tror denne er good'
 
@@ -41,3 +41,6 @@ def login():
             msg = 'Incorrect username/password!'
     # Show the login form with message (if any)
     return render_template('index.html', msg=msg)
+
+if __name__ == "__main__":
+    app.run(debug=True)

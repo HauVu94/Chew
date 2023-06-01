@@ -13,12 +13,14 @@ export const LoginPage = () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+      url : 'http://localhost:5000'
       },
       body: JSON.stringify({ username, password }),
     })
       .then((response) => response.text())
       .then((data) => {
         // Handle the response from the backend
+          console.log(data)
         if (data === 'Logged in successfully!') {
           // Redirect to the home page or perform other actions
           console.log('Logged in successfully!');

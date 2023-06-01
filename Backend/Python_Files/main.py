@@ -4,7 +4,7 @@ import MySQLdb
 import mysql
 from flask import Flask, session, render_template
 
-app = Flask(__name__)
+app = Flask(name)
 
 app.secret_key = 'Dette er en test nøkkel, jeg tror denne er good'
 

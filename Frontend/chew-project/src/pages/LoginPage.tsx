@@ -32,44 +32,43 @@ export const LoginPage = () => {
         console.error('Error:', error);
       });
   };
+    return (
+        <div className="login-body">
+            <div className="back-icon">
+            <Link to="/"><img className="x-btn" src="images/cross.png"/></Link>
+          </div>
+          <div>
+            <Link to="/"><img className="login-logo" src="images/chew-logo.png" alt="Logo" /></Link>
+          </div>
 
-  return (
-    <div className="login-body">
-        <div className="back-icon">
-        <Link to="/"><img className="x-btn" src="images/cross.png"/></Link>
-      </div>
-      <div>
-        <Link to="/"><img className="login-logo" src="images/chew-logo.png" alt="Logo" /></Link>
-      </div>
-
-      <div className="form-login">
-        <label className="form-txt">Brukernavn</label>
-        <input
-          className="form-input"
-          type="text"
-          placeholder="Skriv ditt brukernavn"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <label className="form-txt">Passord</label>
-        <input
-          className="form-input"
-          type="password"
-          placeholder="Skriv passord"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button className="login-btn" onClick={handleLogin}>
-          Logg Inn
-        </button>
+          <div className="form-login">
+            <label className="form-txt">Brukernavn</label>
+            <input
+              className="form-input"
+              type="text"
+              placeholder="Skriv ditt brukernavn"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <label className="form-txt">Passord</label>
+            <input
+              className="form-input"
+              type="password"
+              placeholder="Skriv passord"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button className="login-btn" onClick={handleLogin}>
+              Logg Inn
+            </button>
 
 
-                <label className="register-lbl">Registrer deg</label>
-                    <Link to="/LoginTPP"><button className="register-btn">Registrer</button></Link>
+                    <label className="register-lbl">Registrer deg</label>
+                        <Link to="/LoginTPP"><button className="register-btn">Registrer</button></Link>
 
-                <label className="forgot-lbl">Glemt passord?</label>
-                <button className="reset-btn">Nullstill</button>
+                    <label className="forgot-lbl">Glemt passord?</label>
+                    <button className="reset-btn">Nullstill</button>
+                </div>
             </div>
-        </div>
-    );
+        );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-// import Navbar from '../components/Navbar';
+import Navbar from '../components/Navigation/Navbar';
 import Sidetabs from '../components/Sidetabs';
 import { Link } from 'react-router-dom';
 // import Toolbar from '../components/Toolbar';
@@ -9,7 +9,7 @@ import '../styles/IngredientSearch.css'
 const IngredientSearchPage = () => {
     return (
         <>
-            {/* <Navbar avatarSrc="images/default-avatar.png"/> */}
+            <Navbar avatarSrc="images/default-avatar.png"/>
             <Sidetabs />
             
 

@@ -5,6 +5,7 @@ import { RecipePage } from './pages/RecipePage';
 import './styles/App.css';
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import IngredientSearchPage from './pages/IngredientSearchPage';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route path="/RecipePage" element={ <RecipePage/> }></Route>
             <Route path="/MyFridge" element={ <MyFridge/> }></Route>
             <Route path="/LoginPage" element={ <LoginPage/> }></Route>
+            <Route path="/IngredientSearchPage" element={ <IngredientSearchPage/> }></Route>
           </Routes>
       </Router>
     </div>

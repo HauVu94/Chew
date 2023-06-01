@@ -1,27 +1,20 @@
 import React from "react";
-import "../../styles/MyFrigdeTitleBar.css"
+import "../../styles/Sidetab.css"
+import { Link } from 'react-router-dom';
 
 
 export const MyFrigdeTitleBar  = () => {
 
     return(
         <div className="tab-wrapper">
-            <div className="sidetab left">
-
-                <img className="sidetab-icon" alt="calendar-icon" src="images/calendar-icon.png"/>
-
+            <div className="sidetab sidetab-left">
+                <Link to="/RecipePage">
+                <img className="sidetab-icon" alt="recipe-icon" src="images/recipe-white.png"/>
+                </Link>
             </div>
 
-            <div className="page-title">
-
-                <h2>Ditt Kjøleskap</h2>
-
-            </div>
-
-            <div className="sidetab right">
-
-                <img className="sidetab-icon" alt="calendar-icon" src="images/calendar-icon.png"/>
-
+            <div className="sidetab sidetab-right">
+                <img className="sidetab-icon" alt="pluss-icon" src="images/pluss-white.png"/>
             </div>
         </div>
     )

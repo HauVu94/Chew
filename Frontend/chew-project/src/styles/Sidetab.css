@@ -1,8 +1,6 @@
 .tab-wrapper{
     display: grid;
-    position: absolute;
-    width: 100vw;
-    margin-top: 150px;
+    height: 200px;
 }
 
 .sidetab{
@@ -14,18 +12,23 @@
     width: 85px;
     height: 65px;
     background-color: #ff5b2e;
+    top: 225px;
 }
 
 .sidetab-icon{
     height: 40px;
 }
 
-.calendar{
+.sidetab-left{
     border-radius: 0px 50px 50px 0px;
     justify-self: start;
 }
 
-.social{
+.sidetab-right{
     border-radius: 50px 0px 0px 50px;
     justify-self: end;
+}
+
+.page-title{
+    justify-self: center;
 }

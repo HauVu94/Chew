@@ -1,8 +1,9 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navigation/Navbar';
 import Sidetabs from '../components/Sidetabs';
 import { Link } from 'react-router-dom';
 import Toolbar from '../components/Toolbar';
+import MainMenu from '../components/MainMenu';
+import SchoolPrivate from '../components/SchoolPrivate';
 
 export const HomePage = () => {  
     return (
@@ -10,6 +11,8 @@ export const HomePage = () => {
             <Navbar avatarSrc="images/default-avatar.png"/>
             <Toolbar />
             <Sidetabs />
+            <MainMenu />
+            <SchoolPrivate />
 
             {/* Midlertidig link til pages/MyFridge.tsx */}
             <Link to="/MyFridge">My Fridge</Link>

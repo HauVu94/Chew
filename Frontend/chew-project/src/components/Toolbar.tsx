@@ -5,7 +5,7 @@ import "../styles/Toolbar.css"
 const Toolbar = () => {
     return(
         <div className="toolbar">
-            <Link to="/MyFridge" className="chew-logo chew-logo-btn">
+            <Link to="/MyFridge" className="my-fridge">
                 <button className="tool my-fridge">Mitt kjøleskap</button>
             </Link>
             <input className="tool search" placeholder="Søk"></input>

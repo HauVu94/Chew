@@ -3,12 +3,9 @@ import db_connector
 class UserDao:
 
     def save(self, user):
-
-        tupUser = (user.firstName, user.lastName, user.username, user.password)
-
-        sqlStatement ="INSERT INTO User (firstName, lastName, username, password) VALUES (%s, %s, %s, %s)"
-
-        db_connector.mycursor.execute(sqlStatement, tupUser)
+        sqlStatement = "INSERT INTO User (firstName, lastName, username, password) VALUES (%s, %s, %s, %s)"
+        values = (user.firstName, user.lastName, user.username, user.password)
+        db_connector.mycursor.execute(sqlStatement, values)
         db_connector.chewDb.commit()
 
 

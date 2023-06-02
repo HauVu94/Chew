@@ -3,7 +3,7 @@ import userDao
 
 
 
-test = user.User("ole", "christian", 123)
+test = user.User("Ape", "Mamma", 66644)
 
 dao = userDao.UserDao()
 

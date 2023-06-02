@@ -14,7 +14,8 @@ create table User(
     id          int      not null AUTO_INCREMENT
         primary key,
     firstName   char(10) not null,
-    lastName    char(10) null,
+    lastName    char(10) not null,
+    username    char(20) not null,
     password    int      not null
 );
 

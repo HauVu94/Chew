@@ -45,8 +45,10 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                 <Link to="/" className="chew-logo chew-logo-btn">
                     <img className="chew-logo" src="images/chew-logo.png"/>
                 </Link>
-
-                <img className="profile-btn" src={avatarSrc}/>
+                
+                <Link className="profile-btn" to="/ProfilePage">
+                    <img className="profile-btn" src={avatarSrc}/>
+                </Link>
             </div>
         </IconContext.Provider>
     )

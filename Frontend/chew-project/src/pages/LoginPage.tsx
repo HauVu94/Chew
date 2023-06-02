@@ -13,7 +13,6 @@ export const LoginPage = () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-      url : 'http://localhost:5000'
       },
       body: JSON.stringify({ username, password }),
     })

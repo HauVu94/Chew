@@ -1,16 +1,22 @@
 import React from "react";
 import "../../styles/RecipeTitleBar.css"
 import { Link } from 'react-router-dom';
-import {BiFridge} from 'react-icons/bi'
+import * as BiIcons from 'react-icons/bi'
 
 export const RecipeTitleBar  = () => {
 
     return(
         <div className="tab-wrapper">
 
-            <div className="sidetab fridge">
+            <div className="sidetab sidetab-right">
                 <Link to="/MyFridge">
-                    <BiFridge/>
+                    <BiIcons.BiFridge/>
+                </Link>
+            </div>
+
+            <div className="sidetab sidetab-left">
+                <Link to="/ShoppingListPage">
+                    <BiIcons.BiShoppingBag/>
                 </Link>
             </div>
 

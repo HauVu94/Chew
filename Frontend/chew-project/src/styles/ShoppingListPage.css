@@ -1,10 +1,15 @@
+
+
 .shoppinglist-container{
     display: grid;
     background-color: white;
-    margin: 2rem 2rem 0 2rem;
     border-radius: 25px;
     max-height: 75vh;
     overflow-y: scroll;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 60vw;
 }
 
 .cross-container{
@@ -29,13 +34,14 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     margin: 2rem 2rem 2rem 0;
+    border-bottom: 1px solid black;
 }
 
 .number-input{
     grid-column: auto/ span 1;
-    height: 1rem;
+    width: 2rem;
 }
 
 .grocery-label{

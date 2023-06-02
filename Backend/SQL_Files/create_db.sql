@@ -11,15 +11,10 @@ USE chew_db;
 
 #Code to create tables for the user side of the database incl. Member, Family, Institute
 create table User(
-    id          int      not null
+    id          int      not null AUTO_INCREMENT
         primary key,
     firstName   char(10) not null,
     lastName    char(10) null,
-    birthDate   int      not null,
-    email       char(30) not null,
-    phone       int(8)   not null,
-    profBildeId int      null,
-    username    char(10) not null,
     password    int      not null
 );
 

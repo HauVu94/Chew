@@ -7,11 +7,12 @@ export const RecipeContainer  = () => {
 
     return(
         <>
-            <div className="title-container">
-                <h2 className="page-title">Oppskrifter basert på ditt kjøleskap</h2>
-            </div>
-
             <div className="info-wrapper">
+
+                <div className="title-container">
+                    <h2 className="page-title">Oppskrifter basert på ditt kjøleskap</h2>
+                </div>
+
             <div className="info">
                 <div className="info-field">
                     <div className="ingredients-avaliable green"/>

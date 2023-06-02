@@ -15,7 +15,7 @@ create table User(
         primary key,
     firstName   char(10) not null,
     lastName    char(10) not null,
-    username    char(20) not null,
+    username    char(20) not null UNIQUE,
     password    int      not null
 );
 

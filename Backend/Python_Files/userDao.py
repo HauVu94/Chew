@@ -3,24 +3,31 @@ import db_connector
 class UserDao:
 
     def save(self, user):
-
-        tupUser = (user.firstName, user.lastName, user.password)
-
-        sqlStatement ="INSERT INTO User (firstName, lastName, password) VALUES (%s, %s, %s)"
-
-        db_connector.mycursor.execute(sqlStatement, tupUser)
+        sqlStatement = "INSERT INTO User (firstName, lastName, username, password) VALUES (%s, %s, %s, %s)"
+        values = (user.firstName, user.lastName, user.username, user.password)
+        db_connector.mycursor.execute(sqlStatement, values)
         db_connector.chewDb.commit()
 
 
-    def retrive(self, id):
+    def retriveById(self, id):
+        tupId = (id, )
 
-        sqlStatement = "SELECT * FROM User"
+        sqlStatement = "SELECT * FROM User WHERE id = %s"
 
-        db_connector.mycursor.execute(sqlStatement)
+        db_connector.mycursor.execute(sqlStatement, tupId)
         result = db_connector.mycursor.fetchall()
 
         for row in result:
             print(row)
+
+
+    def retriveByUsername(self, username):
+        tupUserName = (username, )
+        sqlStatement = "SELECT * FROM User WHERE username = %s"
+
+        db_connector.mycursor.execute(sqlStatement, tupUserName)
+
+        return db_connector.mycursor.fetchall().pop()
 
 
 

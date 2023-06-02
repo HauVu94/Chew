@@ -41,3 +41,6 @@ def login():
             msg = 'Incorrect username/password!'
     # Show the login form with message (if any)
     return render_template('index.html', msg=msg)
+
+if __name__ == "__main__":
+    app.run(debug=True)

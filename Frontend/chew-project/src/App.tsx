@@ -28,6 +28,9 @@ function App() {
             <Route path="/LoginTPP" element={ <LoginTPP/> }></Route>
             <Route path="/LoginPupil" element={ <LoginPupil/> }></Route>
             <Route path="/LoginTeacher" element={ <LoginTeacher/> }></Route>
+            <Route path="/ProfilePage" element={ <ProfilePage/> }></Route>
+            <Route path="/ShoppingListPage" element={ <ShoppingListPage/> }></Route>
+
           </Routes>
       </Router>
     </div>

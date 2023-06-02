@@ -12,4 +12,17 @@ class UserDao:
         db_connector.chewDb.commit()
 
 
+    def retrive(self, id):
+
+        sqlStatement = "SELECT * FROM User"
+
+        db_connector.mycursor.execute(sqlStatement)
+        result = db_connector.mycursor.fetchall()
+
+        for row in result:
+            print(row)
+
+
+
+
 

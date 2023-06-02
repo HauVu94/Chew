@@ -5,7 +5,7 @@ import mysql.connector
 chewDb = mysql.connector.connect(
     host='127.0.0.1',
     user='root',
-    password='Q3rpojfoaqHauvu94',
+    password='',
     port='3306',
     database='chew_db'  # Pass på at DB navnet stemmer med det på MySQL
 )

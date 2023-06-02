@@ -42,13 +42,15 @@ const MainMenu = () => {
     }
 
     return(
-        <div className="main-menu">
-            <h1>Kom i gang!</h1>
-            <button className="main-menu-btn btn1" onClick={btn1Click}>{button1Text}</button>
-            <button className="main-menu-btn btn2" onClick={btn2Click}>{button2Text}</button>
-            <button className="main-menu-btn btn3" onClick={btn3Click}>{button3Text}</button>
-            <button className="main-menu-btn btn4" onClick={btn4Click}>{button4Text}</button>
-        </div>
+            <div className="main-menu">
+                <h1 className="main-menu-title">Kom i gang!</h1>
+                <div className="main-menu-container">
+                    <button className="main-menu-btn btn1" onClick={btn1Click}>{button1Text}</button>
+                    <button className="main-menu-btn btn2" onClick={btn2Click}>{button2Text}</button>
+                    <button className="main-menu-btn btn3" onClick={btn3Click}>{button3Text}</button>
+                    <button className="main-menu-btn btn4" onClick={btn4Click}>{button4Text}</button>
+                </div>
+            </div>
     );
 };
 

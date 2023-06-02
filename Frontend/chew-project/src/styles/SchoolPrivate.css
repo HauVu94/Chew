@@ -1,8 +1,7 @@
 .school-private{
-    position: absolute;
-    left: 50%;
-    bottom: 5%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 .swap-btn{

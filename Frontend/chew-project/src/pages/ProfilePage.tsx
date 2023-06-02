@@ -5,7 +5,7 @@ import "../styles/Profilepage.css";
 export const ProfilePage = () => {  
     return (
         <> 
-            <Navbar avatarSrc="images/default-avatar.png"/>
+            <Navbar avatarSrc="images/profile.png"/>
             <Toolbar />
 
             <div className='profilecard-container'>

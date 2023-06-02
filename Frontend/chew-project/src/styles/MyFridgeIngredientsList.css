@@ -1,11 +1,6 @@
 .ingredient-container{
-    /* Does this work OK with flex or grid? */
-    margin-left: auto; 
-    margin-right: auto;
-
-    /* H and W needs to be relative to screen size */
-    max-height: 25em;
-    width: 60vw;
+    height: 100%;
+    margin: 1rem 5rem 5rem 5rem;
 
 
     padding: .5em;

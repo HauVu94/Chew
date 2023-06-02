@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../components/Navigation/Navbar';
+import Navbar from '../components/NavigationComponents/Navbar';
 import Sidetabs from '../components/Sidetabs';
 import { Link } from 'react-router-dom';
 // import Toolbar from '../components/Toolbar';

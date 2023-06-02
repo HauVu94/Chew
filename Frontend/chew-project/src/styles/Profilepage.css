@@ -1,18 +1,21 @@
 .profilecard-container{
     width: 95%;
     height: 60vh;
-    display: flex;
+    display: grid;
     position: relative;
     overflow: hidden;
     top: 100px;
     left: 30px;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     background-color: rgb(255, 255, 255);
     border: solid #C8BCAC 2px;
     border-radius: 2rem;
     box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);
+}
+
+.profilecard-container label{
+    align-self: flex-end;
 }
 
 .banner-orange{

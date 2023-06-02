@@ -15,7 +15,9 @@ export const MyFrigdeTitleBar  = () => {
             </div>
 
             <div className="sidetab sidetab-right">
-                <BiPlusCircle/>
+                <Link to="/ShoppingListPage">
+                    <BiPlusCircle/>
+                </Link>
             </div>
         </div>
     )

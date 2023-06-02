@@ -14,6 +14,12 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
+        title: 'Oppskrifter',
+        path: '/RecipePage',
+        icon: <BiIcons.BiRestaurant/>,
+        cName: 'nav-text'
+    },
+    {
         title: 'Kjøleskap',
         path: '/MyFridge',
         icon: <BiIcons.BiFridge/>,

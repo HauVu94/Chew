@@ -28,8 +28,3 @@ class UserDao:
         db_connector.mycursor.execute(sqlStatement, tupUserName)
 
         return db_connector.mycursor.fetchall().pop()
-
-
-
-
-

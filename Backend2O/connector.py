@@ -9,7 +9,7 @@ from pathlib import Path
     3. REMEMBER TO 
         A. RIGHT CLICK
         B. GO TO GIT
-        C. ADD TO GIT IGNORE
+        C. ADD TO GIT IGNORE 
 """
 
 

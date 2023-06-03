@@ -13,7 +13,7 @@ from pathlib import Path
 """
 
 
-def getDb():
+def connector():
     password = Path("password.txt").open().readline().strip()
 
     Db = connector.connect(

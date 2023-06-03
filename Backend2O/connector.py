@@ -11,11 +11,11 @@ from pathlib import Path
         B. GO TO GIT
         C. ADD TO GIT IGNORE
 """
-password = Path("password.txt").open().readline().strip()
-print(password)
 
 
-def ConnectToDB():
+def getDb():
+    password = Path("password.txt").open().readline().strip()
+
     Db = connector.connect(
         host="127.0.0.1",
         user="root",
@@ -26,6 +26,5 @@ def ConnectToDB():
     return Db
 
 
-t = ConnectToDB()
-
-print(t)
+def cursor():
+    return getDb().cursor()

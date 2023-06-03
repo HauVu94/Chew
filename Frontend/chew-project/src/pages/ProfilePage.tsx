@@ -6,7 +6,6 @@ export const ProfilePage = () => {
     return (
         <> 
             <Navbar avatarSrc="images/profile.png"/>
-            <Toolbar />
 
             <div className='profilecard-container'>
                 <div className='banner-orange'></div>

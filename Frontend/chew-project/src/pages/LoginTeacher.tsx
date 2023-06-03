@@ -8,7 +8,7 @@ export const LoginTeacher = () => {
                 <img className="chew-logo-reg" src="images/chew-logo.png"/>
             </div>
             <div className="back-icon">
-                <Link to="/"><img className="x-btn" src="images/cross.png"/></Link>
+                <Link to="LoginTPP"><img className="x-btn" src="images/cross.png"/></Link>
             </div>
 
             <div className="form-registration">

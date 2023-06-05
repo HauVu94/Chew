@@ -2,7 +2,7 @@
 
 .shoppinglist-container{
     display: grid;
-    background-color: white;
+    background-image: url("../../public/images/Bakgrunnbrokoli.png");
     
     max-height: 650px;
     max-width: 650px;

@@ -12,10 +12,8 @@ from pathlib import Path
         C. ADD TO GIT IGNORE  
 """
 
-
+password = Path("password.txt").open().readline().strip()
 def getDb():
-    password = Path("password.txt").open().readline().strip()
-
     Db = connector.connect(
         host="127.0.0.1",
         user="root",

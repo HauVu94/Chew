@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "../styles/MainMenu.css"
 
@@ -8,6 +9,8 @@ const MainMenu = () => {
     const [button2Text, setButton2Text] = useState("")
     const [button3Text, setButton3Text] = useState("")
     const [button4Text, setButton4Text] = useState("")
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const mode = localStorage.getItem("Mode")
@@ -26,19 +29,46 @@ const MainMenu = () => {
     }, []);
 
     const btn1Click = () => {
-        console.log("Trykket på 'Delta i skoletime'")
+        if(button1Text === "Delta i skoletime"){
+            console.log("Trykket på 'Delta i skoletime'")
+            alert("Ingenting her enda")
+            navigate("/");
+        } else{
+            console.log("Trykket på 'Oppskrifter'");
+            navigate("/RecipePage");
+        }
     }
 
     const btn2Click = () => {
-        console.log("Trykket på 'Kunngjøringer og meldinger'")
+        if(button2Text === "Kunngjøringer og meldinger"){
+            console.log("Trykket på 'Kunngjøringer og meldinger'")
+            alert("Ingenting her enda")
+            navigate("/");
+        } else{
+            console.log("Trykket på 'Handleliste'");
+            navigate("/ShoppingListPage");
+        }
     }
 
     const btn3Click = () => {
-        console.log("Trykket på 'Utfordringer og spill'")
+        
+        if(button3Text === "Utfordringer og spill"){
+            console.log("Trykket på 'Utfordringer og spill'")
+            alert("Ingenting her enda")
+            navigate("/");
+        } else{
+            console.log("Trykket på 'Videoleksjoner'");
+            alert("Ingenting her enda")
+            navigate("/");
+        }
     }
 
     const btn4Click = () => {
-        console.log("Trykket på 'Trenger du hjelp?'")
+        if(button4Text === "Trenger du hjelp?"){
+            console.log("Trykket på 'Trenger du hjelp?'");
+            alert("Ingenting her enda")
+            navigate("/");
+        }
     }
 
     return(

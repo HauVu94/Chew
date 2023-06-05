@@ -11,7 +11,7 @@ const IngredientSearch = () => {
 		<div className='ingredient-search-container'>
 			<input type='text' onChange={event => {setSearchTerm(event.target.value)}} placeholder='Søk...' className='ingredeients-search-field'/>
 			
-				<ul>
+				<ul className='search-result-ul'>
 					{ingredientsList.filter((val) => {
 						if (searchTerm === ''){
 							return ""
@@ -21,7 +21,7 @@ const IngredientSearch = () => {
 					}).slice(0,5).map((val, key) => {
 						return (
 							<div className='search-results-tab'>
-								<li>{val.name}</li>
+								<li className='search-result-li'>{val.name}</li>
 							</div>
 						)
 				})}

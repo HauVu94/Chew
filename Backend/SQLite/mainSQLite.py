@@ -1,7 +1,12 @@
+"""
+The terminal have some errors printing which is in solving.
+If you wish to check that the database received the correct data check the query console.
+"""
+
 # Code block 1: Table creation
 import sqlite3
 
-conn = sqlite3.connect('./chew.db') #Insert chew.db for file name when done with testing
+conn = sqlite3.connect('chew.db') #Insert chew.db for file name when done with testing
 c = conn.cursor()
 
 # Creates the tables in the database
@@ -65,10 +70,8 @@ conn.commit()
 
 # Inserts values into the database
 c.execute("INSERT INTO user VALUES ('0', 'Marcus', 'Cin', 250800, 'test@mail.com', '12345678', 'Teacher', 'pfpic.jpeg')")
-tables = c.fetchall()
 
-print("Tables in the database:")
-for table in tables:
-    print(table[0])
+print(c.fetchall())
+
 conn.commit()
 conn.close()

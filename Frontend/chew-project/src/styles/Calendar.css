@@ -27,7 +27,6 @@
     grid-template-columns: repeat(12, 1fr);
     grid-column: auto / span 12;
     width: 100%;
-    margin-left: 1rem;
 }
 
 .calendar-title{
@@ -35,6 +34,8 @@
     color: white;
     align-self: center;
     font-size: 2rem;
+    margin-left: 1rem;
+
 }
 
 .calendar-cross{
@@ -67,7 +68,7 @@
     justify-self: start;
 }
 .calendar-list-title{
-    font-size: 1.3rem;
+    font-size: 1.7rem;
 }
 .calendar-list-teacher, .calendar-list-subject, .calendar-list-comment{
     font-size: .8rem;

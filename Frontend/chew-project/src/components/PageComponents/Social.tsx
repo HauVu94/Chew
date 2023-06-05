@@ -18,7 +18,7 @@ export const Social = () => {
     return(
         <>  
             <Link to="#" className="social-icon" onClick={showSocial}>
-                    <div className="sidetab sidetab-right">
+                    <div className={social ? "sidetab sidetab-right active" : "sidetab sidetab-right"}>
                             <BiIcon.BiGroup />
                     </div>
             </Link>

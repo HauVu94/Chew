@@ -58,7 +58,7 @@ export const Calender = () => {
     return(
         <>  
             <Link to="#" className="calender-icon" onClick={showCalendar}>
-                    <div className="sidetab sidetab-left">
+                    <div className={calendar ? "sidetab sidetab-left active" : "sidetab sidetab-left"}>
                             <BiIcon.BiCalendar />
                     </div>
             </Link>
@@ -74,8 +74,8 @@ export const Calender = () => {
                     {calendarList.map((item, index) => (
                         <li className="calendar-list-item">
                             <h3 className="calendar-list-title">{item.title}</h3>
-                            <h3 className="calendar-list-teacher">{item.teacher}</h3>
-                            <h3 className="calendar-list-subject">{item.subject}</h3>
+                            <h3 className="calendar-list-teacher">Lærer: {item.teacher}</h3>
+                            <h3 className="calendar-list-subject">Emne: {item.subject}</h3>
                             <h3 className="calendar-list-comment">{item.comment}</h3>
                         </li>
                     ))}

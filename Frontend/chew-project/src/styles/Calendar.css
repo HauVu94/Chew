@@ -3,8 +3,8 @@
     border-radius: 0 50px 50px 0;
     width: 30vw;
     height: 60vh;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     position: fixed;
     top: 20;
     right: 100%;
@@ -22,5 +22,57 @@
     color: white;
 }
 
-.calendar-icon svg{
+.calendar-header{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: auto / span 12;
+    width: 100%;
+    margin-left: 1rem;
+}
+
+.calendar-title{
+    grid-column: auto / span 9;
+    color: white;
+    align-self: center;
+    font-size: 2rem;
+}
+
+.calendar-cross{
+    grid-column: auto / span 3; 
+    align-self: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.calendar-list{
+    grid-column: auto / span 12;
+    margin: 0 1rem;
+    padding-left: .5rem;
+    height: 20rem;
+    max-height: 20rem;
+    overflow-y: scroll;
+}
+
+.calendar-list-item{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    border-bottom: 1px solid black;
+    margin-bottom: 1rem;
+}
+
+.calendar-list-title, .calendar-list-teacher, .calendar-list-subject, .calendar-list-comment{
+    grid-column: auto / span 12;
+    color: white;
+    margin: 0;
+    justify-self: start;
+}
+.calendar-list-title{
+    font-size: 1.3rem;
+}
+.calendar-list-teacher, .calendar-list-subject, .calendar-list-comment{
+    font-size: .8rem;
+}
+
+.calendar-list-comment{
+    margin-bottom: 1rem;
 }

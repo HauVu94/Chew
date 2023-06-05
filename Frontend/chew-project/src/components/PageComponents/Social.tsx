@@ -24,21 +24,36 @@ export const Social = () => {
                 </div>
                 <div className="social-list">
                     <div className="social-item">
-                        <h3 className="social-name">Navn1</h3>
+                        <h3 className="social-name">Svend Simen Svendsen</h3>
                     </div>
                     <div className="social-item">
-                        <h3 className="social-name">Navn1</h3>
+                        <h3 className="social-name">Gerhart Gedrius</h3>
                     </div>
                     <div className="social-item">
-                        <h3 className="social-name">Navn1</h3>
+                        <h3 className="social-name">Stein Steinarsen</h3>
                     </div>
                     <div className="social-item">
-                        <h3 className="social-name">Navn1</h3>
+                        <h3 className="social-name">Odd Due</h3>
+                    </div>
+                    <div className="social-item">
+                        <h3 className="social-name">Navn Navnesen</h3>
+                    </div>
+                    <div className="social-item">
+                        <h3 className="social-name">Frank Løke</h3>
+                    </div>
+                    <div className="social-item">
+                        <h3 className="social-name">Ivar Aasen</h3>
+                    </div>
+                    <div className="social-item">
+                        <h3 className="social-name">Geir Geiresen</h3>
+                    </div>
+                    <div className="social-item">
+                        <h3 className="social-name">Gudrun Heimsett</h3>
                     </div>
                 </div>
 
                 <input className="social-search" type="text" placeholder="Søk..."></input>
-                
+
             </div>
         </>
     )

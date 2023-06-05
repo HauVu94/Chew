@@ -77,7 +77,7 @@ export const ShoppingList = () => {
                         {shoppingList.map((item) => (
                             <>
                                 <div className="grocery-item" key={item.id}>
-                                    <label className="number-input" placeholder="0">{item.quantity.toString()} x</label>
+                                    <label className="number-input" placeholder="0">{item.quantity.toString() + " x"}</label>
                                     <label className="grocery-label">{item.name}</label>
                                     <input className="checkbox-input" type="checkbox"></input>
                                     <div className="item-buttons">

@@ -49,12 +49,13 @@
 }
 
 .number-input{
-    grid-column: auto/ span 1;
+    grid-column: auto/ span 3;
     width: 2rem;
+    white-space: nowrap;
 }
 
 .grocery-label{
-    grid-column: auto/ span 9;
+    grid-column: auto/ span 7;
 }
 
 .checkbox-input{

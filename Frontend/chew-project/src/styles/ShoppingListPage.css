@@ -1,0 +1,56 @@
+
+
+.shoppinglist-container{
+    display: grid;
+    background-color: white;
+    border-radius: 25px;
+    max-height: 75vh;
+    overflow-y: scroll;
+    margin: 1rem 5rem 5rem 5rem;
+}
+
+.cross-container{
+    justify-self: end;
+    margin: 1rem 1rem 0 0;
+    position: absolute;
+}
+
+.pluss-container{
+    justify-self: end;
+    align-self: flex-end;
+    margin: 0 1rem 1rem 0;
+    position: absolute;
+}
+
+.grocery-container{
+    margin: 0 2rem 3rem 3rem;
+    gap: 3rem 1rem;
+}
+
+.grocery-item{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 2rem 2rem 0;
+    border-bottom: 1px solid black;
+}
+
+.number-input{
+    grid-column: auto/ span 1;
+    width: 2rem;
+}
+
+.grocery-label{
+    grid-column: auto/ span 9;
+}
+
+.checkbox-input{
+    grid-column: auto/ span 1;
+    width: 2rem;
+    height: 2rem;
+}
+
+.trashcan-icon{
+    grid-column: auto/ span 1;
+}

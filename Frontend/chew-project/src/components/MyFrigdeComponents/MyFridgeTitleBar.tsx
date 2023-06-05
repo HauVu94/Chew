@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/Sidetab.css"
 import { Link } from 'react-router-dom';
+import * as BiIcons from 'react-icons/bi';
 
 
 export const MyFrigdeTitleBar  = () => {
@@ -9,12 +10,14 @@ export const MyFrigdeTitleBar  = () => {
         <div className="tab-wrapper">
             <div className="sidetab sidetab-left">
                 <Link to="/RecipePage">
-                <img className="sidetab-icon" alt="recipe-icon" src="images/recipe-white.png"/>
+                    <BiIcons.BiRestaurant/>
                 </Link>
             </div>
 
             <div className="sidetab sidetab-right">
-                <img className="sidetab-icon" alt="pluss-icon" src="images/pluss-white.png"/>
+                <Link to="/ShoppingListPage">
+                    <BiIcons.BiShoppingBag/>
+                </Link>
             </div>
         </div>
     )

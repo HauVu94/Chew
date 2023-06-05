@@ -11,17 +11,19 @@ USE chew_db;
 
 #Code to create tables for the user side of the database incl. Member, Family, Institute
 create table User(
-    id          int      not null
+    id          int      not null AUTO_INCREMENT
         primary key,
     firstName   char(10) not null,
-    lastName    char(10) null,
-    birthDate   int      not null,
-    email       char(30) not null,
-    phone       int(8)   not null,
-    profBildeId int      null,
-    username    char(10) not null,
+    lastName    char(10) not null,
+    username    char(20) not null UNIQUE,
     password    int      not null
 );
+
+
+    create table Movies(id          int      not null AUTO_INCREMENT
+    title char(20) not null,
+    Year int);
+
 
 create table Member(
     userId      int not null
@@ -32,7 +34,7 @@ create table Member(
 
 create table Family(
     familyId int  null,
-    lastName char null
+    lastName char(10) null
 );
 
 create table Institute(

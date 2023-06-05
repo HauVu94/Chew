@@ -1,26 +1,21 @@
-h1{
-    margin: 0;
-}
-
 .navbar{
-    padding: 10px;
+    padding: 0.5rem;
+    margin: 0 .5rem 0 .5rem ;
     /*kun for testing, skal fjernes */
     /* background-color: rgb(255, 203, 184);*/
-    display: grid;
-    grid-template-columns: 2fr, 8fr, 2fr;
-    height: 75px;
-    justify-items: center;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
 .burger-menu{
-    grid-column: 1 / 2;
     height: 50px;
 }
 
 .chew-logo{
     grid-column: 3 / 10;
-    height: 75px;
+    height: 150px;
+    margin-top: 0.5rem;
 }
 
 .profile-btn{
@@ -35,7 +30,7 @@ h1{
 
 .nav-menu{
     background-color: antiquewhite;
-    width: 40vw;
+    width: 30vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -46,7 +41,7 @@ h1{
     z-index: 999;
 }
 .nav-menu.active{
-    right: 60%;
+    right: 70%;
     transition: 850ms;
 }
 
@@ -64,7 +59,7 @@ h1{
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: start;
     padding: 0 16px;
     border-radius: 4px;
 }
@@ -73,9 +68,6 @@ h1{
 
 }
 
-.nav-text img{
-    height: 50px;
-}
 
 .nav-menu-items{
     width: 100%;

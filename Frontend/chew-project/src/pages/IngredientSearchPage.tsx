@@ -14,7 +14,7 @@ const IngredientSearchPage = () => {
 
     return (
         <>
-            {/* <Navbar avatarSrc="images/default-avatar.png"/> */}
+            <Navbar avatarSrc="images/profile.png"/>
             <Sidetabs />
             
 

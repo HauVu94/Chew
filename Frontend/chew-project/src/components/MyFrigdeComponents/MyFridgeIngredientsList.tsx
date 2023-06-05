@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../styles/MyFridgeIngredientsList.css'
+import { PageTitle } from '../PageComponents/PageTitle'
 
 
 
@@ -10,11 +11,8 @@ const MyFridgeIngredientsList = () => {
 
   return (
     <>
-      <div className='title-container'>
-        <h2 className='page-title'>Ditt Kjøleskap</h2>
-      </div>
-
       <div className='ingredient-container'>
+      <PageTitle pageTitle='Ditt Kjøleskap' />
         <ul>
           {ingredientsList.map(ingredient => <li key={ingredient}>{ingredient}</li>)}
         </ul>

@@ -1,0 +1,26 @@
+.calendar-container{
+    background-color: #ff5b2e;
+    border-radius: 0 50px 50px 0;
+    width: 30vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 20;
+    right: 100%;
+    transition: 500ms;
+    z-index: 900;
+}
+
+.calendar-container.active{
+    right: 70%;
+    transition: 850ms;
+}
+
+.calendar-title{
+    z-index: 999;
+    color: white;
+}
+
+.calendar-icon svg{
+}

@@ -29,12 +29,12 @@ top: 0;
 }
 
 .profile-picture{
+    background-color: magenta;
     width: 200px;
     height: 200px;
     position: absolute;
     top: 10px;
     left: 15px;
-    background-image: url(../../public/images/child-avatar.png);
     background-size: 200px;
     border: #000000 40px;
     border-radius: 3rem;

@@ -7,6 +7,7 @@ export const ProfilePage = () => {
         <> 
             <Navbar avatarSrc="images/profile.png"/>
 
+            
             <div className='profilecard-container'>
                 <div className='banner-orange'></div>
                 <div className='profile-picture'></div>
@@ -17,18 +18,25 @@ export const ProfilePage = () => {
                 <div className='fremgang'></div>
                 <div className='tracker'></div>
                 <div className='bragder'>
-                    <h2>Bragder</h2>
+                    
                     <div className='bragde-boks'>
-                        <div className='bragd-icon'></div>
-                        <div className='bragd-icon'></div>
+                        <h2 className='h2-bragder'>BRAGDER</h2>
+                        <div className='bragd-stekepanne'></div>
+                        <div className='bragd-kuttetomat'></div>
                         <div className='bragd-icon'></div>
                         <div className='bragd-icon'></div>
                         <div className='bragd-icon'></div>
                     </div>
                 </div>
+
+                <h2 className='h2-opplåsninger'>OPPLÅSNINGER OG NIVÅ</h2>
             </div>
 
-            <img className="background-blue" src="../images/Dividerblue.png"></img>
+            <div className='background-beige'></div>
+            <div className='background-foods'></div>
+            <div className='background-blue'></div>
+            
+            
             
         </>
     )

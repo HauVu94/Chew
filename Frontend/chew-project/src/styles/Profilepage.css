@@ -151,21 +151,31 @@ top: 0;
     }
 }
 
-.background-blue{
-    background-image: url("../../public/images/Denblågreia.svg");
-    height: 500px;
+.background-beige{
+    background-image: url("../../public/images/Denbeigegreia.svg");
+    height: 400px;
     width: 100%;
     top: 100%;
-    background-position: center;
+    background-position-y: top;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .background-foods{
     background-image: url("../../public/images/Bakgrunnbrokoli.png");
-    background-color: #cccccc;
-    height: 500px;
-    background-position: center;
+    height: 800px;
+    width: 100%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-origin: content-box;
+}
+
+.background-blue{
+    background-image: url("../../public/images/Denblågreia.svg");
+    height: 400px;
+    width: 100%;
+    background-position-y: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 }

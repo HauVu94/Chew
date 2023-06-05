@@ -1,0 +1,32 @@
+.social-container{
+    background-color: #ff5b2e;
+    border-radius: 50px 0 0 50px;
+    width: 30vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 20;
+    left: 100%;
+    transition: 500ms;
+    z-index: 900;
+}
+
+.social-container.active{
+    left: 70%;
+    transition: 850ms;
+}
+
+.social-title{
+    z-index: 999;
+    color: white;
+}
+
+.social-container svg{
+    color: wite;
+}
+
+.menu-bars svg{
+    font-size: 3rem;
+    color: white;
+}

@@ -10,7 +10,6 @@ import './styles/App.css';
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { RegisterPage } from './pages/RegisterPage';
-import IngredientSearch from './components/SearchComponents/IngredientSearch';
 import IngredientSearchPage from './pages/IngredientSearchPage';
 import { ShoppingListPage } from './pages/ShoppingListPage';
 
@@ -30,6 +29,7 @@ function App() {
             <Route path="/LoginTeacher" element={ <LoginTeacher/> }></Route>
             <Route path="/ProfilePage" element={ <ProfilePage/> }></Route>
             <Route path="/ShoppingListPage" element={ <ShoppingListPage/> }></Route>
+            <Route path="/IngredientSearchPage" element={ <IngredientSearchPage/> }></Route>
 
           </Routes>
       </Router>

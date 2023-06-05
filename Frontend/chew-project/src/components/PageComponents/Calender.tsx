@@ -17,6 +17,9 @@ export const Calender = () => {
             </Link>
             <div className={calendar ? "calendar-container active" : "calendar-container"}>
                     <h2 className="calendar-title">Calendar</h2>
+                    <Link to="#" className="calendar-icon" onClick={showCalendar}> 
+                        <BiIcon.BiX />
+                    </Link>
             </div>
         </>
     )

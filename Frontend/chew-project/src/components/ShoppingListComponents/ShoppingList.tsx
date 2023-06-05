@@ -16,30 +16,30 @@ interface shoppingListItem{
 export const ShoppingList = () => {
 
     const [shoppingList, setShoppingList] = useState<shoppingListItem[]>([
-        {
-            id: uuid(),
-            name: '1,5L Melk',
-            quantity: 2,
-            isChecked: false
-        },
-        {
-            id: uuid(),
-            name: '400gr Kjøttdeig',
-            quantity: 1,
-            isChecked: false
-        },
-        {
-            id: uuid(),
-            name: '1kg Beatepoteter',
-            quantity: 1,
-            isChecked: false
-        },
-        {
-            id: uuid(),
-            name: 'Kattemat',
-            quantity: 4,
-            isChecked: false
-        },
+        // {
+        //     id: uuid(),
+        //     name: '1,5L Melk',
+        //     quantity: 2,
+        //     isChecked: false
+        // },
+        // {
+        //     id: uuid(),
+        //     name: '400gr Kjøttdeig',
+        //     quantity: 1,
+        //     isChecked: false
+        // },
+        // {
+        //     id: uuid(),
+        //     name: '1kg Beatepoteter',
+        //     quantity: 1,
+        //     isChecked: false
+        // },
+        // {
+        //     id: uuid(),
+        //     name: 'Kattemat',
+        //     quantity: 4,
+        //     isChecked: false
+        // },
     ]);
 
     const addItemToList = () => {

@@ -1,77 +1,96 @@
-"""
-The terminal have some errors printing which is in solving.
-If you wish to check that the database received the correct data check the query console.
-"""
-
-# Code block 1: Table creation
 import sqlite3
 
-conn = sqlite3.connect('chew.db') #Insert chew.db for file name when done with testing
-c = conn.cursor()
+# Create the tables in the database
+with sqlite3.connect('chew.db') as conn:
+    c = conn.cursor()
 
-# Creates the tables in the database
-c.execute("""CREATE TABLE IF NOT EXISTS user(
-            id int,
-            firstName text,
-            lastName text,
-            birthDate int,
-            email text,
-            phone int,
-            roles text,
-            profilePic blob 
-            )""")
+    c.execute("""
+        CREATE TABLE IF NOT EXISTS user(
+            id INTEGER,
+            firstName TEXT,
+            lastName TEXT,
+            birthDate INTEGER,
+            email TEXT,
+            phone INTEGER,
+            roles TEXT,
+            profilePic BLOB
+        )
+    """)
 
-c.execute("""CREATE TABLE IF NOT EXISTS member(
-            userId int,
-            instituteId int,
-            familyId int
-            )""")
+    c.execute("""
+        CREATE TABLE IF NOT EXISTS member(
+            userId INTEGER,
+            instituteId INTEGER,
+            familyId INTEGER
+        )
+    """)
 
-c.execute("""CREATE TABLE IF NOT EXISTS family(
-            familyId int,
-            lastName text
-            )""")
+    c.execute("""
+        CREATE TABLE IF NOT EXISTS family(
+            familyId INTEGER,
+            lastName TEXT
+        )
+    """)
 
-c.execute("""CREATE TABLE IF NOT EXISTS institute(
-            instituteId int
-            )""")
+    c.execute("""
+        CREATE TABLE IF NOT EXISTS institute(
+            instituteId INTEGER
+        )
+    """)
 
-c.execute("""CREATE TABLE IF NOT EXISTS fridge(
-            fridgeId int
-            )""")
+    c.execute("""
+        CREATE TABLE IF NOT EXISTS fridge(
+            fridgeId INTEGER
+        )
+    """)
 
-c.execute("""CREATE TABLE IF NOT EXISTS foodItem(
-            quantity int,
-            bestBeforeDate int,
-            fridgeId int,
-            ingredientId int
-            )""")
+    c.execute("""
+        CREATE TABLE IF NOT EXISTS foodItem(
+            quantity INTEGER,
+            bestBeforeDate INTEGER,
+            fridgeId INTEGER,
+            ingredientId INTEGER
+        )
+    """)
 
-c.execute("""CREATE TABLE IF NOT EXISTS ingredient(
-            ingredientName text
-            )""")
+    c.execute("""
+        CREATE TABLE IF NOT EXISTS ingredient(
+            ingredientName TEXT
+        )
+    """)
 
-c.execute("""CREATE TABLE IF NOT EXISTS ingredientQuantity(
-            quantity int,
-            recipeId int    
-            )""")
+    c.execute("""
+        CREATE TABLE IF NOT EXISTS ingredientQuantity(
+            quantity INTEGER,
+            recipeId INTEGER
+        )
+    """)
 
-c.execute("""CREATE TABLE IF NOT EXISTS recipe(
-            recipeId int,
-            name text,
-            description text
-            )""")
+    c.execute("""
+        CREATE TABLE IF NOT EXISTS recipe(
+            recipeId INTEGER,
+            name TEXT,
+            description TEXT
+        )
+    """)
 
-print("Table creation errors:")
-for error in conn.execute("PRAGMA table_info(user)"):
-    print(error)
+    # Print table creation errors
+    print("Table creation errors:")
+    for error in conn.execute("PRAGMA table_info(user)"):
+        print(error)
 
-conn.commit()
+    conn.commit()
 
-# Inserts values into the database
-c.execute("INSERT INTO user VALUES ('0', 'Marcus', 'Cin', 250800, 'test@mail.com', '12345678', 'Teacher', 'pfpic.jpeg')")
+    # Insert values into the user table
+    c.execute(
+        "INSERT INTO user VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+        ('0', 'Marcus', 'Cin', 250800, 'test@mail.com', '12345678', 'Teacher', 'pfpic.jpeg')
+    )
 
-print(c.fetchall())
+    # Retrieve and print data from the user table
+    c.execute("SELECT * FROM user")
+    rows = c.fetchall()
+    for row in rows:
+        print(row)
 
-conn.commit()
-conn.close()
+    conn.commit()

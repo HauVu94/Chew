@@ -1,9 +1,10 @@
 import sqlite3
 
-# Create the tables in the database
+# Connects the database
 with sqlite3.connect('chew.db') as conn:
     c = conn.cursor()
 
+# All general database tables are created here
     c.execute("""
         CREATE TABLE IF NOT EXISTS user(
             id INTEGER,
@@ -70,6 +71,16 @@ with sqlite3.connect('chew.db') as conn:
         CREATE TABLE IF NOT EXISTS recipe(
             recipeId INTEGER,
             name TEXT,
+            description TEXT
+        )
+    """)
+# End of general database tables
+
+# Database tables for profile page is created here
+    c.execute("""
+        CREATE TABLE IF NOT EXISTS profileBadges(
+            badgeId INTEGER,
+            badgeIcon BLOB,
             description TEXT
         )
     """)

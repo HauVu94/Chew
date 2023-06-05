@@ -1,32 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 // Dummy data, import from database
-
-const ingredientsList = [{id: 1, name: 'Hodekål'}, {id: 2, ingr: 'Grønnkål'}, {id: 3, ingr: 'Spisskål'}, {id: 4, ingr: 'Kålrabi'}, {id: 5, ingr: 'Rødkål'}]
-
-// const getFilteredItems = (query, items) => {
-// 	if (!query){
-// 		return items
-// 	}
-// 	return items.filter(ingredient => ingredient.name.incudes(query))
-// } 
+const ingredientsList = [{id: 1, name: 'Hodekål'}, {id: 2, name: 'Grønnkål'}, {id: 3, name: 'Spisskål'}, {id: 4, name: 'Kålrabi'}, {id: 5, name: 'Rødkål'}, {id: 6, name: 'Rødkål'}, {id: 7, name: 'Rødkål'}, {id: 8, name: 'Rødkål'}]
 
 
 const IngredientSearch = () => {
-	const [query, setQuery] = useState("")
+	const [searchTerm, setSearchTerm] = useState('')
 
-	// const {ingredients} = ingredientsList
-	// const {items} = ingr
-
-	// const filteredItems = getFilteredItems(query, items)
-
-	return (
+	return(
 		<div className='ingredient-search-container'>
-			<h1>Finn matvare</h1>
-			<input className='ingredeients-search-field' type='text' onChange={e => setQuery(e.target.value)} />
-			<ul>
-				{/* {filteredItems.map(value => <p key={value.id}>{value.name}</p>)} */}
-			</ul>
+			<input type='text' onChange={event => {setSearchTerm(event.target.value)}} placeholder='Søk...' className='ingredeients-search-field'/>
+			
+				<ul>
+					{ingredientsList.filter((val) => {
+						if (searchTerm === ''){
+							return ""
+						} else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())){
+							return val
+						}
+					}).slice(0,5).map((val, key) => {
+						return (
+							<div className='search-results-tab'>
+								<li>{val.name}</li>
+							</div>
+						)
+				})}
+				</ul>
 		</div>
 	)
 }

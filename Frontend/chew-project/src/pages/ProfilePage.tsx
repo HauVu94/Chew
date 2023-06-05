@@ -32,10 +32,10 @@ export const ProfilePage = () => {
                 <h2 className='h2-opplåsninger'>OPPLÅSNINGER OG NIVÅ</h2>
             </div>
 
-            
-            
-            <div className='background-blue'></div>
+            <div className='background-beige'></div>
             <div className='background-foods'></div>
+            <div className='background-blue'></div>
+            
             
             
         </>

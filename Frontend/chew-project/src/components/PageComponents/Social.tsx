@@ -16,11 +16,29 @@ export const Social = () => {
                     </div>
             </Link>
             <div className={social ? "social-container active" : "social-container"}>
-                    <h2 className="social-title">social</h2>
-
-                    <Link to="#" className="menu-bars"> 
+                <div className="social-header">
+                    <Link to="#" className="social-cross" onClick={showSocial}> 
                         <BiIcon.BiX />
                     </Link>
+                    <h2 className="social-title">Dine venner</h2>
+                </div>
+                <div className="social-list">
+                    <div className="social-item">
+                        <h3 className="social-name">Navn1</h3>
+                    </div>
+                    <div className="social-item">
+                        <h3 className="social-name">Navn1</h3>
+                    </div>
+                    <div className="social-item">
+                        <h3 className="social-name">Navn1</h3>
+                    </div>
+                    <div className="social-item">
+                        <h3 className="social-name">Navn1</h3>
+                    </div>
+                </div>
+
+                <input className="social-search" type="text" placeholder="Søk..."></input>
+                
             </div>
         </>
     )

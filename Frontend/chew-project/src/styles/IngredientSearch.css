@@ -10,17 +10,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
 
 .ingredeients-search-field{
     height: 3em;
     width: 25em;
     margin: 1em;
-
     border-radius: 2em;
-
-padding: .2em 2em;
+    padding: .2em 2em;
 }
 
 

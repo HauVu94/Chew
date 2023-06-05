@@ -1,30 +1,22 @@
 .tab-wrapper{
-    display: grid;
-    height: 200px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .sidetab{
-    box-shadow: 0px 2px 6px 1px rgba(92, 92, 92, 0.411);
-    display: grid;
-    position: absolute;
-    justify-items: center;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 6px 1px rgba(92, 92, 92, 0.411);
     width: 85px;
-    height: 65px;
+    height: 70px;
     background-color: #ff5b2e;
-    top: 225px;
-}
-
-.sidetab-icon{
-    height: 40px;
 }
 
 .sidetab-left{
     border-radius: 0px 50px 50px 0px;
-    justify-self: start;
 }
 
 .sidetab-right{
     border-radius: 50px 0px 0px 50px;
-    justify-self: end;
 }

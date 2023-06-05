@@ -6,10 +6,7 @@
     border-radius: 25px;
     max-height: 75vh;
     overflow-y: scroll;
-
-    margin-left: auto;
-    margin-right: auto;
-    width: 60vw;
+    margin: 1rem 5rem 5rem 5rem;
 }
 
 .cross-container{

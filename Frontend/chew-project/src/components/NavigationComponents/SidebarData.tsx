@@ -9,7 +9,7 @@ export const SidebarData = [
     },
     {
         title: 'Profil',
-        path: '/Profile',
+        path: '/ProfilePage',
         icon: <BiIcons.BiUser/>,
         cName: 'nav-text'
     },

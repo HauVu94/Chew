@@ -35,4 +35,11 @@ body{
     color: #ff5b2e;
 }
 
+.footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+
+}
+
 

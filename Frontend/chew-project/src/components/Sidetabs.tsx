@@ -1,16 +1,19 @@
-import React from "react";
-
+import React, { useState } from "react";
+import * as BiIcon from "react-icons/bi"
+import { Link } from "react-router-dom";
 import "../styles/Sidetab.css"
+import { Calender } from "./PageComponents/Calender";
+import { Social } from "./PageComponents/Social";
 
 const Sidetabs = () => {
 
     return(
-        <div className="tab-wrapper">
-            <div className="sidetab sidetab-left">
-                <img className="sidetab-icon" alt="calendar-icon" src="images/calendar-icon.png"/>
-            </div>
-            <div className="sidetab sidetab-right">
-                <img className="sidetab-icon" alt="social-icon" src="images/social-icon.png"/>
+        <div className="sidetab-container">
+            <div className="tab-wrapper">
+                
+                <Calender />
+
+                <Social />
             </div>
         </div>
     )

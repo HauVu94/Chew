@@ -19,6 +19,12 @@ create table User(
     password    int      not null
 );
 
+
+    create table Movies(id          int      not null AUTO_INCREMENT
+    title char(20) not null,
+    Year int);
+
+
 create table Member(
     userId      int not null
         primary key,

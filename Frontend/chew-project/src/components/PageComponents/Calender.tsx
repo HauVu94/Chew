@@ -8,8 +8,6 @@ export const Calender = () => {
 
     const showCalendar = () => {
         setCalendar(!calendar)
-        .calendar-icon
-
     }
 
     const calendarList = [
@@ -32,7 +30,7 @@ export const Calender = () => {
             title: "Torsdag 07.April - 12:50",
             teacher: "Tina Ellingsen Rosenhoff",
             subject: "Introduksjon til matsvinn",
-      æ      comment: "Ha med lærebok og skrivesaker",
+            comment: "Ha med lærebok og skrivesaker",
         },
         {
             id: 1,

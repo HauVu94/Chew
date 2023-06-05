@@ -34,9 +34,9 @@ export const ProfilePage = () => {
 
             
             
+            <div className='background-blue'></div>
+            <div className='background-foods'></div>
             
-
-            <img className="background-blue" src="../images/Dividerblue.png"></img>
             
         </>
     )

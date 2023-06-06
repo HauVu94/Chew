@@ -18,6 +18,8 @@ body{
 
 .page-title{
     font-size: 3rem;
+    text-align: center;
+    font-style: italic;
 }
 
 /* Chew Logo CSS */

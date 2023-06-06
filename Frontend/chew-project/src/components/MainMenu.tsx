@@ -65,9 +65,7 @@ const MainMenu = () => {
 
     const btn4Click = () => {
         if(button4Text === "Trenger du hjelp?"){
-            console.log("Trykket på 'Trenger du hjelp?'");
-            alert("Ingenting her enda")
-            navigate("/");
+            navigate("/QAPage");
         }
     }
 

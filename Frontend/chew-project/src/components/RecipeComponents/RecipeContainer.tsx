@@ -43,7 +43,7 @@ export const RecipeContainer  = () => {
                         {/*TEST RECIPES*/}
 
                         <article className='recipe-card'>
-                            <img className='recipe-img' src="images/recipes/kjøttform.png" alt="image"/>
+                            <img className='recipe-img' src="images/recipes/kjottform.png" alt="image"/>
                             <div className='recipe-title'>
                                 <div className="ingredients-avaliable green"></div>
                                 <h4>Engelsk Hyrdepai</h4>
@@ -54,7 +54,7 @@ export const RecipeContainer  = () => {
                         </article>
 
                         <article className='recipe-card'>
-                            <img className='recipe-img' src="images/recipes/kjøttkaker.png" alt="image"/>
+                            <img className='recipe-img' src="images/recipes/kjottkaker.png" alt="image"/>
                             <div className='recipe-title'>
                                 <div className="ingredients-avaliable yellow"></div>
                                 <h4>Hjemmelagde kjøttkaker</h4>

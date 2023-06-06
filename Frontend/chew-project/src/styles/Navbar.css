@@ -12,12 +12,6 @@
     height: 50px;
 }
 
-.chew-logo{
-    grid-column: 3 / 10;
-    height: 150px;
-    margin-top: 0.5rem;
-}
-
 .profile-btn{
     grid-column: 11 / 12;
     height: 50px;

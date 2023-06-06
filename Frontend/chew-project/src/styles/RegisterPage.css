@@ -9,6 +9,7 @@
     border: solid #C8BCAC 2px;
     border-radius: 2rem;
     box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);
+    background-image: url("../../public/images/Bakgrunnbrokoli.png");
     
 }
 .register-body{
@@ -23,12 +24,10 @@
     grid-template-columns: 2fr, 8fr, 2fr;
     grid-column: 3 / 10;
     margin: 2rem;
-    height: 75px;
 }
 .reg-logo img{
     display: block;
     margin: 0 auto;
-    height: 75px;
 }
 
 .save-btn-reg{
@@ -57,5 +56,26 @@
     border: none;
     align-items: center;
     text-align: center;
+}
 
+.register-header{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100vw;
+    align-items: center;
+
+}
+
+.back-icon svg{
+    justify-self: start;
+    grid-column: auto / span 1;
+    margin-left: 2rem;
+    font-size: 3rem;
+    text-decoration: none;
+    color: #ff5b2e;
+}
+
+
+.reg-logo{
+    grid-column: auto / span 10;
 }

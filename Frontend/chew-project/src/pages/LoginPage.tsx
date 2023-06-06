@@ -35,12 +35,8 @@ export const LoginPage = () => {
   };
     return (
         <div className="login-body">
-            <div className="back-icon">
-            <Link to="/"><img className="x-btn" src="images/cross.png"/></Link>
-          </div>
-          <div>
-            <Link to="/"><img className="login-logo" src="images/chew-logo.png" alt="Logo" /></Link>
-          </div>
+
+          <Link to="/"><img className="chew-logo" src="images/chew-logo.png" alt="Logo" /></Link>
 
           <div className="form-login">
             <label className="form-txt">Brukernavn</label>
@@ -63,13 +59,21 @@ export const LoginPage = () => {
               Logg Inn
             </button>
 
+            <div className='register-forgot-container'>
+              <div className='register-container'>
+                <label className="register-lbl">Registrer deg</label>
+                <Link to="/RegisterTPP">
+                  <button className="register-btn">Registrer</button>
+                </Link>
+              </div>            
 
-                    <label className="register-lbl">Registrer deg</label>
-                        <Link to="/LoginTPP"><button className="register-btn">Registrer</button></Link>
+              <div className='forgot-container'>
+                <label className="forgot-lbl">Glemt passord?</label>
+                <button className="forgot-btn">Nullstill</button>
+              </div>
 
-                    <label className="forgot-lbl">Glemt passord?</label>
-                    <button className="reset-btn">Nullstill</button>
-                </div>
             </div>
+            </div>
+          </div>
         );
 }

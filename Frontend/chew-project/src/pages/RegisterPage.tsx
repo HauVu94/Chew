@@ -1,3 +1,4 @@
+import { RegisterHeader } from "../components/RegisterComponents/RegisterHeader"
 import "../styles/RegisterPage.css"
 import { Link } from "react-router-dom"
 
@@ -5,12 +6,7 @@ import { Link } from "react-router-dom"
 export const RegisterPage = () => {
     return(
         <div className="register-body">
-            <div className="reg-logo">
-                <img className="chew-logo-reg" src="images/chew-logo.png"/>
-            </div>
-            <div className="back-icon">
-                <Link to="/"><img className="x-btn" src="images/cross.png"/></Link>
-            </div>
+            <RegisterHeader />
 
             <div className="form-registration">
                 <label className="form-txt">Fornavn:</label>
@@ -27,7 +23,7 @@ export const RegisterPage = () => {
                     <input type="text" placeholder="Skriv ønsket brukernavn"/>
                 <label className="form-txt">Skriv ønsket passord:</label>
                     <input type="password" placeholder="Skriv inn ønsket passord"/>
-                <button className="save-btn-reg">Lagre endringer</button> 
+                <button className="save-btn-reg">Lag Profil</button> 
             </div>
         </div>
     )

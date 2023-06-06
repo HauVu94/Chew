@@ -7,7 +7,6 @@ import { LoginTPP } from './pages/LoginTPP';
 import { LoginTeacher } from './pages/LoginTeacher';
 import { LoginPupil } from './pages/LoginPupil';
 import './styles/App.css';
-
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { RegisterPage } from './pages/RegisterPage';
 import IngredientSearchPage from './pages/IngredientSearchPage';

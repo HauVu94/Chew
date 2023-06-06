@@ -43,3 +43,26 @@ body{
 }
 
 
+       ::-webkit-scrollbar {
+        width: 10px;
+        position: absolute;
+        right: 3px;
+        
+    }
+
+    /* Customize the scrollbar track */
+    ::-webkit-scrollbar-track {
+        background-color: #ff5b2e45;
+        
+    }
+
+    /* Customize the scrollbar thumb */
+    ::-webkit-scrollbar-thumb {
+        background-color: #ff5b2ea2;
+       
+    }
+
+    /* Customize the scrollbar thumb on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #ff5b2e;
+    }

@@ -1,7 +1,7 @@
 .ingredient-container{
     height: 100%;
     margin: 1rem 5rem 5rem 5rem;
-
+    background-image: url("../../public/images/Bakgrunnbrokoli.png");
 
     padding: .5em;
     background-color: #fff;
@@ -18,6 +18,43 @@
     /* color: red; */
 }
 
+.page-title{
+    font-size: 5rem;
+}
+
 .ingredient-container ul{
     margin-top: 1em;
+}
+
+.fridge-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.fridge-section{
+    grid-column: auto / span 6  ;
+    margin: 0 5rem 1.5rem 5rem;
+    border-bottom: 2px solid black;
+}
+
+.fridge-title{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.fridge-item {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.fridge-text {
+    font-size: 1.5rem;
+    grid-column: auto / span 10;
+}
+
+.fridge-item svg{
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: black;
 }

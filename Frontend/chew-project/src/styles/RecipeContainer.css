@@ -1,11 +1,11 @@
 .recipe-container{
     display: grid;
-    background-color: white;
     border-radius: 0px 0px 25px 25px;
     grid-template-columns: repeat(12, 1fr);
     width: auto;
     height: 1000px;
     overflow: scroll;
+    border-top: 1px solid black;
 }
 
 .recipe-card-container{
@@ -18,7 +18,7 @@
 
 .info-wrapper{
     display: grid;
-    background-color: white;
+    background-image: url("../../public/images/Bakgrunnbrokoli.png");
     height: 100%;
     margin: 1rem 5rem 5rem 5rem;
     border-radius: 2rem;

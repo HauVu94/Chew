@@ -17,6 +17,12 @@
     border-radius: 0px 50px 50px 0px;
 }
 
+.sidetab-left.active, .sidetab-right.active{
+    visibility: hidden;
+    transition: 200ms;
+}
+
 .sidetab-right{
     border-radius: 50px 0px 0px 50px;
 }
+

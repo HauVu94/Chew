@@ -2,11 +2,14 @@
 
 .shoppinglist-container{
     display: grid;
-    background-color: white;
-    border-radius: 25px;
-    max-height: 75vh;
+    background-image: url("../../public/images/Bakgrunnbrokoli.png");
+    
+    max-height: 650px;
+    max-width: 650px;
     overflow-y: scroll;
-    margin: 1rem 5rem 5rem 5rem;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow: 1px 3px 6px 1px rgba(0, 0, 0, 0.289);
 }
 
 .cross-container{
@@ -20,11 +23,20 @@
     align-self: flex-end;
     margin: 0 1rem 1rem 0;
     position: absolute;
+    transform: scale(2);
 }
 
 .grocery-container{
     margin: 0 2rem 3rem 3rem;
     gap: 3rem 1rem;
+    justify-content: center;
+    min-height: 35px;
+}
+
+.wrapper{
+    justify-self: center;
+    background-color: white;
+  
 }
 
 .grocery-item{
@@ -37,12 +49,13 @@
 }
 
 .number-input{
-    grid-column: auto/ span 1;
+    grid-column: auto/ span 3;
     width: 2rem;
+    white-space: nowrap;
 }
 
 .grocery-label{
-    grid-column: auto/ span 9;
+    grid-column: auto/ span 7;
 }
 
 .checkbox-input{
@@ -53,4 +66,13 @@
 
 .trashcan-icon{
     grid-column: auto/ span 1;
+}
+
+.edit-icon{
+    grid-column: auto/ span 1;
+}
+
+.item-buttons{
+    display: flex;
+    justify-content: space-between;
 }

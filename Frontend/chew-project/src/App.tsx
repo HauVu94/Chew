@@ -1,4 +1,5 @@
 import { HomePage } from './pages/HomePage';
+import { QAPage } from './pages/QAPage';
 import { MyFridge } from './pages/MyFridge';
 import { LoginPage } from './pages/LoginPage';
 import { RecipePage } from './pages/RecipePage';
@@ -29,6 +30,7 @@ function App() {
             <Route path="/ProfilePage" element={ <ProfilePage/> }></Route>
             <Route path="/ShoppingListPage" element={ <ShoppingListPage/> }></Route>
             <Route path="/IngredientSearchPage" element={ <IngredientSearchPage/> }></Route>
+            <Route path="/QAPage" element={ <QAPage/> }></Route>
 
           </Routes>
       </Router>

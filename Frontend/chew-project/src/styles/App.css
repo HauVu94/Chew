@@ -53,16 +53,15 @@ body{
 }
 
 
-       ::-webkit-scrollbar {
-        width: 10px;
-        position: absolute;
-        right: 3px;
-        
+    ::-webkit-scrollbar {
+    width: 10px;
+    position: absolute;
+    right: 3px;
     }
 
     /* Customize the scrollbar track */
     ::-webkit-scrollbar-track {
-        background-color: #ff5b2e45;
+        background-color: transparent;
         
     }
 

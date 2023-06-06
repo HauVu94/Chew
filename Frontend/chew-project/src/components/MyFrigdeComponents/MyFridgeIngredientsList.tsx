@@ -2,7 +2,9 @@ import React from 'react'
 import '../../styles/MyFridgeIngredientsList.css'
 import { PageTitle } from '../PageComponents/PageTitle'
 import * as TbIcon from 'react-icons/tb'
-import {RxCross2} from 'react-icons/rx'
+import {BsTrash} from 'react-icons/bs'
+import * as LuIcons from 'react-icons/lu'
+
 
 
 
@@ -22,7 +24,7 @@ const MyFridgeIngredientsList = () => {
             {ingredientsList.map(ingredient => <li className='fridge-item' key={ingredient}>
               <TbIcon.TbCarrot />
               <span className='fridge-text'>{ingredient}</span>
-              <RxCross2 />
+              <BsTrash/>
               </li>)}
           </ul>
         </div>
@@ -31,9 +33,9 @@ const MyFridgeIngredientsList = () => {
             <h2 className='fridge-title'>Frukt:</h2>
             {ingredientsList.map(ingredient => 
             <li className='fridge-item' key={ingredient}>
-              <TbIcon.TbApple />
+              <LuIcons.LuApple />
               <span className='fridge-text'>{ingredient}</span>
-              <RxCross2 />
+              <BsTrash/>
             </li>)}
           </ul>
         </div>
@@ -44,7 +46,7 @@ const MyFridgeIngredientsList = () => {
             <li className='fridge-item' key={ingredient}>
               <TbIcon.TbMeat />
               <span className='fridge-text'>{ingredient}</span>
-              <RxCross2 />
+              <BsTrash/>
               </li>)}
           </ul>
         </div>
@@ -53,9 +55,9 @@ const MyFridgeIngredientsList = () => {
             <h2 className='fridge-title'>Rester:</h2>
             {ingredientsList.map(ingredient => 
             <li className='fridge-item' key={ingredient}>
-              <TbIcon.TbMeat />
+              <LuIcons.LuPizza />
               <span className='fridge-text'>{ingredient}</span>
-              <RxCross2 />
+              <BsTrash/>
               </li>)}
           </ul>
         </div>
@@ -64,9 +66,9 @@ const MyFridgeIngredientsList = () => {
             <h2 className='fridge-title'>Diverse:</h2>
             {ingredientsList.map(ingredient => 
             <li className='fridge-item' key={ingredient}>
-              <TbIcon.TbCarrot />
+              <TbIcon.TbSalad />
               <span className='fridge-text'>{ingredient}</span>
-              <RxCross2 />
+              <BsTrash/>
               </li>)}
           </ul>
         </div>

@@ -1,6 +1,6 @@
 import React from "react"
 import Navbar from '../components/NavigationComponents/Navbar';
-import Grid from '../components/Grid';
+import GridComponent from "../components/GridComponent"
 import "../styles/VideoPage.css"
 
 export const VideoPage = () => {
@@ -14,23 +14,20 @@ export const VideoPage = () => {
                 
                     <div className="video-player">
                     <iframe width="791" height="445" 
-                    src="https://www.youtube.com/embed/YAtyz3V5-pQ" 
-                    title="Chew on This with Mano Rashidi | Chew&#39;s CEO" 
-                    frameBorder="0" 
-                    data-allow="accelerometer; 
-                    autoplay; clipboard-write; 
-                    encrypted-media; gyroscope; 
-                    picture-in-picture; 
-                    web-share" 
-                    allowFullScreen>
-                    </iframe>
+                        src="https://www.youtube.com/embed/YAtyz3V5-pQ" 
+                        title="Chew on This with Mano Rashidi | Chew&#39;s CEO" 
+                        frameBorder="0" 
+                        data-allow="accelerometer; 
+                        autoplay; clipboard-write; 
+                        encrypted-media; gyroscope; 
+                        picture-in-picture; 
+                        web-share" 
+                        allowFullScreen>
+                        </iframe>
                     </div>
 
-                    <Grid/>
-
-
+                    <GridComponent />
                 </div>
-              
         </div>
 
     )

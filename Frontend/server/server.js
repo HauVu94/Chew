@@ -2,8 +2,11 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import express from "express";
 import dotenv from "dotenv";
+import req from "express/lib/request.js";
+import res from "express/lib/response.js";
 dotenv.config()
 const app = express();
+const db = require('./database')
 app.use(bodyParser.json())
 app.use(cookieParser(process.env.COOKIE_SECRET))
 
@@ -11,7 +14,20 @@ const users = [{ username: "Haavar123", password: "123" }]
 
 
 
-
+app.get("/api/users", (req, res, next) => {
+  const sql = "select * from user"
+  const params = []
+  db.all(sql, params, (err, rows) => {
+    if (err){
+      res.status(400).json({"error":err.message});
+      return;
+    }
+    res.json({
+      "message": "success",
+      "data":rows
+    })
+  })
+})
 
 
 app.get("/api/login", (req, res) => {

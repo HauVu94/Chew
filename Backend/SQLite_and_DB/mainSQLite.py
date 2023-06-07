@@ -1,3 +1,7 @@
+# To make the database work you need to go into properties in the chew database on the right.
+# Then set the FILE NOT URL to the absolute path of the chew.sqlite file in the directory.
+# This will make the functions available and running.
+
 import os
 import sqlite3
 

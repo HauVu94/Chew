@@ -1,16 +1,54 @@
+import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
 import express from "express";
-
+import dotenv from "dotenv";
+dotenv.config()
 const app = express();
+app.use(bodyParser.json())
+app.use(cookieParser(process.env.COOKIE_SECRET))
+
+const users = [{ username: "Haavar123", password: "123" }]
+
+
+
+
+
 
 app.get("/api/login", (req, res) => {
-  return res.json({ username: "Haavar123", fullName: "Håvar Cedolf Karlsen" });
+  function respond(){
+    if(req.user){
+      const {username, password} = req.user;
+      return res.json({username, password})
+    }else{
+      res.status(204)
+    }
+  }
 });
 
 
+app.post("/api/login", (req, res) => {
+  const {username, password} = req.body;
 
+  //find user
+  const user = users.find(u => u.username === username && u.password === password); 
+
+  //if found user
+  if (user){
+    res.cookie("username", user.username, {signed: true});
+    res.sendStatus(200)
+  }
+  else{
+    res.sendStatus(401)
+  }
+})
+
+
+
+
+//Says where you find static files
 app.use(express.static("../client/dist"))
 
-app.use((req, res) => {
+app.use((req, res, next) => {
   if (req.method === "GET" && !req.path.startsWith("/api")) {
     res.sendFile(path.resolve("../client/dist/index.html"));
   } else {

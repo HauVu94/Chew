@@ -1,15 +1,11 @@
-import "../styles/LoginTeacher.css"
+import { RegisterHeader } from "../components/RegisterComponents/RegisterHeader";
+import "../styles/Login.css"
 import { Link } from 'react-router-dom';
 
-export const LoginTeacher = () => {
+export const RegisterTeacher = () => {
     return(
         <div className="register-body">
-            <div className="reg-logo">
-                <img className="chew-logo-reg" src="images/chew-logo.png"/>
-            </div>
-            <div className="back-icon">
-                <Link to="/"><img className="x-btn" src="images/cross.png"/></Link>
-            </div>
+            <RegisterHeader />
 
             <div className="form-registration">
                 <div>
@@ -18,7 +14,7 @@ export const LoginTeacher = () => {
                 
                 <label className="form-txt">Klassekode:</label>
                     <input className="input-field" type="tel" placeholder="4-A-Q-9"/>
-                <button className="save-btn-reg">Lagre endringer</button>
+                <button className="save-btn-reg">Lag Profil</button>
             </div>
 
         </div>

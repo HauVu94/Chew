@@ -3,6 +3,10 @@
 
 body{
     background-color: antiquewhite; /* bra farge? */
+    background:
+    url("../../public/images/Denblågreia.svg") no-repeat,
+    url("../../public/images/Denbeigegreia.svg"),
+    url("../../public/images/Bakgrunnbrokoli.png");
     margin: 0;
     font-family: 'Comic Neue', cursive;
     font-family: 'Poppins', sans-serif;

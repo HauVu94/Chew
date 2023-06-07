@@ -1,13 +1,13 @@
 import Navbar from "../components/NavigationComponents/Navbar"
 import { RecipeContainer } from "../components/RecipeComponents/RecipeContainer";
-import { RecipeTitleBar } from "../components/RecipeComponents/RecipeTitleBar";
+import { RecipeSidetab } from "../components/RecipeComponents/RecipeSidetab";
 
 export const RecipePage = () => {  
     return (
         <> 
             <Navbar avatarSrc="images/profile.png"/>   
 
-            <RecipeTitleBar />     
+            <RecipeSidetab />     
 
             <RecipeContainer />
      

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import * as BiIcons from 'react-icons/bi'
 
-export const RecipeTitleBar  = () => {
+export const RecipeSidetab = () => {
 
     return(
         <div className="tab-wrapper">

@@ -7,13 +7,20 @@
 # You can select the datasource on the right side in the datasource tab
 # and pressing the "+" icon on the top left in the tab
 
+import os
 import sqlite3
 
-# Connects the database
-with sqlite3.connect('chew.sqlite') as conn:
+# Get the current directory
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Create the database file path relative to the current directory
+db_file = os.path.join(current_dir, 'chew.sqlite')
+
+# Connect to the database
+with sqlite3.connect(db_file) as conn:
     c = conn.cursor()
 
-# All general database tables are created here
+    # All general database tables are created here
     c.execute("""
         CREATE TABLE IF NOT EXISTS user(
             id INTEGER,
@@ -83,9 +90,9 @@ with sqlite3.connect('chew.sqlite') as conn:
             description TEXT
         )
     """)
-# End of general database tables
+    # End of general database tables
 
-# Database tables for profile page is created here
+    # Database tables for profile page are created here
     c.execute("""
         CREATE TABLE IF NOT EXISTS profileBadges(
             badgeId INTEGER,

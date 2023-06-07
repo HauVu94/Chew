@@ -13,13 +13,12 @@ const AchievmentBox = () => {
   return (
     <div className='bragde-boks'>
         <h2 className='h2-bragder'>BRAGDER</h2>
-
+        
+        <div className='bragd-icon-container'>
         {dummyData.map(achievment => {
             return <Achievment key={achievment.id} message={achievment.message} image={achievment.img}/>
         })}
-        {/* <div className='bragd-icon'></div>
-        <div className='bragd-icon'></div>
-        <div className='bragd-icon'></div> */}
+        </div>
     </div>
   )
 }

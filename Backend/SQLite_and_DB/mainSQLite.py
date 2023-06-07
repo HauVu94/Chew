@@ -1,6 +1,8 @@
 """
 - mainSQLite.py needs to be ran first!
 - Remeber to connect SQLite as a datasource or the connection will not work!
+- If the "Can't resolve user" error persists, do ALT + SHIFT + ENTER and "choose schema" to resolve the issue
+    It will say that no schema is available but that's ok
 
 You can select the datasource on the right side in the datasource tab
 and pressing the "+" icon on the top left in the tab
@@ -92,11 +94,6 @@ with sqlite3.connect('chew.db') as conn:
             description TEXT
         )
     """)
-
-    # Print table creation errors
-    print("Table creation errors:")
-    for error in conn.execute("PRAGMA table_info(user)"):
-        print(error)
 
     conn.commit()
 

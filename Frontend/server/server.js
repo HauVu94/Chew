@@ -7,7 +7,9 @@ app.get("/api/login", (req, res) => {
 });
 
 
+
 app.use(express.static("../client/dist"))
+
 app.use((req, res) => {
   if (req.method === "GET" && !req.path.startsWith("/api")) {
     res.sendFile(path.resolve("../client/dist/index.html"));

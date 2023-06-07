@@ -3,7 +3,6 @@
     grid-template-columns: repeat(12, 1fr);
     margin: 3rem 5rem 0 5rem;
     height: 65vh;
-    background-image: url("../../public/images/Bakgrunnbrokoli.png");
     border-radius: 25px;
 }
 

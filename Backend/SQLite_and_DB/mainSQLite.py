@@ -1,12 +1,3 @@
-# IF THE DATABASE DO NOT WORK, CHECK THIS TO DO LIST !!!
-# - mainSQLite.py needs to be ran first!
-# - Remember to connect SQLite as a datasource or the connection will not work!
-# - If the "Can't resolve user" error persists, do ALT + SHIFT + ENTER and "choose schema" to resolve the issue
-#    It will say that no schema is available but that's ok the error should be sorted out
-
-# You can select the datasource on the right side in the datasource tab
-# and pressing the "+" icon on the top left in the tab
-
 import os
 import sqlite3
 

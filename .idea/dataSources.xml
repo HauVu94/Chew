@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="chew" uuid="be4a4fc1-e2db-41fb-a117-6164818bd31a">
+    <data-source source="LOCAL" name="chew" uuid="11e49fc8-b1c1-4a35-ba2f-c1f5b4a4ba9c">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
-      <configured-by-url>true</configured-by-url>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\frede\OneDrive\Dokumenter\GitHub\PRO202_SmidigProsjektEksamen\Backend\SQLite_and_DB\chew.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\hau_v\HK\4_Semester\pythonProject\PRO202_SmidigProsjektEksamen\Backend\SQLite_and_DB\chew.sqlite</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.40.1/org/xerial/sqlite-jdbc/3.40.1.0/sqlite-jdbc-3.40.1.0.jar</url>
+        </library>
         <library>
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.40.1/org/xerial/sqlite-jdbc/3.40.1.0/sqlite-jdbc-3.40.1.0.jar</url>
         </library>

@@ -16,7 +16,8 @@ body{
 .title-main{
     font-size: 3rem;
     text-align: center;
-    font-style: italic;
+    text-decoration: underline;
+    margin: 1;
 }
 
 /* Chew Logo CSS */

@@ -4,6 +4,8 @@
     margin: 3rem 5rem 0 5rem;
     height: 65vh;
     border-radius: 25px;
+    background-color: white;
+    box-shadow: 3px 3px #00000033; 
 }
 
 .qa-container h2{

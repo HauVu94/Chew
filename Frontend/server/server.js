@@ -3,8 +3,14 @@ import cookieParser from "cookie-parser";
 import express from "express";
 import * as path from "path";
 import dotenv from "dotenv";
+import req from "express/lib/request.js";
+import res from "express/lib/response.js";
+
+
+
 dotenv.config()
 const app = express();
+//const db = require('./database')
 app.use(bodyParser.json())
 app.use(cookieParser(process.env.COOKIE_SECRET))
 
@@ -53,3 +59,22 @@ app.use((req, res, next) => {
 const server = app.listen(process.env.PORT || 5000, () => {
   console.log(`Listening on http://localhost:${server.address().port}`);
 });
+
+
+
+
+
+app.get("/api/users", (req, res, next) => {
+  const sql = "select * from user"
+  const params = []
+  db.all(sql, params, (err, rows) => {
+    if (err){
+      res.status(400).json({"error":err.message});
+      return;
+    }
+    res.json({
+      "message": "success",
+      "data":rows
+    })
+  })
+})

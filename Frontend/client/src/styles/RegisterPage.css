@@ -1,0 +1,81 @@
+.form-registration{
+    width: 40%;
+    padding: 2rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid #C8BCAC 2px;
+    border-radius: 2rem;
+    box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);
+    background-image: url("../../public/images/Bakgrunnbrokoli.png");
+    
+}
+.register-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg-logo{
+    display: grid;
+    grid-template-columns: 2fr, 8fr, 2fr;
+    grid-column: 3 / 10;
+    margin: 2rem;
+}
+.reg-logo img{
+    display: block;
+    margin: 0 auto;
+}
+
+.save-btn-reg{
+    width: 15rem;
+    margin: 1rem;
+    height: 50px;
+    font-size: large;
+    border-radius: 15px;
+    box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);
+    background-color: #ff5b2e;
+    color: white;
+    border: none;
+}
+.save-btn-reg:hover{
+    border: 2px solid #ff5b2e;
+    transform: scale(1.025)
+}
+.form-registration input{
+    margin: 1rem;
+    width: 15rem;
+    margin: 1rem;
+    height: 50px;
+    font-size: large;
+    border-radius: 15px;
+    box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);
+    border: none;
+    align-items: center;
+    text-align: center;
+}
+
+.register-header{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100vw;
+    align-items: center;
+
+}
+
+.back-icon svg{
+    justify-self: start;
+    grid-column: auto / span 1;
+    margin-left: 2rem;
+    font-size: 3rem;
+    text-decoration: none;
+    color: #ff5b2e;
+}
+
+
+.reg-logo{
+    grid-column: auto / span 10;
+}

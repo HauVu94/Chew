@@ -1,0 +1,65 @@
+.activities-container{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10em;
+    height: 30em;
+    width: 30em;
+    border-radius: .5em;
+    background-color: #FFF;
+    box-shadow: .2em .2em #CCC;
+    overflow-y: scroll;
+}
+
+.activity-header{
+    position: fixed;
+    background-color: orangered;
+    color: #FFF;
+    width: 30em;
+    margin-top: 0;
+    height: 7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5em .5em 0 0;
+}
+
+.activities{
+    height: 100%;
+    margin-top: 9em;
+}
+
+.activity-profile-pic{
+    min-width: 4em;
+    min-height: 4em;
+    background-color: #000;
+    margin: 1em;
+}
+
+.activity-contents-container{
+    display: flex;
+    height: 100%;
+    
+    }
+
+.individual-activity-container{
+    background-color: #EEE;
+    height: 6em;
+    margin: 2em;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: .2em .2em #CCC;
+}
+
+.congrats-btn{
+    background-color: orangered;
+    color: #FFF;
+    border: none;
+    height: 2em;
+    width: 10em;
+    border-radius: 1em;
+    justify-self: end;
+    align-self: end;
+    margin: .5em;
+}

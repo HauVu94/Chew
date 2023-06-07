@@ -13,12 +13,7 @@ body{
 
 
 /* Title CSS */
-.title-container{
-    display: grid;
-    justify-content: center;
-}
-
-.page-title{
+.title-main{
     font-size: 3rem;
     text-align: center;
     font-style: italic;

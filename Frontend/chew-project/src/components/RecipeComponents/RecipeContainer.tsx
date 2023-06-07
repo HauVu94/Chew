@@ -11,9 +11,7 @@ export const RecipeContainer  = () => {
             
 
             <div className="info-wrapper">
-                <div className="title-container">
-                    <h2 className="page-title">Oppskrifter basert på ditt kjøleskap</h2>
-                </div>
+                <PageTitle pageTitle="Oppskrifter" />
                 <div className="info">
                     <div className="info-field">
                         <div className="ingredients-avaliable green"/>

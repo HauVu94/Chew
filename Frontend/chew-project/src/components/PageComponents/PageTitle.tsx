@@ -6,7 +6,7 @@ export const PageTitle: React.FC<TitleProps> = (props) => {
 
     return(
         <div className="title-container">
-            <h2 className="page-title">{pageTitle}</h2>
+            <h2 className="title-main">{pageTitle}</h2>
         </div>
     )
 }

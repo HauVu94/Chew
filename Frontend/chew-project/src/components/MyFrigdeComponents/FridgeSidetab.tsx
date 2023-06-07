@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import * as BiIcons from 'react-icons/bi';
 
 
-export const MyFrigdeTitleBar  = () => {
+export const FridgeSidetab  = () => {
 
     return(
         <div className="tab-wrapper">

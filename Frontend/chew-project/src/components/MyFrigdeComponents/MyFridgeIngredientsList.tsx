@@ -103,10 +103,7 @@ const MyFridgeIngredientsList = () => {
     <>
       <div className='ingredient-container'>
       <div className='top-wrapper'>
-        <div className="title-container-fridge">
-          <h2 className="page-title">Ditt kjøleskap</h2>
-        </div>
-      
+          <PageTitle pageTitle='Mitt Kjøleskap' />
           <div className="add-item-container">
             {/* bytte ut med link til ingredientSearch?             <------ */}
             <BiIcons.BiPlus onClick={() => addNewItem()}/>  

@@ -1,14 +1,14 @@
 .qa-container{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    margin: 3rem 5rem 0 5rem;
-    height: 65vh;
+    grid-template-rows: 20vh;
+    margin: 3rem 5rem 5rem 5rem;
     border-radius: 25px;
     background-color: white;
     box-shadow: 3px 3px #00000033; 
 }
 
-.qa-container h2{
+.qa-container .title-container{
     grid-column: auto / span 12;
     text-decoration: underline;
     margin: 0;
@@ -17,12 +17,14 @@
 .question-container{
     grid-column: auto / span 9;
     border-right: 1px solid black;
+    margin-bottom: 2rem;
 }
 
 .question-list{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 2rem;
+    margin: 2rem;
 }
 
 .question-item{
@@ -31,13 +33,34 @@
     list-style: none;
 }
 
+.question-title{
+    font-size: 2rem;
+}
+
+.question-question{
+    color: #ff5b2e;
+}
+
+.question-answer{
+    font-size: 1rem;
+    color: black;
+
+}
+
 .contact-container{
     grid-column: auto / span 3;
+    margin: 1rem;
 }
 
 
 .contact-item{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 2rem 1rem 2rem;
+    color: black;
+}
+
+.contact-item svg{
+    color: #ff5b2e;
 }

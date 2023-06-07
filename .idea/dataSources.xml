@@ -4,7 +4,6 @@
     <data-source source="LOCAL" name="chew" uuid="be4a4fc1-e2db-41fb-a117-6164818bd31a">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
-      <configured-by-url>true</configured-by-url>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:C:\Users\frede\OneDrive\Dokumenter\GitHub\PRO202_SmidigProsjektEksamen\Backend\SQLite_and_DB\chew.sqlite</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>

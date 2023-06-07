@@ -8,8 +8,8 @@ export const ProfilePage = () => {
     return (
         <> 
             <Navbar avatarSrc="images/profile.png"/>
-            {/* <ProfileWidget />
-            <ActivitiesContainer /> */}
+            <ProfileWidget />
+            <ActivitiesContainer />
             
 
 

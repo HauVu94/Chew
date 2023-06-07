@@ -92,6 +92,14 @@ with sqlite3.connect(db_file) as conn:
         )
     """)
 
+    # Database tables for shopping cart
+    c.execute("""
+           CREATE TABLE IF NOT EXISTS shoppingcart(
+               cartId INTEGER,
+                
+               description TEXT
+           )
+       """)
     conn.commit()
 
     # Insert values into the user table

@@ -89,7 +89,7 @@ body{
     height: 150px;
 }
 
-.title-container-fridge{
+.top-wrapper .title-container{
     position: absolute;
     justify-self: center;
     min-width: 330px;

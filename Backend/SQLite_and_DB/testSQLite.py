@@ -55,3 +55,5 @@ cursor.execute("SELECT * FROM user")
 
 result = cursor.fetchall()
 print(result)
+
+print(result)

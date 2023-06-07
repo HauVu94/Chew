@@ -7,6 +7,7 @@ import { ProfilePage } from './pages/ProfilePage';
 import { RegisterTeacher } from './pages/RegisterTeacher';
 import { RegisterTPP } from './pages/RegisterTPP';
 import { RegisterPupil } from './pages/RegisterPupil';
+import { VideoPage } from './pages/VideoPage';
 import './styles/App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { RegisterPage } from './pages/RegisterPage';
@@ -30,6 +31,7 @@ function App() {
             <Route path="/ProfilePage" element={ <ProfilePage/> }></Route>
             <Route path="/ShoppingListPage" element={ <ShoppingListPage/> }></Route>
             <Route path="/IngredientSearchPage" element={ <IngredientSearchPage/> }></Route>
+            <Route path="/VideoPage" element={ <VideoPage/> }></Route>
             <Route path="/QAPage" element={ <QAPage/> }></Route>
 
           </Routes>

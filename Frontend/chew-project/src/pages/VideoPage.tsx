@@ -6,11 +6,12 @@ import "../styles/VideoPage.css"
 export const VideoPage = () => {
     return(
         
-
         <div className="tutorial-container">
-
+            
             <Navbar avatarSrc="images/profile.png"/>
+            <h1 className="title">Videoleksjoner</h1>
                 <div className="video-library">
+                
                     <div className="video-player">
                     <iframe width="791" height="445" 
                     src="https://www.youtube.com/embed/YAtyz3V5-pQ" 
@@ -29,6 +30,7 @@ export const VideoPage = () => {
 
 
                 </div>
+              
         </div>
 
     )

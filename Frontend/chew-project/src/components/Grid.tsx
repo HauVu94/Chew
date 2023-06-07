@@ -11,6 +11,7 @@ const GridComponent = () => {
                 frameBorder="0" 
                 data-allow="accelerometer; autoplay; clipboard-write; 
                 encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                
             </div>
             
 

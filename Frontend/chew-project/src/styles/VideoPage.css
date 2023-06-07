@@ -21,6 +21,9 @@
     display: flex;
     justify-content: center;
 }
-.youyube-embed{
-    box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);
+.title{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2rem;
 }

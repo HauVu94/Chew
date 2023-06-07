@@ -1,5 +1,6 @@
 import React from "react"
 import Navbar from '../components/NavigationComponents/Navbar';
+import Grid from '../components/Grid';
 import "../styles/VideoPage.css"
 
 export const VideoPage = () => {
@@ -23,6 +24,8 @@ export const VideoPage = () => {
                     allowFullScreen>
                     </iframe>
                     </div>
+
+                    <Grid/>
 
 
                 </div>

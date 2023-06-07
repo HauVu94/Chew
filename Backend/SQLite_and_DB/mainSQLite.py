@@ -1,17 +1,16 @@
-"""
-- mainSQLite.py needs to be ran first!
-- Remeber to connect SQLite as a datasource or the connection will not work!
-- If the "Can't resolve user" error persists, do ALT + SHIFT + ENTER and "choose schema" to resolve the issue
-    It will say that no schema is available but that's ok
+#
+# - mainSQLite.py needs to be ran first!
+# - Remember to connect SQLite as a datasource or the connection will not work!
+# - If the "Can't resolve user" error persists, do ALT + SHIFT + ENTER and "choose schema" to resolve the issue
+#    It will say that no schema is available but that's ok
 
-You can select the datasource on the right side in the datasource tab
-and pressing the "+" icon on the top left in the tab
-"""
+# You can select the datasource on the right side in the datasource tab
+# and pressing the "+" icon on the top left in the tab
 
 import sqlite3
 
 # Connects the database
-with sqlite3.connect('chew.db') as conn:
+with sqlite3.connect('chew.sqlite') as conn:
     c = conn.cursor()
 
 # All general database tables are created here

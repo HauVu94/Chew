@@ -1,5 +1,6 @@
 import React from 'react'
 import Activity from './Activity'
+import '../../styles/activitiesWidget.css'
 
 const dummyData = [
     {id: 1, name: 'Janne Nordmann', message: 'har nådd nivå 16'},
@@ -14,17 +15,20 @@ const dummyData = [
 
 
 const ActivitiesContainer = () => {
-    const activityList = dummyData.map((activity) => {
-        return (
-            <Activity key={activity.id} name={activity.name} message={activity.message} />
-        )
-    })
+    // const activityList = dummyData.map((activity) => {
+    //     return (
+    //         <Activity key={activity.id} name={activity.name} message={activity.message} />
+    //     )
+    // })
 
   return (
     <div className='activities-container'>
         <div className='activity-header'><h1>Venners Aktivitet</h1></div>
         <div className='activities'>
-            {activityList}
+            {/* {activityList} */}
+            {dummyData.map((activity) => {
+                return <Activity key={activity.id} name={activity.name} message={activity.message} />
+            })}
         </div>
     </div>
   )

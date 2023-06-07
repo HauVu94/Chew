@@ -8,17 +8,17 @@ const ProfileWidget = () => {
 
   return (
       <div className='profilecard-container'>
-            <div className='banner-orange'></div>
+            {/* <div className='banner-orange'></div>
             
             <div className='fremgang'></div>
             <label className='level'>2</label>
             <div className='tracker'></div>
-            <div className='bragder'>
-            <ProfileInformation name = {dummyPerson.name} schoolname = {dummyPerson.school}/>        
+            <div className='bragder'> */}
+            {/* <ProfileInformation name = {dummyPerson.name} schoolname = {dummyPerson.school}/>         */}
             <AchievmentBox />
-            </div>
+            {/* </div> */}
 
-            <h2 className='h2-opplåsninger'>OPPLÅSNINGER OG NIVÅ</h2>
+            {/* <h2 className='h2-opplåsninger'>OPPLÅSNINGER OG NIVÅ</h2> */}
 
          </div>
   )

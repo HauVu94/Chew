@@ -1,3 +1,12 @@
+body{
+    background:
+    url("../../public/images/Denblågreia.svg") no-repeat,
+    url("../../public/images/Denbeigegreia.svg"),
+    url("../../public/images/Bakgrunnbrokoli.png");
+
+}
+
+
 .profilecard-container{
     width: 95%;
     height: 60vh;
@@ -29,7 +38,7 @@ top: 0;
 }
 
 .profile-picture{
-    background-color: magenta;
+    background-color: yellow;
     width: 200px;
     height: 200px;
     position: absolute;
@@ -89,7 +98,14 @@ top: 0;
     display: flex;
     position: absolute;
     top: 20px;
-    left: 900px;
+
+    /* KOMMENTER INN IGJEN! BARE FOR Å SENTRERE MENS JEG JOBBER */
+    /* left: 900px;  */
+
+    /* Slett!!! */
+    left: 3em;
+
+
     border: #000000 40px;
     background-color: white;
     border-radius: 1rem;
@@ -97,29 +113,35 @@ top: 0;
 }
 
 .h2-bragder{
-    position: absolute;
+    /* position: absolute; */
+    /* justify-self: center; */
     top: 0;
     left: 40%;
     text-decoration: underline;
 }
 
-.bragd-stekepanne{
+.achievment-circle{
     display: flex;
     flex-direction: column;
-    position: absolute;
+    /* position: absolute; */
+    margin: 3em 1em 0;
     width: 50px;
     height: 50px;
     top: 50px;
     left: 10px;
-    background-image: url(../../public/images/stekepanne.png);
-    background-size: 50px;
-    border: #000000 40px;
+    /* background-size: 50px; */
+    /* border: #000000 40px; */
     border-radius: 3rem;
     box-shadow: 1px 3px 6px 1px rgba(0, 0, 0, 0.289);
     cursor: pointer;
 }
 
-.explenation-stekepanne{
+.achievment-image{
+    width: 3em;
+    height: 3em;
+}
+
+.explanation{
     display: none;
     width: 120px;
     font-size: 10px;
@@ -137,13 +159,13 @@ top: 0;
     transition: opacity 0.3s, visibility 0.3s;
 }
 
-.bragd-stekepanne:hover, .explenation-stekepanne{
+.achievment-circle:hover, .explanation{
     display: flex;
     opacity: 1;
     animation: wiggle 2s linear;
 }
 
-.bragd-kuttetomat{
+/* .bragd-kuttetomat{
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -160,7 +182,7 @@ top: 0;
 
 .bragd-kuttetomat:hover{
     animation: wiggle 2s linear infinite;
-}
+} */
 
 @keyframes wiggle {
     0%, 7%{
@@ -186,7 +208,7 @@ top: 0;
     }
 }
 
-.background-beige{
+/* .background-beige{
     position: absolute;
     z-index: -1;
     background-image: url("../../public/images/Denbeigegreia.svg");
@@ -220,4 +242,4 @@ top: 0;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */

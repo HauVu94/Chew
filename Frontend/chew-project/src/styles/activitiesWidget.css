@@ -4,14 +4,14 @@
     margin-top: 10em;
     height: 30em;
     width: 30em;
-    border-radius: .5em;
+    border-radius: 1em;
     background-color: #FFF;
     box-shadow: .2em .2em #CCC;
     overflow-y: scroll;
 }
 
 .activity-header{
-    position: fixed;
+    position: absolute;
     background-color: orangered;
     color: #FFF;
     width: 30em;
@@ -20,7 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: .5em .5em 0 0;
+    border-radius: 1em 1em 0 0;
 }
 
 .activities{

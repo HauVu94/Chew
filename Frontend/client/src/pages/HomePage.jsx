@@ -24,7 +24,7 @@ export const HomePage = () => {
       reponse => reponse.json()
     ).then(data =>
       setUser(data))
-      
+
       setLoading(false)
   }, [])
 

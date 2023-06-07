@@ -1,21 +1,24 @@
+
 import { useEffect, useState } from "react";
 
-export function useLoader(loadFn) {
-  const [data, setData] = useState();
+export function useLoader(loadingFn) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
-  useEffect(reload, []);
+  const [data, setData] = useState();
+  useEffect(() =>{
+    reload
+  }, []);
 
   async function reload() {
-    setError(undefined);
     setLoading(true);
     try {
-      setData(await loadFn());
-    } catch (e) {
-      setError(e);
+      setData(await loadingFn());
+    } catch (error) {
+      setError(error);
     } finally {
       setLoading(false);
     }
   }
 
-  return { data, loading, error, reload };
+  return { loading, error, data, reload };
+}

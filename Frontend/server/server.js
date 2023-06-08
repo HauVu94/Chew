@@ -28,17 +28,40 @@ app.get("/api/login", (req, res) => {
     return res.json({username, password})
 });
 
+app.get("/api/users", (req, res, next) => {
+  var sql = "select * from user"
+  var params = []
+  db.all('SELECT * FROM user', (err, rows) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+  
+    console.log(rows);
+  });
+});
+
+
+
+
 app.post("/api/login", (req, res) => {
   const { username, password } = req.body;
-  const user = users.find(
-    (u) => u.username === username && u.password === password
-  );
-  if (!user) {
-    return res.sendStatus(401);
-  }
-  res.cookie("username", username, { signed: true });
-  res.sendStatus(200);
+
+  const sql = `SELECT * FROM user WHERE username=${username} AND password=${password}`;
+
+  db.all(sql, (err, rows) => {
+    if (err){
+      console.log(err)
+      return;
+    }
+    res.cookie("username", username, {signed: true});
+    res.statusCode(200)
+    console.log("shk")
+
+  })
 });
+
+
 
 app.use(express.static("../client/dist"));
 
@@ -54,15 +77,4 @@ const server = app.listen(process.env.PORT || 5000, () => {
   console.log(`Listening on http://localhost:${server.address().port}`);
 });
 
-app.get("/api/users", (req, res, next) => {
-  var sql = "select * from user"
-  var params = []
-  db.all('SELECT * FROM user', (err, rows) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-  
-    console.log(rows);
-  });
-});
+

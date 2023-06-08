@@ -20,6 +20,11 @@ body{
     margin: 1;
 }
 
+.text-align-center{
+    text-align: center;
+    margin: 0;
+}
+
 /* Chew Logo CSS */
 .chew-logo{
     grid-column: 3 / 10;

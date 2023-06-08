@@ -10,15 +10,6 @@ export const ProfilePage = () => {
             <Navbar avatarSrc="images/profile.png"/>
             <ProfileWidget />
             {/* <ActivitiesContainer /> */}
-            
-
-
-            {/* <div className='background-beige'></div>
-            <div className='background-foods'></div>
-            <div className='background-blue'></div>  */}
-            
-            
-            
         </>
     )
 }

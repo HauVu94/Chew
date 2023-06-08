@@ -35,7 +35,7 @@ app.get("/api/login", (req, res) => {
 });
 
 app.get("/api/users", (req, res, next) => {
-  const sql = "SELECT * FROM user";
+  const sql = "SELECT * from user";
   db.all(sql, (err, rows) => {
     if (err) {
       console.error(err);
@@ -51,7 +51,7 @@ app.get("/api/users", (req, res, next) => {
 app.post("/api/users", (req, res) => {
   const { username, password } = req.body;
 
-  const sql = `SELECT * FROM user WHERE user=${username} AND password=${password}`;
+  const sql = `SELECT * FROM user WHERE username=${username} AND password=${password}`;
 
   db.all(sql, (err, rows) => {
     if (err) {

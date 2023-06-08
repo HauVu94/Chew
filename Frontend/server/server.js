@@ -9,27 +9,7 @@ import sqlite3  from "sqlite3";
 
 dotenv.config()
 const app = express();
-const db = new sqlite3.Database("chew.sqlite", (err) => {
-  if(err){
-    console.error(err.message);
-    throw err;
-  }
-  else{
-    console.log("db conected")
-    
-    db.all(".tables", [], (err, rows) => {
-      if (err) {
-          throw err;
-      }
-
-      rows.forEach((row) => {
-          console.log(row);
-      });
-    });
-
-
-  }
-});
+const db = new sqlite3.Database("chew.sqlite");
 app.use(bodyParser.json())
 app.use(cookieParser(process.env.COOKIE_SECRET))
 

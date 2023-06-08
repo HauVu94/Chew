@@ -3,11 +3,7 @@ import cookieParser from "cookie-parser";
 import express from "express";
 import * as path from "path";
 import dotenv from "dotenv";
-import req from "express/lib/request.js";
-import res from "express/lib/response.js";
 import sqlite3  from "sqlite3";
-
-
 
 dotenv.config()
 const app = express();
@@ -27,7 +23,6 @@ app.use((req, res, next) => {
   next();
 });
 
-
 app.get("/api/login", (req, res) => {
     const{username, password} = req.user
     return res.json({username, password})
@@ -45,8 +40,6 @@ app.post("/api/login", (req, res) => {
   res.sendStatus(200);
 });
 
-
-
 app.use(express.static("../client/dist"));
 
 app.use((req, res, next) => {
@@ -60,10 +53,6 @@ app.use((req, res, next) => {
 const server = app.listen(process.env.PORT || 5000, () => {
   console.log(`Listening on http://localhost:${server.address().port}`);
 });
-
-
-
-
 
 app.get("/api/users", (req, res, next) => {
   var sql = "select * from user"

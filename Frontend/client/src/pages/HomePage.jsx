@@ -32,6 +32,8 @@ export const HomePage = () => {
     return <div>Loading...</div>;
   }
 
+  console.log(user.username)
+
 
   return (
     <>

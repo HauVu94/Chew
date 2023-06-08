@@ -4,7 +4,8 @@ import AchievmentBox from './AchievmentBox'
 
 const ProfileWidget = () => {
 
-    const dummyPerson = {id: 1, name: "Per Nordmann", school: "Kul barneskole", image: "../images/child-avatar.png", level: 2}
+    const img = require("../../../public/images/child-avatar.png");
+    const dummyPerson = {id: 1, name: "Per Nordmann", school: "Kul barneskole", image: img, level: 2}
 
   return (
       <div className='profilecard-container'>

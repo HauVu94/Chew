@@ -3,10 +3,14 @@ import Achievment from './Achievment'
 // import '../../../public/images/stekepanne.png'
 
 
+const img1 = require('../../../public/images/stekepanne.png');
+const img2 = require('../../../public/images/stekepanne.png');
+const img3 = require('../../../public/images/bragd-tomat.png');
+
 const dummyData = [
-    {id: 1, img: 'images/stekepanne.png', message: 'Message 1'},
-    {id: 2, img: 'images/stekepanne.png', message: 'Message 2'},
-    {id: 3, img: 'images/bragd-tomat.png', message: 'Message 3'}
+    {id: 1, img: img1, message: 'Message 1'},
+    {id: 2, img: img2, message: 'Message 2'},
+    {id: 3, img: img3, message: 'Message 3'}
 ]
 
 const AchievmentBox = () => {

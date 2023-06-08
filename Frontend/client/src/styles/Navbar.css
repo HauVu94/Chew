@@ -17,9 +17,10 @@
     height: 50px;
 }
 
-.menu-cross{
-    height: 30px;
+.menu-bars svg{
+    font-size: 3rem;
     margin: 1rem;
+    color: #FF5B2E;
 }
 
 .nav-menu{

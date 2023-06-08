@@ -44,13 +44,10 @@ export const LoginPage = () => {
         console.error('Error:', error);
       });
 
-
-
-
-
-
-
   };
+
+
+
     return (
         <div className="login-body">
 
@@ -77,9 +74,9 @@ export const LoginPage = () => {
               <button className="login-btn">
                 Logg Inn
               </button>
-              <pre>
+              {/* <pre>
                 {JSON.stringify({username, password}, undefined, " ")}
-              </pre>
+              </pre>  */}
 
             </form>
 

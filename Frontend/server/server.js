@@ -22,8 +22,11 @@ const users = [{ username: "Haavar123", password: "123" },
 //adds cookie to session
 app.use((req, res, next) => {
   const { username } = req.signedCookies;
+
   if (username) {
-    req.user = users.find((u) => u.username === username);
+
+
+    req.username = db.get("SELECT username FROM user")
   }
   next();
 });
@@ -50,9 +53,8 @@ app.get("/api/users", (req, res, next) => {
 
 app.post("/api/users", (req, res) => {
   const { username, password } = req.body;
-  const sql = `SELECT * FROM user WHERE username="${username};`;
+  const sql = `SELECT * FROM user WHERE username="${username}" AND password="${password}";`;
 
-  console.log(username)
 
   db.all(sql, (err, rows) => {
     if (err) {

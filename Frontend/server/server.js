@@ -50,8 +50,9 @@ app.get("/api/users", (req, res, next) => {
 
 app.post("/api/users", (req, res) => {
   const { username, password } = req.body;
+  const sql = `SELECT * FROM user WHERE username="${username};`;
 
-  const sql = `SELECT * FROM user`;
+  console.log(username)
 
   db.all(sql, (err, rows) => {
     if (err) {

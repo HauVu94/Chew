@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="chew.sqlite" uuid="44e1306e-a4db-4c24-95e1-8eab09a9b674">
+    <data-source source="LOCAL" name="chew.sqlite" uuid="9f0b336f-80c0-434c-99a6-eeeca623d279">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\frede\OneDrive\Dokumenter\GitHub\PRO202_SmidigProsjektEksamen\Backend\SQLite_and_DB\chew.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\frede\OneDrive\Dokumenter\GitHub\PRO202_SmidigProsjektEksamen\Frontend\server\chew.sqlite</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

@@ -9,7 +9,7 @@ export const ProfilePage = () => {
         <> 
             <Navbar avatarSrc="images/profile.png"/>
             <ProfileWidget />
-            {/* <ActivitiesContainer /> */}
+            <ActivitiesContainer />
         </>
     )
 }

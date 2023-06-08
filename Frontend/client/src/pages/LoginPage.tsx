@@ -18,12 +18,6 @@ export const LoginPage = () => {
     });
   }
 
-
-
-
-
-
-
   const handleLogin = () => {
     // Make an HTTP POST request to the backend with the entered username and password
     fetch('/LoginPage/', {

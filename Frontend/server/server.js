@@ -23,10 +23,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/api/login", (req, res) => {
-    const{username, password} = req.user
-    return res.json({username, password})
-});
 
 app.get("/api/users", (req, res, next) => {
   var sql = "select * from user"
@@ -44,7 +40,7 @@ app.get("/api/users", (req, res, next) => {
 
 
 
-app.post("/api/login", (req, res) => {
+app.post("/api/users", (req, res) => {
   const { username, password } = req.body;
 
   const sql = `SELECT * FROM user WHERE username=${username} AND password=${password}`;

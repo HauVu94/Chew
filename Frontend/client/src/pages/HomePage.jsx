@@ -20,7 +20,7 @@ export const HomePage = () => {
   const[user, setUser] = useState([{}])
 
   useEffect(() => {
-    fetch("/api/login").then(
+    fetch("/api/users").then(
       reponse => reponse.json()
     ).then(data =>
       setUser(data))

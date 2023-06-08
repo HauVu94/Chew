@@ -37,7 +37,7 @@ app.get("/api/users", (req, res, next) => {
       return;
     }
   
-    console.log(rows);
+    res.json(rows)
   });
 });
 

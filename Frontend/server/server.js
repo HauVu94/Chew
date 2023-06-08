@@ -3,7 +3,11 @@ import cookieParser from "cookie-parser";
 import express from "express";
 import * as path from "path";
 import dotenv from "dotenv";
+import req from "express/lib/request.js";
+import res from "express/lib/response.js";
 import sqlite3  from "sqlite3";
+
+
 
 dotenv.config()
 const app = express();
@@ -24,6 +28,11 @@ app.use((req, res, next) => {
 });
 
 
+app.get("/api/login", (req, res) => {
+    const{username, password} = req.user
+    return res.json({username, password})
+});
+
 app.get("/api/users", (req, res, next) => {
   var sql = "select * from user"
   var params = []
@@ -38,21 +47,22 @@ app.get("/api/users", (req, res, next) => {
 });
 
 
-
+//ss
 
 app.post("/api/users", (req, res) => {
   const { username, password } = req.body;
 
-  const sql = `SELECT * FROM user WHERE username=${username} AND password=${password}`;
+  const sql = `SELECT * FROM user`;
+
 
   db.all(sql, (err, rows) => {
     if (err){
       console.log(err)
       return;
     }
-    res.cookie("username", username, {signed: true});
+    console.log(rows)
     res.statusCode(200)
-    console.log("shk")
+    res.cookie("username", username, {signed: true});
 
   })
 });

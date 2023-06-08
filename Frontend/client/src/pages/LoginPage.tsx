@@ -7,9 +7,9 @@ export const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: { preventDefault: () => void; }) {
     e.preventDefault();
-    await fetch("/api/login", {
+    await fetch("/api/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -17,12 +17,6 @@ export const LoginPage = () => {
       body: JSON.stringify({ username, password }),
     });
   }
-
-
-
-
-
-
 
   const handleLogin = () => {
     // Make an HTTP POST request to the backend with the entered username and password

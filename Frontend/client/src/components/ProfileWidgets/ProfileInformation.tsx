@@ -1,6 +1,5 @@
 import React from 'react'
 import LevelTracker from './LevelTracker'
-//import  profilepicture from '../../../public/images/child-avatar.png';
 
 const ProfileInformation = (props: any) => {
   return (
@@ -12,7 +11,7 @@ const ProfileInformation = (props: any) => {
 
           <div className='level-container'>
           <div className='fremgang'>
-            <label className='level'>{props.level}</label>  
+            <label className='level-number'>{props.level}</label>  
           </div>
           <LevelTracker num= {30}/>
         </div>

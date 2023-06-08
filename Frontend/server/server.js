@@ -51,11 +51,10 @@ app.get("/api/users", (req, res, next) => {
 app.post("/api/users", (req, res) => {
   const { username, password } = req.body;
 
-  const sql = `SELECT * FROM user${username};`;
+  const sql = `SELECT * FROM user${username} AND password=${password}`;
 
   db.all(sql, (err, rows) => {
     if (err) {
-      res.statusCode(401)
       console.log(err);
       return;
     }

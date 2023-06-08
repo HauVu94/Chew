@@ -57,11 +57,12 @@ const server = app.listen(process.env.PORT || 5000, () => {
 app.get("/api/users", (req, res, next) => {
   var sql = "select * from user"
   var params = []
-  db.all(sql, params, [], (err, rows) => {
-      if (err) {
-        res.status(400).json({"error":err.message});
-        return;
-      }
-      res.json({rows})
-    });
+  db.all('SELECT * FROM user', (err, rows) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+  
+    console.log(rows);
+  });
 });

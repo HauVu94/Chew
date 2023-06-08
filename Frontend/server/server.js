@@ -5,11 +5,36 @@ import * as path from "path";
 import dotenv from "dotenv";
 import sqlite3  from "sqlite3";
 
+
+
 dotenv.config()
 const app = express();
-const db = new sqlite3.Database("chew.sqlite");
+const db = new sqlite3.Database("chew.sqlite", (err) => {
+  if(err){
+    console.error(err.message);
+    throw err;
+  }
+  else{
+    console.log("db conected")
+    
+    db.all(".tables", [], (err, rows) => {
+      if (err) {
+          throw err;
+      }
+
+      rows.forEach((row) => {
+          console.log(row);
+      });
+    });
+
+
+  }
+});
 app.use(bodyParser.json())
 app.use(cookieParser(process.env.COOKIE_SECRET))
+
+console.log(db.run)
+
 
 const users = [{ username: "Haavar123", password: "123" },
 { username: "Marcus", password: "321" }]
@@ -24,37 +49,38 @@ app.use((req, res, next) => {
 });
 
 
+app.get("/api/login", (req, res) => {
+    const{username, password} = req.user
+    return res.json({username, password})
+});
+
 app.get("/api/users", (req, res, next) => {
-  var sql = "select * from user"
-  var params = []
-  db.all('SELECT * FROM user', (err, rows) => {
+  const sql = "SELECT * FROM user";
+  db.all(sql, (err, rows) => {
     if (err) {
       console.error(err);
       return;
     }
-  
-    res.json(rows)
+    res.json(rows);
   });
 });
 
 
-
+//ss
 
 app.post("/api/users", (req, res) => {
   const { username, password } = req.body;
 
-  const sql = `SELECT * FROM user WHERE username=${username} AND password=${password}`;
+  const sql = `SELECT * FROM user`;
 
   db.all(sql, (err, rows) => {
-    if (err){
-      console.log(err)
+    if (err) {
+      console.log(err);
       return;
     }
-    res.cookie("username", username, {signed: true});
-    res.statusCode(200)
-    console.log("shk")
-
-  })
+    console.log(rows);
+    res.status(200).cookie("username", username, { signed: true }).send();
+  });
 });
 
 

@@ -81,7 +81,7 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
 
         // Insert values into the user table
         const insertUser = "INSERT INTO user VALUES (?, ?, ?, ?, ?, ?, ?, ?,?,?)";
-        db.run(insertUser, ['0', 'Marcus', 'Cin', 250800, 'test@mail.com', '12345678', 'Teacher', 'pfpic.jpeg', 'Cinderus', 123]);
+        db.run(insertUser, ['1', 'Marcus', 'Cin', 250800, 'test@mail.com', '12345678', 'Teacher', 'pfpic.jpeg', 'Haavar123', 123]);
 
         // Retrieve and print data from the user table
         db.all("SELECT * FROM user", [], (err, rows) => {

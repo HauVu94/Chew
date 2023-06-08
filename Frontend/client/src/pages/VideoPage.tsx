@@ -8,7 +8,8 @@ export const VideoPage = () => {
         
         <div className="tutorial-container">
             
-            <Navbar avatarSrc="images/profile.png"/>
+            <Navbar avatarSrc={require("../../public/images/profile.png")}/>
+            
             <h1 className="title">Videoleksjoner</h1>
                 <div className="video-library">
                 

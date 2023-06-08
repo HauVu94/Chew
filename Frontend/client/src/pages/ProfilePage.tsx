@@ -9,7 +9,7 @@ import "../styles/Profilepage.css";
 export const ProfilePage = () => {  
     return (
         <> 
-            <Navbar avatarSrc="images/profile.png"/>
+            <Navbar avatarSrc={require("../../public/images/profile.png")}/>
             <ProfileWidget/>
             <ActivitiesContainer/>
             <ProgressionBar/>

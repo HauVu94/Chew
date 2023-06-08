@@ -1,4 +1,3 @@
-
 .profilecard-container{
     width: 45%; 
     height: 40vh;
@@ -79,7 +78,8 @@ background-color: #ff5b2e;
 .level-number{
     color: limegreen;
     font-size: 80px;
-    margin: -15;
+    margin: -1.7em;
+    padding-left: 2em;
 }
 
 .tracker{

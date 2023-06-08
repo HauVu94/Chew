@@ -17,14 +17,14 @@ const Navbar: React.FC<NavbarProps> = (props) => {
             <div className="navbar">
 
                 <Link to="#" className="menu-bars">
-                    <img className="burger-menu" src="images/burger-menu.png" onClick={showSidebar}/>
+                    <img className="burger-menu" src={require("../../../public/images/burger-menu.png")} onClick={showSidebar}/>
                 </Link>
 
                 <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
                     <ul className="nav-menu-items" onClick={showSidebar}>
                         <li className="navbar-toggle">
                             <Link to="#" className="menu-bars">
-                                <img className="menu-cross" src="images/cross.png"></img>
+                                <img className="menu-cross" src={require("../../../public/images/cross.png")}></img>
                             </Link>
                         </li>
 
@@ -43,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
 
 
                 <Link to="/" className="chew-logo chew-logo-btn">
-                    <img className="chew-logo" src="images/chew-logo.png"/>
+                    <img className="chew-logo" src={require("../../../public/images/chew-logo.png")}/>
                 </Link>
                 
                 <Link className="profile-btn" to="/ProfilePage">

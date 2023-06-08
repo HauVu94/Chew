@@ -16,7 +16,7 @@ export const RegisterHeader = () => {
                 </div>
                 <div className="reg-logo">
                     <Link to="/">
-                        <img className="chew-logo" src="images/chew-logo.png"/>
+                        <img className="chew-logo" src={require("../../../public/images/chew-logo.png")}/>
                     </Link>
                 </div>
             </div>

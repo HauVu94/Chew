@@ -37,7 +37,8 @@ export const HomePage = () => {
 
   return (
     <>
-            <Navbar avatarSrc="images/profile.png"/>
+            <Navbar avatarSrc={require("../../public/images/profile.png")}/>
+
             <Sidetabs />
             <MainMenu />
             <SchoolPrivate />

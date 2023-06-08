@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import "../../styles/Navbar.css"
 import { SidebarData } from "./SidebarData";
 import {IconContext} from "react-icons";
+import {BiX} from 'react-icons/bi';
+import {GiHamburgerMenu} from 'react-icons/gi';
 
 const Navbar: React.FC<NavbarProps> = (props) => {
     const {avatarSrc} = props;
@@ -17,14 +19,14 @@ const Navbar: React.FC<NavbarProps> = (props) => {
             <div className="navbar">
 
                 <Link to="#" className="menu-bars">
-                    <img className="burger-menu" src="images/burger-menu.png" onClick={showSidebar}/>
+                    <GiHamburgerMenu onClick={showSidebar}/>
                 </Link>
 
                 <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
                     <ul className="nav-menu-items" onClick={showSidebar}>
                         <li className="navbar-toggle">
                             <Link to="#" className="menu-bars">
-                                <img className="menu-cross" src="images/cross.png"></img>
+                                <BiX />
                             </Link>
                         </li>
 
@@ -43,7 +45,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
 
 
                 <Link to="/" className="chew-logo chew-logo-btn">
-                    <img className="chew-logo" src="images/chew-logo.png"/>
+                    <img className="chew-logo" src={require("../../../public/images/chew-logo.png")}/>
                 </Link>
                 
                 <Link className="profile-btn" to="/ProfilePage">

@@ -7,7 +7,7 @@ import {BsChatLeftDots} from 'react-icons/bs'
 export const QAPage = () => {  
     return (
         <> 
-            <Navbar avatarSrc="images/profile.png"/>
+            <Navbar avatarSrc={require("../../public/images/profile.png")}/>
 
             <div className="qa-container">
 

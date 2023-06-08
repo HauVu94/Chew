@@ -5,7 +5,7 @@ import MyFridgeIngredientsList from "../components/MyFrigdeComponents/MyFridgeIn
 export const MyFridge = () => {  
     return (
         <> 
-            <Navbar avatarSrc="images/profile.png"/>
+            <Navbar avatarSrc={require("../../public/images/profile.png")}/>
             <FridgeSidetab />
             <MyFridgeIngredientsList />
         </>

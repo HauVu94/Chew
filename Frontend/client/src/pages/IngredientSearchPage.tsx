@@ -13,7 +13,7 @@ const IngredientSearchPage = () => {
 
     return (
         <>
-            <Navbar avatarSrc="images/profile.png"/>
+            <Navbar avatarSrc={require("../../public/images/profile.png")}/>
             <Sidetabs />
 
             <IngredientSearch />

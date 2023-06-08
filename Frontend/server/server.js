@@ -55,6 +55,7 @@ app.post("/api/users", (req, res) => {
 
   db.all(sql, (err, rows) => {
     if (err) {
+      res.statusCode(401)
       console.log(err);
       return;
     }

@@ -100,7 +100,8 @@ with sqlite3.connect(db_file) as conn:
     c.execute("""
            CREATE TABLE IF NOT EXISTS shoppingcart(
                cartId INTEGER,
-                
+               quantity INTEGER,
+               ingredientName TEXT, 
                description TEXT
            )
        """)

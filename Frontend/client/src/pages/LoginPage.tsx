@@ -4,8 +4,25 @@ import "../styles/Login.css"
 
 
 export const LoginPage = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    await fetch("/api/login", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    });
+  }
+
+
+
+
+
+
 
   const handleLogin = () => {
     // Make an HTTP POST request to the backend with the entered username and password
@@ -32,6 +49,13 @@ export const LoginPage = () => {
         // Handle any errors that occur during the request
         console.error('Error:', error);
       });
+
+
+
+
+
+
+
   };
     return (
         <div className="login-body">
@@ -39,25 +63,31 @@ export const LoginPage = () => {
           <Link to="/"><img className="chew-logo" src="images/chew-logo.png" alt="Logo" /></Link>
 
           <div className="form-login">
-            <label className="form-txt">Brukernavn</label>
-            <input
-              className="form-input"
-              type="text"
-              placeholder="Skriv ditt brukernavn"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-            <label className="form-txt">Passord</label>
-            <input
-              className="form-input"
-              type="password"
-              placeholder="Skriv passord"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <button className="login-btn" onClick={handleLogin}>
-              Logg Inn
-            </button>
+            <form onSubmit={handleSubmit}>
+              <label className="form-txt">Brukernavn</label>
+              <input
+                className="form-input"
+                type="text"
+                placeholder="Skriv ditt brukernavn"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+              <label className="form-txt">Passord</label>
+              <input
+                className="form-input"
+                type="password"
+                placeholder="Skriv passord"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <button className="login-btn">
+                Logg Inn
+              </button>
+              <pre>
+                {JSON.stringify({username, password}, undefined, " ")}
+              </pre>
+
+            </form>
 
             <div className='register-forgot-container'>
               <div className='register-container'>

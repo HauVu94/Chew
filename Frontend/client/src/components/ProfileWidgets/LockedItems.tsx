@@ -1,7 +1,6 @@
 import React from 'react'
-// import LockedItem from './LockedItem'
-import '../../styles/lockedItems.css'
 import LockedItem from './LockedItem'
+import '../../styles/lockedItems.css'
 
 const dummyData = [
   {id: 1, image: 'images/stekepanne.png', progress: 50},

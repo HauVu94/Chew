@@ -10,7 +10,7 @@ import res from "express/lib/response.js";
 
 dotenv.config()
 const app = express();
-//const db = require('./database')
+const db = require('./database.js')
 app.use(bodyParser.json())
 app.use(cookieParser(process.env.COOKIE_SECRET))
 

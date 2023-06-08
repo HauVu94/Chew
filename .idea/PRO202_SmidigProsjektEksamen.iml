@@ -11,7 +11,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Backend/SQL_Files" />
       <excludeFolder url="file://$MODULE_DIR$/venv/oppgave" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.11 (PRO202_SmidigProsjektEksamen)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

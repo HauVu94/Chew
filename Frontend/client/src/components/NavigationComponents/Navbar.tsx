@@ -19,14 +19,14 @@ const Navbar: React.FC<NavbarProps> = (props) => {
             <div className="navbar">
 
                 <Link to="#" className="menu-bars">
-                    <img className="burger-menu" src={require("../../../public/images/burger-menu.png")} onClick={showSidebar}/>
+                    <GiHamburgerMenu onClick={showSidebar}/>
                 </Link>
 
                 <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
                     <ul className="nav-menu-items" onClick={showSidebar}>
                         <li className="navbar-toggle">
                             <Link to="#" className="menu-bars">
-                                <img className="menu-cross" src={require("../../../public/images/cross.png")}></img>
+                                <BiX />
                             </Link>
                         </li>
 

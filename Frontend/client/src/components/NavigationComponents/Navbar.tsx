@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import "../../styles/Navbar.css"
 import { SidebarData } from "./SidebarData";
 import {IconContext} from "react-icons";
+import {BiX} from 'react-icons/bi';
+import {GiHamburgerMenu} from 'react-icons/gi';
 
 const Navbar: React.FC<NavbarProps> = (props) => {
     const {avatarSrc} = props;

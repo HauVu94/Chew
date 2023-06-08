@@ -9,7 +9,7 @@ export const LoginPage = () => {
 
   async function handleSubmit(e: { preventDefault: () => void; }) {
     e.preventDefault();
-    await fetch("/api/login", {
+    await fetch("/api/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -8,7 +8,7 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
         console.error(err.message);
         throw err;
     } else {
-        console.log('Connected to the SQLite database.');
+        console.log('Connected to the SQLite ddatabase.');
 
         db.run(`CREATE TABLE IF NOT EXISTS user(
             id INTEGER,
@@ -18,7 +18,9 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
             email TEXT,
             phone INTEGER,
             roles TEXT,
-            profilePic BLOB
+            profilePic BLOB,
+            username TEXT,
+            password TEXT
         )`);
 
         db.run(`CREATE TABLE IF NOT EXISTS member(
@@ -78,8 +80,8 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
         )`);
 
         // Insert values into the user table
-        const insertUser = "INSERT INTO user VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-        db.run(insertUser, ['0', 'Marcus', 'Cin', 250800, 'test@mail.com', '12345678', 'Teacher', 'pfpic.jpeg']);
+        const insertUser = "INSERT INTO user VALUES (?, ?, ?, ?, ?, ?, ?, ?,?,?)";
+        db.run(insertUser, ['0', 'Marcus', 'Cin', 250800, 'test@mail.com', '12345678', 'Teacher', 'pfpic.jpeg', 'Cinderus', 123]);
 
         // Retrieve and print data from the user table
         db.all("SELECT * FROM user", [], (err, rows) => {
@@ -93,5 +95,6 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
         });
     }
 });
+
 
 module.exports = db;

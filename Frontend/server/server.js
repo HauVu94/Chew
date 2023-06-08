@@ -5,10 +5,13 @@ import * as path from "path";
 import dotenv from "dotenv";
 import req from "express/lib/request.js";
 import res from "express/lib/response.js";
+import sqlite3  from "sqlite3";
+
+
 
 dotenv.config()
 const app = express();
-const db = import('./database.cjs')
+const db = new sqlite3.Database("chew.sqlite");
 app.use(bodyParser.json())
 app.use(cookieParser(process.env.COOKIE_SECRET))
 
@@ -23,6 +26,7 @@ app.use((req, res, next) => {
   }
   next();
 });
+
 
 app.get("/api/login", (req, res) => {
     const{username, password} = req.user
@@ -41,6 +45,8 @@ app.post("/api/login", (req, res) => {
   res.sendStatus(200);
 });
 
+
+
 app.use(express.static("../client/dist"));
 
 app.use((req, res, next) => {
@@ -55,17 +61,18 @@ const server = app.listen(process.env.PORT || 5000, () => {
   console.log(`Listening on http://localhost:${server.address().port}`);
 });
 
+
+
+
+
 app.get("/api/users", (req, res, next) => {
-  const sql = "SELECT * FROM user";
-
-  db.all(sql, (err, rows) => {
-    if (err) {
-      return res.status(400).json({ "error": err.message });
-    }
-
-    res.json({
-      "message": "success",
-      "data": rows
+  var sql = "select * from user"
+  var params = []
+  db.all(sql, params, [], (err, rows) => {
+      if (err) {
+        res.status(400).json({"error":err.message});
+        return;
+      }
+      res.json({rows})
     });
-  });
 });

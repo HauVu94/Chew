@@ -3,17 +3,38 @@ import cookieParser from "cookie-parser";
 import express from "express";
 import * as path from "path";
 import dotenv from "dotenv";
-import req from "express/lib/request.js";
-import res from "express/lib/response.js";
 import sqlite3  from "sqlite3";
 
 
 
 dotenv.config()
 const app = express();
-const db = new sqlite3.Database("chew.sqlite");
+const db = new sqlite3.Database("chew.sqlite", (err) => {
+  if(err){
+    console.error(err.message);
+    throw err;
+  }
+  else{
+    console.log("db conected")
+    
+    db.all(".tables", [], (err, rows) => {
+      if (err) {
+          throw err;
+      }
+
+      rows.forEach((row) => {
+          console.log(row);
+      });
+    });
+
+
+  }
+});
 app.use(bodyParser.json())
 app.use(cookieParser(process.env.COOKIE_SECRET))
+
+console.log(db.run)
+
 
 const users = [{ username: "Haavar123", password: "123" },
 { username: "Marcus", password: "321" }]
@@ -34,15 +55,13 @@ app.get("/api/login", (req, res) => {
 });
 
 app.get("/api/users", (req, res, next) => {
-  var sql = "select * from user"
-  var params = []
-  db.all('SELECT * FROM user', (err, rows) => {
+  const sql = "SELECT * FROM user";
+  db.all(sql, (err, rows) => {
     if (err) {
       console.error(err);
       return;
     }
-  
-    res.json(rows)
+    res.json(rows);
   });
 });
 
@@ -54,17 +73,14 @@ app.post("/api/users", (req, res) => {
 
   const sql = `SELECT * FROM user`;
 
-
   db.all(sql, (err, rows) => {
-    if (err){
-      console.log(err)
+    if (err) {
+      console.log(err);
       return;
     }
-    console.log(rows)
-    res.statusCode(200)
-    res.cookie("username", username, {signed: true});
-
-  })
+    console.log(rows);
+    res.status(200).cookie("username", username, { signed: true }).send();
+  });
 });
 
 

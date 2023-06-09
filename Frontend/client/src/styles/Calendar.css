@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     position: fixed;
-    top: 20;
+    top: 170;
     right: 100%;
     transition: 500ms;
     z-index: 900;

@@ -7,7 +7,7 @@
     grid-template-columns: repeat(12, 1fr);
     justify-content: center;
     position: fixed;
-    top: 170;
+    top: 220;
     left: 100%;
     transition: 500ms;
     z-index: 900;

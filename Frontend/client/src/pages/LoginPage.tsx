@@ -53,8 +53,8 @@ export const LoginPage = () => {
 
           <Link to="/"><img className="chew-logo" src={require("../../public/images/chew-logo.png")} alt="Logo" /></Link>
 
-          <div className="login-container">
-            <form className='form-login' onSubmit={handleSubmit}>
+          <div className="form-login">
+            <form onSubmit={handleSubmit}>
               <label className="form-txt">Brukernavn</label>
               <input
                 className="form-input"

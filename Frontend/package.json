@@ -492,6 +492,7 @@
     "p-retry": "^4.6.2",
     "p-try": "^2.2.0",
     "param-case": "^3.0.4",
+    "parcel": "^2.9.1",
     "parent-module": "^1.0.1",
     "parse-json": "^5.2.0",
     "parse5": "^6.0.1",

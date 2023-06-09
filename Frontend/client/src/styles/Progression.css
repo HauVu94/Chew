@@ -1,4 +1,4 @@
-.progression-container{
+/* .progression-container{
     width: 45%; 
     height: 40vh;
     min-height: 25em;
@@ -13,18 +13,9 @@
     border: solid #C8BCAC 2px;
     border-radius: 2rem;
     box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);
-}
+} */
 
-.banner-orange-sm{
-    height: 125px;
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 100em;
-    background-color: #ff5b2e;
-}
+
 
 .progression-h2{
     color: white;

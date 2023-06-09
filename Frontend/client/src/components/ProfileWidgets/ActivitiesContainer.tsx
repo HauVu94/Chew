@@ -23,14 +23,16 @@ const ActivitiesContainer = () => {
 
   return (
     <div className='activities-container'>
-        <div className='activity-header'><h1>Venners Aktivitet</h1></div>
-        <div className='activities'>
-            {/* {activityList} */}
-            {dummyData.map((activity) => {
-                return <Activity key={activity.id} name={activity.name} message={activity.message} />
-            })}
+        <div className="profile-content-wrapper">
+            <div className='banner-orange-sm'><h1>VENNERS AKTIVITET</h1></div>
+            <div className='activities'>
+                {/* {activityList} */}
+                {dummyData.map((activity) => {
+                    return <Activity key={activity.id} name={activity.name} message={activity.message} />
+                })}
+            </div>
         </div>
-    </div>
+     </div>
   )
 }
 

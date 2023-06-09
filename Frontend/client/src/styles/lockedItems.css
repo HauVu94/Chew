@@ -1,4 +1,4 @@
-.b-orange{
+/* .b-orange{
     background-color: orangered;
     width: 100%;
     color: #fff;
@@ -11,7 +11,6 @@
 .locked-items-container{
     width: 30em;
     height: 15em;
-    /* background-color: whitesmoke; */
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -19,11 +18,17 @@
     align-items: center;
     border-radius: 2rem;
     box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);
-}
+} */
+
+
+
 
 .locked-items-wrapper{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10em;
 }
 
 .locked-item{

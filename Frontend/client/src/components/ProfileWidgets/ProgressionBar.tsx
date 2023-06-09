@@ -6,7 +6,7 @@ function ProgressionBar() {
   return (
     <div className='progression-container'>
         <div className='banner-orange-sm'>
-            <h2 className='progression-h2'>NIVÅ PROGRESJON</h2>
+        <h1>NIVÅPROGRESJON</h1>
         </div>
     </div>
     

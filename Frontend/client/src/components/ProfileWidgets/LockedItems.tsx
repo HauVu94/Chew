@@ -14,14 +14,15 @@ const LockedItems = () => {
 
   return (
     <div className='locked-items-container'>
-      {/* <div className="banner-orange"> */}
-      <div className="b-orange">
-        <h2>Låste bragder</h2>
-      </div>
-      <div className='locked-items-wrapper'>
-        {dummyData.map((item) => {
-          return <LockedItem key={item.id} image={item.image} progress={item.progress}/>
-        })}
+      <div className="profile-content-wrapper">
+        <div className="banner-orange-sm">
+          <h1>LÅSTE BRAGDER</h1>
+        </div>
+        <div className='locked-items-wrapper'>
+          {dummyData.map((item) => {
+            return <LockedItem key={item.id} image={item.image} progress={item.progress}/>
+          })}
+        </div>
       </div>
     </div>
   )

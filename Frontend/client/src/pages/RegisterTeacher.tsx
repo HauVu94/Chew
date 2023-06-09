@@ -9,7 +9,7 @@ export const RegisterTeacher = () => {
 
             <div className="form-registration">
                 <div>
-                    <img className="feide-login" src="images/FeideLogin.png" alt="feide login" />
+                    <img className="feide-login" src={require("../../public/images/FeideLogin.png")} alt="feide login" />
                 </div>
                 
                 <label className="form-txt">Klassekode:</label>

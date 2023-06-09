@@ -9,7 +9,7 @@ export const RegisterPupil = () => {
 
             <div className="form-registration">
                 <div>
-                    <img className="feide-login" src="images/FeideLogin.png" alt="feide login" />
+                    <img className="feide-login" src={require("../../public/images/FeideLogin.png")} alt="feide login" />
                 </div>
                 
                 <button className="save-btn-reg">Lag Profil</button>

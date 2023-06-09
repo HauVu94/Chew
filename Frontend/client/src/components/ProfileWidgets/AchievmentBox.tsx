@@ -3,9 +3,9 @@ import Achievment from './Achievment'
 // import '../../../public/images/stekepanne.png'
 
 
-const img1 = require('../../../public/images/stekepanne.png');
-const img2 = require('../../../public/images/stekepanne.png');
-const img3 = require('../../../public/images/bragd-tomat.png');
+const img1 = require('../../../public/images/fryingpan.png');
+const img2 = require('../../../public/images/fryingpan.png');
+const img3 = require('../../../public/images/tomato.png');
 
 const dummyData = [
     {id: 1, img: img1, message: 'Message 1'},

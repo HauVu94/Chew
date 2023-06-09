@@ -28,7 +28,7 @@ export const RecipeContainer  = () => {
                 </div>
                     <div className="recipe-container">
                         <article className='recipe-card'>
-                            <img className='recipe-img' src="images/recipes/gryte.png" alt="image"/>
+                            <img className='recipe-img' src={require("../../../public/images/recipes/gryte.png")} alt="image"/>
                             <div className='recipe-title'>
                                 <div className="ingredients-avaliable green"></div>
                                 <h4>Gryte med kjøttdeig</h4>
@@ -41,7 +41,7 @@ export const RecipeContainer  = () => {
                         {/*TEST RECIPES*/}
 
                         <article className='recipe-card'>
-                            <img className='recipe-img' src="images/recipes/kjottform.png" alt="image"/>
+                            <img className='recipe-img' src={require("../../../public/images/recipes/kjottform.png")} alt="image"/>
                             <div className='recipe-title'>
                                 <div className="ingredients-avaliable green"></div>
                                 <h4>Engelsk Hyrdepai</h4>
@@ -52,7 +52,7 @@ export const RecipeContainer  = () => {
                         </article>
 
                         <article className='recipe-card'>
-                            <img className='recipe-img' src="images/recipes/kjottkaker.png" alt="image"/>
+                            <img className='recipe-img' src={require("../../../public/images/recipes/kjottkaker.png")} alt="image"/>
                             <div className='recipe-title'>
                                 <div className="ingredients-avaliable yellow"></div>
                                 <h4>Hjemmelagde kjøttkaker</h4>
@@ -63,7 +63,7 @@ export const RecipeContainer  = () => {
                         </article>
 
                         <article className='recipe-card'>
-                            <img className='recipe-img' src="images/recipes/taco.png" alt="image"/>
+                            <img className='recipe-img' src={require("../../../public/images/recipes/taco.png")} alt="image"/>
                             <div className='recipe-title'>
                                 <div className="ingredients-avaliable red"></div>
                                 <h4>Klassisk taco</h4>
@@ -74,7 +74,7 @@ export const RecipeContainer  = () => {
                         </article>
 
                         <article className='recipe-card'>
-                            <img className='recipe-img' src="images/recipes/placeholder.png" alt="image"/>
+                            <img className='recipe-img' src={require("../../../public/images/recipes/placeholder.png")} alt="image"/>
                             <div className='recipe-title'>
                                 <div className="ingredients-avaliable"></div>
                                 <h4>Placeholder</h4>
@@ -85,7 +85,7 @@ export const RecipeContainer  = () => {
                         </article>
 
                         <article className='recipe-card'>
-                            <img className='recipe-img' src="images/recipes/placeholder.png" alt="image"/>
+                            <img className='recipe-img' src={require("../../../public/images/recipes/placeholder.png")} alt="image"/>
                             <div className='recipe-title'>
                                 <div className="ingredients-avaliable"></div>
                                 <h4>Placeholder</h4>
@@ -96,7 +96,7 @@ export const RecipeContainer  = () => {
                         </article>
 
                         <article className='recipe-card'>
-                            <img className='recipe-img' src="images/recipes/placeholder.png" alt="image"/>
+                            <img className='recipe-img' src={require("../../../public/images/recipes/placeholder.png")} alt="image"/>
                             <div className='recipe-title'>
                                 <div className="ingredients-avaliable"></div>
                                 <h4>Placeholder</h4>
@@ -107,7 +107,7 @@ export const RecipeContainer  = () => {
                         </article>
 
                         <article className='recipe-card'>
-                            <img className='recipe-img' src="images/recipes/placeholder.png" alt="image"/>
+                            <img className='recipe-img' src={require("../../../public/images/recipes/placeholder.png")} alt="image"/>
                             <div className='recipe-title'>
                                 <div className="ingredients-avaliable"></div>
                                 <h4>Placeholder</h4>
@@ -118,7 +118,7 @@ export const RecipeContainer  = () => {
                         </article>
 
                         <article className='recipe-card'>
-                            <img className='recipe-img' src="images/recipes/placeholder.png" alt="image"/>
+                            <img className='recipe-img' src={require("../../../public/images/recipes/placeholder.png")} alt="image"/>
                             <div className='recipe-title'>
                                 <div className="ingredients-avaliable"></div>
                                 <h4>Placeholder</h4>
@@ -129,7 +129,7 @@ export const RecipeContainer  = () => {
                         </article>
 
                         <article className='recipe-card'>
-                            <img className='recipe-img' src="images/recipes/placeholder.png" alt="image"/>
+                            <img className='recipe-img' src={require("../../../public/images/recipes/placeholder.png")} alt="image"/>
                             <div className='recipe-title'>
                                 <div className="ingredients-avaliable"></div>
                                 <h4>Placeholder</h4>
@@ -140,7 +140,7 @@ export const RecipeContainer  = () => {
                         </article>
 
                         <article className='recipe-card'>
-                            <img className='recipe-img' src="images/recipes/placeholder.png" alt="image"/>
+                            <img className='recipe-img' src={require("../../../public/images/recipes/placeholder.png")} alt="image"/>
                             <div className='recipe-title'>
                                 <div className="ingredients-avaliable"></div>
                                 <h4>Placeholder</h4>

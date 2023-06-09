@@ -33,7 +33,6 @@ function App() {
             <Route path="/IngredientSearchPage" element={ <IngredientSearchPage/> }></Route>
             <Route path="/VideoPage" element={ <VideoPage/> }></Route>
             <Route path="/QAPage" element={ <QAPage/> }></Route>
-
           </Routes>
       </Router>
     </div>

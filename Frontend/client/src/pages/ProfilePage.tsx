@@ -11,9 +11,12 @@ export const ProfilePage = () => {
     return (
         <> 
             <Navbar avatarSrc={require("../../public/images/profile.png")}/>
-            <ProfileWidget/>
-            <ActivitiesContainer/>
-            <ProgressionBar/>
+            <div className='profile-container'>
+                <ProfileWidget/>
+                <ActivitiesContainer/>
+                <ProgressionBar/>
+                <LockedItems />
+            </div>
         </>
     )
 }

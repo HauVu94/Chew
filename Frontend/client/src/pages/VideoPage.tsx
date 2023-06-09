@@ -1,18 +1,18 @@
 import React from "react"
 import Navbar from '../components/NavigationComponents/Navbar';
-import GridComponent from "../components/GridComponent"
+import GridComponentVideo from "../components/GridComponentVideo"
 import "../styles/VideoPage.css"
 
 export const VideoPage = () => {
     return(
         
-        <div className="tutorial-container">
-            
+        <>
             <Navbar avatarSrc={require("../../public/images/profile.png")}/>
+
+            <div className="tutorial-container">
             
-            <h1 className="title">Videoleksjoner</h1>
-                <div className="video-library">
-                
+            <div className="video-library">
+                <h1 className="title-main">Videoleksjoner</h1>
                     <div className="video-player">
                     <iframe width="791" height="445" 
                         src="https://www.youtube.com/embed/YAtyz3V5-pQ" 
@@ -27,9 +27,10 @@ export const VideoPage = () => {
                         </iframe>
                     </div>
 
-                    <GridComponent />
+                    <GridComponentVideo />
                 </div>
-        </div>
+            </div>
+        </>
 
     )
 }

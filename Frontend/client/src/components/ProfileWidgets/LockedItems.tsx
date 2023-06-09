@@ -3,10 +3,10 @@ import LockedItem from './LockedItem'
 import '../../styles/lockedItems.css'
 
 const dummyData = [
-  {id: 1, image: 'images/stekepanne.png', progress: 50},
-  {id: 2, image: 'images/bragd-tomat.png', progress: 90},
-  {id: 3, image: 'images/stekepanne.png', progress: 10},
-  {id: 4, image: 'images/bragd-tomat.png', progress: 40},
+  {id: 1, image: 'stekepanne.png', progress: 50},
+  {id: 2, image: 'bragd-tomat.png', progress: 90},
+  {id: 3, image: 'stekepanne.png', progress: 10},
+  {id: 4, image: 'bragd-tomat.png', progress: 40},
 ]
 
 const LockedItems = () => {

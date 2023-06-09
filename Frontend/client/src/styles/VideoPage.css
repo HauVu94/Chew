@@ -1,3 +1,11 @@
+.tutorial-container{
+    background-color: white;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 25px;
+    box-shadow: 2px 2px 6px 1px rgba(128, 128, 128, 0.411);
+}
+
 .video-player{
     display: flex;
     justify-content: center;

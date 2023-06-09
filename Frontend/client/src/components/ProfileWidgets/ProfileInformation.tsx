@@ -6,8 +6,8 @@ const ProfileInformation = (props: any) => {
       <div className='information'>
         <img className='profile-picture' src= {props.image}/>
         <div className='info-text'>
-          <label>Navn: {props.name}</label>
-          <label>Skole: {props.schoolname}</label>
+          <label className='profile-name'>Navn: {props.name}</label>
+          <label className='profile-school'>Skole: {props.schoolname}</label>
 
           <div className='level-container'>
           <div className='fremgang'>

@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/VideoPage.css"
 
-const GridComponent = () => {
+const GridComponentVideo = () => {
     return(
             <div className="container">
                 <div className="grid-item">
@@ -80,7 +80,7 @@ const GridComponent = () => {
                     </div>
     )
 }
-export default GridComponent;
+export default GridComponentVideo;
 
 
 

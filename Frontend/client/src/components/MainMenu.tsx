@@ -58,8 +58,7 @@ const MainMenu = () => {
             navigate("/");
         } else{
             console.log("Trykket på 'Videoleksjoner'");
-            alert("Ingenting her enda")
-            navigate("/");
+            navigate("/VideoPage");
         }
     }
 

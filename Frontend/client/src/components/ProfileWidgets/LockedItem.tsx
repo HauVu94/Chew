@@ -5,7 +5,7 @@ const LockedItem = (props: any) => {
 
     return (
         <div className='unlocked-item-individual-container'>
-            <img className='locked-item' src={props.image} alt={props.image}/>
+            <img className='locked-item' src={require(`../../../public/images/` + props.image)} />
             <div className='progress-tracker-unlock'>
                 <div className='progress-bar-unlock' style={progress} />    
             </div>

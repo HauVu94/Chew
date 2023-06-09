@@ -26,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                     <ul className="nav-menu-items" onClick={showSidebar}>
                         <li className="navbar-toggle">
                             <Link to="#" className="menu-bars">
-                                <BiX className="menu-cross" />
+                                <BiX />
                             </Link>
                         </li>
 
@@ -45,7 +45,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
 
 
                 <Link to="/" className="chew-logo chew-logo-btn">
-                    <img className="chew-logo" src="images/chew-logo.png"/>
+                    <img className="chew-logo" src={require("../../../public/images/chew-logo.png")}/>
                 </Link>
                 
                 <Link className="profile-btn" to="/ProfilePage">

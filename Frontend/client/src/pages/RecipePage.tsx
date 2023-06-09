@@ -5,7 +5,7 @@ import { RecipeSidetab } from "../components/RecipeComponents/RecipeSidetab";
 export const RecipePage = () => {  
     return (
         <> 
-            <Navbar avatarSrc="images/profile.png"/>   
+            <Navbar avatarSrc={require("../../public/images/profile.png")}/>
 
             <RecipeSidetab />     
 

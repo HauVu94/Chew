@@ -44,17 +44,14 @@ export const LoginPage = () => {
         console.error('Error:', error);
       });
 
-
-
-
-
-
-
   };
+
+
+
     return (
         <div className="login-body">
 
-          <Link to="/"><img className="chew-logo" src="images/chew-logo.png" alt="Logo" /></Link>
+          <Link to="/"><img className="chew-logo" src={require("../../public/images/chew-logo.png")} alt="Logo" /></Link>
 
           <div className="form-login">
             <form onSubmit={handleSubmit}>
@@ -77,9 +74,9 @@ export const LoginPage = () => {
               <button className="login-btn">
                 Logg Inn
               </button>
-              <pre>
+              {/* <pre>
                 {JSON.stringify({username, password}, undefined, " ")}
-              </pre>
+              </pre>  */}
 
             </form>
 

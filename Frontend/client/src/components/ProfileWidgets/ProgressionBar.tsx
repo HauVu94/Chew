@@ -1,6 +1,7 @@
 import React from 'react'
 import "../../styles/Progression.css";
 import "../../styles/Profilepage.css";
+import ProgressionLevel from './ProgressionLevel';
 
 function ProgressionBar() {
   return (
@@ -9,7 +10,6 @@ function ProgressionBar() {
         <h1>NIVÅPROGRESJON</h1>
         </div>
     </div>
-    
   )
 }
 

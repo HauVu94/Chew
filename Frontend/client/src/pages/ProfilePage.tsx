@@ -10,13 +10,10 @@ import "../styles/Profilepage.css";
 export const ProfilePage = () => {  
     return (
         <> 
-            <Navbar avatarSrc="images/profile.png"/>
-            <div className="profile-page-wrapper">
-                <ProfileWidget/>
-                <ActivitiesContainer/>
-                <ProgressionBar/>
-                <LockedItems />
-            </div>
+            <Navbar avatarSrc={require("../../public/images/profile.png")}/>
+            <ProfileWidget/>
+            <ActivitiesContainer/>
+            <ProgressionBar/>
         </>
     )
 }

@@ -1,6 +1,7 @@
 .profile-container{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    margin-top: 5rem;
 
 }
 

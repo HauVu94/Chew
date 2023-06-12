@@ -10,7 +10,7 @@ function ProgressionBar() {
           <h1>NIVÅPROGRESJON</h1>
         </div>
         <div className='progression-image-container'>
-          <img className='progression-tracker' src={require("../../../public/images/progress.png")}></img>
+          <img className='progression-tracker' src={require("../../../public/images/Progress.png")}></img>
         </div>
     </div>
   )

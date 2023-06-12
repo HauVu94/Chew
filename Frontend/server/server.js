@@ -1,68 +1,75 @@
-import bodyParser from "body-parser";
+import express, {json} from "express";
 import cookieParser from "cookie-parser";
-import express from "express";
-import * as path from "path";
-import dotenv from "dotenv";
-import sqlite3  from "sqlite3";
+import sqlite3 from "sqlite3";
 
-
-
-dotenv.config()
 const app = express();
 const db = new sqlite3.Database("chew.sqlite");
-app.use(bodyParser.json())
-app.use(cookieParser(process.env.COOKIE_SECRET))
+app.use(express.json());
+app.use(cookieParser("your_cookie_secret"));
 
-console.log(db.run)
-
-
-const users = [{ username: "Haavar123", password: "123" },
-{ username: "Marcus", password: "321" }]
-
-//adds cookie to session
 app.use((req, res, next) => {
   const { username } = req.signedCookies;
 
-  if (username) {
+  if (username !== undefined) {
+    const sql = `SELECT * FROM user WHERE username="${username}";`;
 
+    db.all(sql, (err, rows) => {
+      if (err) {
+        console.log(err);
+        return res.sendStatus(500);
+      }
 
-    req.username = db.get("SELECT username FROM user")
+      if (rows.length === 0) {
+        // User not found
+        return res.sendStatus(404);
+      }
+
+      // User found, return the user data
+      const userData = rows[0]; // Assuming there is only one user with the given username
+      res.user = userData
+    });
   }
   next();
 });
 
-
-app.get("/api/login", (req, res) => {
-    const{username, password} = req.user
-    return res.json({username, password})
-});
-
 app.get("/api/users", (req, res, next) => {
-  const sql = "SELECT * FROM user";
+  console.log(req.signedCookies.username)
+  if (req.signedCookies.username === undefined){
+    console.log("hhhh")
+    res.json()
+    return;
+  }
+  const sql = `SELECT * FROM user WHERE username="${req.signedCookies.username}";`
   db.all(sql, (err, rows) => {
     if (err) {
       console.error(err);
       return;
     }
-    res.json(rows);
+    console.log(rows)
+    return res.json(rows);
   });
 });
 
 
 //ss
 
+
 app.post("/api/users", (req, res) => {
   const { username, password } = req.body;
   const sql = `SELECT * FROM user WHERE username="${username}" AND password="${password}";`;
 
-
   db.all(sql, (err, rows) => {
     if (err) {
       console.log(err);
-      return;
+      return res.sendStatus(500);
     }
-    console.log(rows);
-    res.status(200).cookie("username", username, { signed: true }).send();
+    console.log(rows)
+
+    if (rows.length === 0) {
+      return res.sendStatus(401);
+    } else {
+      res.cookie("username", username.toString(), { signed: true }).send();
+    }
   });
 });
 

@@ -85,6 +85,22 @@ app.use((req, res, next) => {
   }
 });
 
+
+app.get("/api/ingredients", (req, res, next) => {
+  const sql = `SELECT * FROM ingredient;`
+  db.all(sql, (err, rows) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log(rows)
+    return res.json(rows);
+  });
+});
+
+
+
+
 const server = app.listen(process.env.PORT || 5000, () => {
   console.log(`Listening on http://localhost:${server.address().port}`);
 });

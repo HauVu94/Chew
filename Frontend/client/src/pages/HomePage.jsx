@@ -14,8 +14,8 @@ export const HomePage = () => {
       .then(response => response.json())
       .then(data => {
         if (data.length > 0) {
-            console.log(data[0].username)
-          setUser(data[0].username);
+            console.log(data[0]) 
+          setUser(data[0]); // henter rad på index 0
         }
         setLoading(false);
       })
@@ -35,7 +35,7 @@ export const HomePage = () => {
       <Sidetabs />
       <MainMenu />
       <SchoolPrivate />
-      {user ? <h1>{user}</h1> : <h1>Not logged in</h1>}
+      {user ? <h1>{user.username}</h1> : <h1>Not logged in</h1>}
 
       <div className='footer'>
         <Link to="/ProfilePage">Profile Page</Link> |

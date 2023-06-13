@@ -19,6 +19,7 @@ app.use((req, res, next) => {
         return res.sendStatus(500);
       }
 
+      // HÅVAR ------ denne linje 22 til 25 gir HTTP HEADER error for alle sammen, unntatt meg. klarer ikke finne ut av det
       if (rows.length === 0) {
         // User not found
         return res.sendStatus(404);
@@ -39,6 +40,7 @@ app.get("/api/users", (req, res, next) => {
     res.json()
     return;
   }
+
   const sql = `SELECT * FROM user WHERE username="${req.signedCookies.username}";`
   db.all(sql, (err, rows) => {
     if (err) {
@@ -104,5 +106,3 @@ app.get("/api/ingredients", (req, res, next) => {
 const server = app.listen(process.env.PORT || 5000, () => {
   console.log(`Listening on http://localhost:${server.address().port}`);
 });
-
-

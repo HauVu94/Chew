@@ -38,6 +38,10 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
             instituteId INTEGER
         )`);
 
+        // db.run(`CREATE TABLE IF NOT EXISTS fridge(
+        //     fridgeId INTEGER
+        // )`);
+
         db.run(`CREATE TABLE IF NOT EXISTS fridge(
             fridgeId INTEGER
         )`);

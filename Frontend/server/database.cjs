@@ -43,17 +43,33 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
         // )`);
 
         db.run(`CREATE TABLE IF NOT EXISTS fridge(
-            fridgeId INTEGER
+            fridgeId INTEGER PRIMARY KEY,
+            familyId INTEGER,
+            FOREIN KEY (familyId) REFERENCES family(familyId)
         )`);
+
+        // db.run(`CREATE TABLE IF NOT EXISTS foodItem(
+        //     quantity INTEGER,
+        //     bestBeforeDate INTEGER,
+        //     fridgeId INTEGER,
+        //     ingredientId INTEGER,
+        // )`);
 
         db.run(`CREATE TABLE IF NOT EXISTS foodItem(
             quantity INTEGER,
-            bestBeforeDate INTEGER,
+            category TEXT,
             fridgeId INTEGER,
-            ingredientId INTEGER
+            ingredient TEXT,
+            FOREIGN KEY (fridgeId) REFERENCES fridge(fridgeId),
+            FOREIGN KEY (ingredientId) REFERENCES ingredient(ingredientId)
         )`);
 
+        // db.run(`CREATE TABLE IF NOT EXISTS ingredient(
+        //     ingredientName TEXT
+        // )`);
+
         db.run(`CREATE TABLE IF NOT EXISTS ingredient(
+            ingredientId INTEGER PRIMARY KEY,
             ingredientName TEXT
         )`);
 

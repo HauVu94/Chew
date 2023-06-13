@@ -88,7 +88,7 @@ app.use((req, res, next) => {
 });
 
 
-app.get("/api/ingredients", (req, res, next) => {
+app.get("/api/ingredients", (req, res) => {
   const sql = `SELECT * FROM ingredient;`
   db.all(sql, (err, rows) => {
     if (err) {
@@ -100,8 +100,30 @@ app.get("/api/ingredients", (req, res, next) => {
   });
 });
 
+app.get("/api/foodItems", (req, res) => {
+  const sql = `SELECT * FROM foodItem;`
+  db.all(sql, (err, rows) => {
+    if (err) {
+      console.error(err);
+      return res.sendStatus(500);
+    }
+    console.log(rows)
+    return res.json(rows);
+  });
+});
 
+app.post("/api/foodItems", (req, res) => {
+  const { quantity, category, fridgeId, ingredient} = req.body;
 
+  const sql = `INSERT INTO foodItem (quantity, category, fridgeId, ingredient) VALUES (?, ?, ?, ?);`;
+  db.run(sql, [quantity, category, fridgeId, ingredient], (err) => {
+    if (err) {
+      console.log(err);
+      return res.sendStatus(500);
+    }
+      return res.sendStatus(200);
+  });
+});
 
 const server = app.listen(process.env.PORT || 5000, () => {
   console.log(`Listening on http://localhost:${server.address().port}`);

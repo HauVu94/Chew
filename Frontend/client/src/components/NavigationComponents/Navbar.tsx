@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavbarProps from "../../interface/NavbarProps";
 import { Link } from "react-router-dom";
 import "../../styles/Navbar.css"
@@ -13,6 +13,44 @@ const Navbar: React.FC<NavbarProps> = (props) => {
     const [sidebar, setSidebar] = useState(false)
 
     const showSidebar = () => setSidebar(!sidebar)
+
+    
+    interface User {
+        id: number;
+        firstName: string;
+        lastName: string;
+        birthDate: number;
+        email: string;
+        phone: number;
+        roles: string;
+        profilePic: string;
+        username: string;
+        password: string;
+    }
+
+    const [loading, setLoading] = useState(true);
+    const [user, setUser] = useState<User | null>(null);
+
+    useEffect(() => {
+        fetch("/api/users")
+        .then(response => response.json())
+        .then(data => {
+            if (data.length > 0) {
+                console.log(data[0])
+            setUser(data[0]); // henter rad på index 0
+            }
+            setLoading(false);
+        })
+        .catch(error => {
+            console.error(error);
+            setLoading(false);
+        });
+    }, []);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
 
     return(
         <IconContext.Provider value={{}}>
@@ -31,12 +69,19 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                         </li>
 
                         {SidebarData.map((item, index) => {
-                            return (
+                            return ( 
                                 <li key={index} className={item.cName}>
+                                    { user ? (
                                     <Link to={item.path}>
                                         {item.icon}
                                         <span>{item.title}</span>
                                     </Link>
+                            ) : (
+                                <>
+                                    {item.icon}
+                                    <span>{item.title}</span>
+                                </>
+                                    )}
                                 </li>
                             )
                         })}
@@ -48,9 +93,14 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                     <img className="chew-logo" src={require("../../../public/images/chew-logo.png")}/>
                 </Link>
                 
+                {user 
+                ? 
                 <Link className="profile-btn" to="/ProfilePage">
                     <img className="profile-btn" src={avatarSrc}/>
-                </Link>
+                </Link> 
+                : 
+                <img className="profile-btn" src={avatarSrc}/>}
+
             </div>
         </IconContext.Provider>
     )

@@ -30,15 +30,39 @@ const IngredientSearch = () => {
 	  if (loading) {
 		return <div>Loading...</div>;
 	  }
-	  
+
 	const categoryHandler = (event: ChangeEvent<HTMLSelectElement>) => {
-		setSelectedCategory("i " + event.target.value);
+		setSelectedCategory(event.target.value);
 	};
 
 	const ingredientHandler = (ingredient: string) => {
 		setSelectedIngredient(ingredient);
 		setSearchTerm('');
 	};
+
+	const addNew = () => {
+		const newItem = {quantity: 1, category: selectedCategory, fridgeId: 1, ingredient: selectedIngredient};
+
+		fetch('/api/foodItems', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(newItem)
+		})
+			.then(response => {
+				if(!response.ok){
+					console.log("error: cant add new food item")
+				}
+				if(selectedCategory && selectedIngredient){
+					setSelectedCategory("");
+					setSelectedIngredient("");
+				}
+				console.log("added new food item successfully")
+			}).catch(err => {
+				console.error(err)
+			})
+	}
 
 	return(
 		<div className='search-wrapper'>
@@ -75,8 +99,13 @@ const IngredientSearch = () => {
 					}) : null}
 					</ul>
 
-				<div className="output">Legg til {selectedIngredient} {selectedCategory}</div>
-				<button className="add-btn">Bekreft</button>
+				<div className="output">Legg til {selectedIngredient} {selectedCategory ? "i " : ""} {selectedCategory}</div>
+
+				<button className="add-btn" onClick={
+					selectedCategory && selectedIngredient ? addNew : 
+					() => {alert("Du må velge både kategori og ingrediens før du kan legge til i kjøleskapet. Prøv igjen")}}>
+				Bekreft </button>
+
 			</div>
 		</div>
 	)

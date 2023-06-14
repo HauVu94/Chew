@@ -30,8 +30,7 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
         )`);
 
         db.run(`CREATE TABLE IF NOT EXISTS family(
-            familyId INTEGER,
-            lastName TEXT
+            familyId INTEGER PRIMARY KEY
         )`);
 
         db.run(`CREATE TABLE IF NOT EXISTS institute(

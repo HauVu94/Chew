@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../styles/MyFridgeIngredientsList.css'
 import { PageTitle } from '../PageComponents/PageTitle'
 import * as TbIcon from 'react-icons/tb'
@@ -6,69 +6,79 @@ import {BsTrash} from 'react-icons/bs'
 import * as LuIcons from 'react-icons/lu'
 import {GiSaltShaker} from 'react-icons/gi'
 import * as BiIcons from 'react-icons/bi';
+import { Link } from 'react-router-dom'
 
 const MyFridgeIngredientsList = () => {
 
-  const [meatFish, setMeatFish] = useState(['Kylling', 'Laks', 'Biff', 'Svinekjøtt', 'Tunfisk', 'Torsk']);
-  const [dryCorn, setDryCorn] = useState(['Pasta', 'Ris', 'Brød', 'Quinoa', 'Havregryn', 'Bygg', 'Couscous']);
-  const [veggiesFruits, setVeggiesFruits] = useState(['Gulrøtter', 'Epler', 'Tomater', 'Brokkoli', 'Paprika', 'Agurk', 'Rødløk', 'Gul løk']);
-  const [dairy, setDairy] = useState(['Melk', 'Gulost', 'Yoghurt', 'Smør', 'Egg', 'Krem', 'Rømme']);
-  const [spices, setSpices] = useState(['Salt', 'Pepper', 'Kanel', 'Hvitløkspulver', 'Paprika', 'Oregano', 'Gurkemeie', 'Chilipulver', 'Koriander', 'Kajennepepper', 'Ingefær', 'Kardemomme', 'Nellik', 'Muskatnøtt', 'Kanelbark']);
-  const [leftovers, setLeftovers] = useState(['Ris (kokt)', 'Pasta (kokt)', 'Kraft (kylling)']);
-  const [other, setOther] = useState(['Vaniljeis', 'Sjokolade']);
+  const [fridge, setFridge] = useState(1)
 
-          ////
-          // add new    ( alt dette kan slettes og byttes ut med link til 'ingredientSearch' kanskje, når vi får koblet opp mot databasen?? )
-          const [selectedCategory, setSelectedCategory] = useState('');
+  const [meatFish, setMeatFish] = useState<string[]>([]);
+  const [dryCorn, setDryCorn] = useState<string[]>([]);
+  const [veggiesFruits, setVeggiesFruits] = useState<string[]>([]);
+  const [dairy, setDairy] = useState<string[]>([]);
+  const [spices, setSpices] = useState<string[]>([]);
+  const [leftovers, setLeftovers] = useState<string[]>([]);
+  const [other, setOther] = useState<string[]>([]);
 
-          const addNewItem = () => {
-            const categoryOptions = ["1", "2", "3", "4", "5", "6", "7"];
-            const categoryInput = prompt('(Midlertidig løsning)\nHva slags type produkt skal du legge til?:\n1. Kjøtt/fisk\n2. Tørrvarer/kornvarer\n3. Grønnsaker og frukt/bær\n4. Meieriprodukter\n5. Krydder/urter\n6. Restemat\n7. Annet');
-            if(categoryInput && categoryOptions.includes(categoryInput)){
-              setSelectedCategory(categoryInput);
-              const productInput = prompt('(Midlertidig løsning)\nHvilket produkt skal du legge til?:');
-              if(productInput){
-                const tempCategory = categoryInput;
-                switch (tempCategory) {
-                  case '1':
-                    setMeatFish(prevList => [...prevList, productInput]);
-                    break;
-                  case '2':
-                    setDryCorn(prevList => [...prevList, productInput]);
-                    break;
-                  case '3':
-                    setVeggiesFruits(prevList => [...prevList, productInput]);
-                    break;
-                  case '4':
-                    setDairy(prevList => [...prevList, productInput]);
-                    break;
-                  case '5':
-                    setSpices(prevList => [...prevList, productInput]);
-                    break;
-                  case '6':
-                    setLeftovers(prevList => [...prevList, productInput]);
-                    break;
-                  case '7':
-                    setOther(prevList => [...prevList, productInput]);
-                    break;
-                  default:
-                    break;
-                }
-              } else {
-                  if(window.confirm('(Midlertidig løsning)\nFEIL: Feltet kan ikke være blankt. Prøv igjen?')){
-                    addNewItem();
-                  }
-                }
-            } else {
-                if(window.confirm('(Midlertidig løsning)\nFEIL: Du må velge 1-7. Prøv igjen?')){
-                  addNewItem();
-                }
-            }
-            setSelectedCategory('');
-          };
-          ////
+  useEffect(() => {
+    // Fetch ingredients from server based on fridge
+    fetch(`/api/foodItems?fridgeId=${fridge}`)
+      .then((response) => response.json())
+      .then((data) => {
+  
+        // Group ingredients into respective categories
+        const ingredientsByCategory = {
+          meatFish: [],
+          dryCorn: [],
+          veggiesFruits: [],
+          dairy: [],
+          spices: [],
+          leftovers: [],
+          other: [],
+        };
+  
+        data.forEach((item: any) => {
+          const { category, ingredient } : { category: string, ingredient: string } = item;
+          
+          switch (category) {
+            case 'Kjøtt/fisk': // OBS OBS, skjønner ikke hvorfor feilkode her....  Alt funker som det skal ... Misteker IDE bug
+              ingredientsByCategory.meatFish.push(ingredient);
+              break;
+            case 'Tørrvarer/kornvarer':
+              ingredientsByCategory.dryCorn.push(ingredient);
+              break;
+            case 'Grønnsaker og frukt/bær':
+              ingredientsByCategory.veggiesFruits.push(ingredient);
+              break;
+            case 'Meieriprodukter':
+              ingredientsByCategory.dairy.push(ingredient);
+              break;
+            case 'Krydder/urter':
+              ingredientsByCategory.spices.push(ingredient);
+              break;
+            case 'Restemat':
+              ingredientsByCategory.leftovers.push(ingredient);
+              break;
+            default:
+              ingredientsByCategory.other.push(ingredient);
+              break;
+          }
+        });
+  
+        // Set the state for each category
+        setMeatFish(ingredientsByCategory.meatFish);
+        setDryCorn(ingredientsByCategory.dryCorn);
+        setVeggiesFruits(ingredientsByCategory.veggiesFruits);
+        setDairy(ingredientsByCategory.dairy);
+        setSpices(ingredientsByCategory.spices);
+        setLeftovers(ingredientsByCategory.leftovers);
+        setOther(ingredientsByCategory.other);
+      })
+      .catch((error) => {
+        console.error('Error fetching ingredients:', error);
+      });
+  }, [fridge]);
 
-  //remove from list
   const removeItem = (category: string, item: string) => {
     if(window.confirm('Er du sikker på at du vil slette dette produktet?')){
       switch (category){
@@ -105,8 +115,9 @@ const MyFridgeIngredientsList = () => {
       <div className='top-wrapper'>
           <PageTitle pageTitle='Mitt Kjøleskap' />
           <div className="add-item-container">
-            {/* bytte ut med link til ingredientSearch?             <------ */}
-            <BiIcons.BiPlus onClick={() => addNewItem()}/>  
+            <Link className="add-item-container" to="/IngredientSearchPage">
+              <BiIcons.BiPlus/>  
+            </Link>
           </div>
         </div>
         

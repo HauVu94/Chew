@@ -2,7 +2,7 @@ body{
     min-width: 678px
 }
 .ingredient-container{
-        height: 100%;
+    height: 100%;
     margin: 1rem 5rem 5rem 5rem;
 
     padding: .5em;
@@ -10,6 +10,7 @@ body{
     border-radius: 25px;
     overflow-y: auto;
     box-shadow: 2px 2px #00000033; 
+    overflow-x: hidden;
 }
 
 .ingredient-container li{
@@ -97,10 +98,15 @@ body{
 }
 
 .add-item-container svg{
-    margin-right: 40px;
-    margin-top: 30px;
-    transform: scale(5);
+    margin-right: 50px;
+    margin-top: 50px;
+    color: #ff5b2e;
+    transform: scale(8);
 }
+
+    .add-item-container svg:hover{
+        transform: scale(10);
+    }
 
 @media screen and (max-width: 1900px) {
     .fridge-section{

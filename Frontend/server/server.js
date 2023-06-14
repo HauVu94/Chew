@@ -53,9 +53,6 @@ app.get("/api/users", (req, res, next) => {
 });
 
 
-//ss
-
-
 app.post("/api/users", (req, res) => {
   const { username, password } = req.body;
   const sql = `SELECT * FROM user WHERE username="${username}" AND password="${password}";`;
@@ -75,8 +72,6 @@ app.post("/api/users", (req, res) => {
   });
 });
 
-
-
 app.use(express.static("../client/dist"));
 
 app.use((req, res, next) => {
@@ -86,7 +81,6 @@ app.use((req, res, next) => {
     next();
   }
 });
-
 
 app.get("/api/ingredients", (req, res) => {
   const sql = `SELECT * FROM ingredient;`
@@ -101,8 +95,9 @@ app.get("/api/ingredients", (req, res) => {
 });
 
 app.get("/api/foodItems", (req, res) => {
-  const sql = `SELECT * FROM foodItem;`
-  db.all(sql, (err, rows) => {
+  const { fridgeId } = req.query;
+  const sql = `SELECT * FROM foodItem WHERE fridgeId = ?;`
+  db.all(sql, [fridgeId], (err, rows) => {
     if (err) {
       console.error(err);
       return res.sendStatus(500);

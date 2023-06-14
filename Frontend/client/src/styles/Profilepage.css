@@ -251,3 +251,15 @@
         transform: rotateZ(0);
     }
 }
+@media (max-width: 820px){
+    .profile-container{
+        display: block;
+        
+    }
+    
+    .profile-container{
+        display: block;
+    }
+
+    
+}

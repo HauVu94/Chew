@@ -21,13 +21,21 @@ const MyFridgeIngredientsList = () => {
   const [other, setOther] = useState<string[]>([]);
 
   useEffect(() => {
-    // Fetch ingredients from server based on fridge
+    // Fetch all fooditems from database
     fetch(`/api/foodItems?fridgeId=${fridge}`)
       .then((response) => response.json())
       .then((data) => {
   
-        // Group ingredients into respective categories
-        const ingredientsByCategory = {
+        // Sort foodItems by category
+        const ingredientsByCategory: {
+          meatFish: string[];
+          dryCorn: string[];
+          veggiesFruits: string[];
+          dairy: string[];
+          spices: string[];
+          leftovers: string[];
+          other:  string[];
+        } = {
           meatFish: [],
           dryCorn: [],
           veggiesFruits: [],
@@ -37,11 +45,11 @@ const MyFridgeIngredientsList = () => {
           other: [],
         };
   
-        data.forEach((item: any) => {
-          const { category, ingredient } : { category: string, ingredient: string } = item;
+        data.forEach((item: { category: string, ingredient: string }) => {
+          const { category, ingredient } = item;
           
           switch (category) {
-            case 'Kjøtt/fisk': // OBS OBS, skjønner ikke hvorfor feilkode her....  Alt funker som det skal ... Misteker IDE bug
+            case 'Kjøtt/fisk':
               ingredientsByCategory.meatFish.push(ingredient);
               break;
             case 'Tørrvarer/kornvarer':
@@ -65,7 +73,7 @@ const MyFridgeIngredientsList = () => {
           }
         });
   
-        // Set the state for each category
+        // Set category states
         setMeatFish(ingredientsByCategory.meatFish);
         setDryCorn(ingredientsByCategory.dryCorn);
         setVeggiesFruits(ingredientsByCategory.veggiesFruits);
@@ -79,6 +87,8 @@ const MyFridgeIngredientsList = () => {
       });
   }, [fridge]);
 
+
+  // fiks
   const removeItem = (category: string, item: string) => {
     if(window.confirm('Er du sikker på at du vil slette dette produktet?')){
       switch (category){

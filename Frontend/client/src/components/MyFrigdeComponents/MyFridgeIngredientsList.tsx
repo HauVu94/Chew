@@ -110,7 +110,7 @@ const MyFridgeIngredientsList = () => {
               <li className='fridge-item'>
                 <TbIcon.TbMeat className="food-icon"/>
                 <span className='fridge-text'>{product.ingredient} {product.quantity}</span>
-                <BsTrash className="trash-icon"/>
+                <BsTrash className="trash-icon" onClick={() => alert("Denne funskjonen finnes ikke enda")}/>
               </li>)}
             </ul>
           </div>
@@ -122,7 +122,7 @@ const MyFridgeIngredientsList = () => {
               <li className='fridge-item'>
                 <TbIcon.TbBread className="food-icon"/>
                 <span className='fridge-text'>{product.ingredient} {product.quantity}</span>
-                <BsTrash className="trash-icon"/>
+                <BsTrash className="trash-icon" onClick={() => alert("Denne funskjonen finnes ikke enda")}/>
               </li>)}
             </ul>
           </div>
@@ -134,7 +134,7 @@ const MyFridgeIngredientsList = () => {
               <li className='fridge-item'>
                 <TbIcon.TbSalad className="food-icon"/>
                 <span className='fridge-text'>{product.ingredient} {product.quantity}</span>
-                <BsTrash className="trash-icon"/>
+                <BsTrash className="trash-icon" onClick={() => alert("Denne funskjonen finnes ikke enda")}/>
               </li>)}
             </ul>
           </div>
@@ -146,7 +146,7 @@ const MyFridgeIngredientsList = () => {
               <li className='fridge-item'>
                 <LuIcons.LuMilk className="food-icon"/>
                 <span className='fridge-text'>{product.ingredient} {product.quantity}</span>
-                <BsTrash className="trash-icon"/>
+                <BsTrash className="trash-icon" onClick={() => alert("Denne funskjonen finnes ikke enda")}/>
               </li>)}
             </ul>
           </div>
@@ -158,7 +158,7 @@ const MyFridgeIngredientsList = () => {
               <li className='fridge-item'>
                 <GiSaltShaker className="food-icon"/>
                 <span className='fridge-text'>{product.ingredient} + {product.quantity}</span>
-                <BsTrash className="trash-icon"/>
+                <BsTrash className="trash-icon" onClick={() => alert("Denne funskjonen finnes ikke enda")}/>
               </li>)}
             </ul>
           </div>
@@ -170,7 +170,7 @@ const MyFridgeIngredientsList = () => {
               <li className='fridge-item'>
                 <LuIcons.LuPizza className="food-icon"/>
                 <span className='fridge-text'>{product.ingredient} {product.quantity}</span>
-                <BsTrash className="trash-icon"/>
+                <BsTrash className="trash-icon" onClick={() => alert("Denne funskjonen finnes ikke enda")}/>
               </li>)}
             </ul>
           </div>
@@ -182,7 +182,7 @@ const MyFridgeIngredientsList = () => {
               <li className='fridge-item'>
                 <LuIcons.LuFileQuestion className="food-icon"/>
                 <span className='fridge-text'>{product.ingredient} {product.quantity}</span>
-                <BsTrash className="trash-icon"/>
+                <BsTrash className="trash-icon" onClick={() => alert("Denne funskjonen finnes ikke enda")}/>
               </li>)}
             </ul>
           </div>

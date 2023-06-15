@@ -38,7 +38,7 @@ export const Social = () => {
                             }
                         }).slice(0,5).map((val, key) => {
                             return (
-                                <li className="social-item">{val.name}</li>
+                                <li key={key} className="social-item">{val.name}</li>
                             )
                     })}
                 </ul>

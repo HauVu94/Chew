@@ -72,7 +72,7 @@ export const Calender = () => {
 
                 <ul className="calendar-list">
                     {calendarList.map((item, index) => (
-                        <li className="calendar-list-item">
+                        <li key={index} className="calendar-list-item">
                             <h3 className="calendar-list-title">{item.title}</h3>
                             <h3 className="calendar-list-teacher">Lærer: {item.teacher}</h3>
                             <h3 className="calendar-list-subject">Emne: {item.subject}</h3>

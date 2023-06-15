@@ -42,15 +42,10 @@ export const HomePage = () => {
       <SchoolPrivate />
       {user ? <h1>{user.username}</h1> : <h1>Not logged in</h1>}
 
-      {user == null ? 
+     
       <div className='footer'>
         <Link to="/LoginPage">Logg inn</Link>
       </div>
-      :
-      <div className='footer' >
-        <button onClick={logOut}> Logg ut</button>
-      </div> 
-      }
       
     </>
   );

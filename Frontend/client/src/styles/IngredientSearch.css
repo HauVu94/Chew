@@ -66,14 +66,19 @@
     background-color: #EEE;
 }
 
-.search-result-ul{
+.search-result-ul-hidden{
+    display: none;
+}
+
+.search-result-ul-visible{
+    display: grid;
+    z-index: 2;
     cursor: pointer;
     white-space: nowrap;
     grid-column: auto / span 6;
     grid-row: 3;
     grid-auto-rows: 38px;
     grid-template-columns: repeat(1, 1fr);
-    display: grid;
     justify-self: center;
     align-self: start;
     padding: 0;
@@ -86,7 +91,6 @@
     max-height: 200px;
     overflow-y: scroll;
     overflow-x: hidden;
-    
 }
 
 .top-text{
@@ -97,9 +101,6 @@
 }
 
 .custom-select {
-    margin: 10px;
-    height: 50px;
-    width: 250px;
     text-align: left;
     font-size: large;
     font-weight: 600;
@@ -114,8 +115,20 @@
         text-align: center;
     }
 
+    .category{
+        margin: 10px;
+        height: 50px;
+        width: 250px;
+    }
+
+    .quantity{
+        margin: 5px;
+        height: 30px;
+        width: 100px;
+    }
 
 .output{
+    font-size: medium;
     display: flex;
     grid-column: auto / span 6;
     grid-row: 6;
@@ -124,7 +137,7 @@
     align-items: end;
 }
 
-.add-btn{
+.add-btn-inactive{
     grid-row: 7;
     grid-column: 2 / span 4;
     height: 50px;
@@ -132,12 +145,55 @@
     font-weight: 600;  
     border-radius: 15px;
     box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);
+    color: #7a7a7a;
+    background-color: rgb(227, 227, 227);
+    border: none;
+}
+
+.add-btn-active{
+    grid-row: 7;
+    grid-column: 2 / span 4;
+    height: 50px;
+    font-size: medium;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;  
+    border-radius: 15px;
+    box-shadow: 1px 3px 6px 1px rgba(92, 92, 92, 0.289);
     color: #ff5b2e;
     background-color: white;
     border: none;
 }
-
-    .add-btn:hover{
+    .add-btn-active:hover{
         border: 2px solid #ff5b2e;
         transform: scale(1.1)
     }
+
+.quantity-container{
+    display: flex;
+    justify-content: center;
+    grid-row: 4;
+    grid-column: auto / span 6;
+}
+
+    .quantity-container input{
+        text-align: center;
+        height: 35px;
+        width: 100px;
+        border: none;
+        box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.41);
+        outline: none;
+        border-radius: 5px;
+        background-color: white;
+        color: #ff5b2e;
+    }
+
+    .quantity-container input::placeholder{
+        color: #ff5b2e;
+    }
+
+.bold{
+    font-size: medium;
+    font-size: larger;
+    font-weight: 900;
+}

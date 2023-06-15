@@ -12,29 +12,29 @@ const MyFridgeIngredientsList = () => {
 
   const [fridge, setFridge] = useState(1)
 
-  const [meatFish, setMeatFish] = useState<string[]>([]);
-  const [dryCorn, setDryCorn] = useState<string[]>([]);
-  const [veggiesFruits, setVeggiesFruits] = useState<string[]>([]);
-  const [dairy, setDairy] = useState<string[]>([]);
-  const [spices, setSpices] = useState<string[]>([]);
-  const [leftovers, setLeftovers] = useState<string[]>([]);
-  const [other, setOther] = useState<string[]>([]);
+  const [meatFish, setMeatFish] = useState<{ingredient: string, quantity: string}[]>([]);
+  const [dryCorn, setDryCorn] = useState<{ingredient: string, quantity: string}[]>([]);
+  const [veggiesFruits, setVeggiesFruits] = useState<{ingredient: string, quantity: string}[]>([]);
+  const [dairy, setDairy] = useState<{ingredient: string, quantity: string}[]>([]);
+  const [spices, setSpices] = useState<{ingredient: string, quantity: string}[]>([]);
+  const [leftovers, setLeftovers] = useState<{ingredient: string, quantity: string}[]>([]);
+  const [other, setOther] = useState<{ingredient: string, quantity: string}[]>([]);
 
   useEffect(() => {
     // Fetch all fooditems from database
-    fetch(`/api/foodItems?fridgeId=${fridge}`)
+    fetch(`/api/foodItems`)
       .then((response) => response.json())
       .then((data) => {
   
         // Sort foodItems by category
         const ingredientsByCategory: {
-          meatFish: string[];
-          dryCorn: string[];
-          veggiesFruits: string[];
-          dairy: string[];
-          spices: string[];
-          leftovers: string[];
-          other:  string[];
+          meatFish: {ingredient: string, quantity: string}[];
+          dryCorn: {ingredient: string, quantity: string}[];
+          veggiesFruits: {ingredient: string, quantity: string}[];
+          dairy: {ingredient: string, quantity: string}[];
+          spices: {ingredient: string, quantity: string}[];
+          leftovers: {ingredient: string, quantity: string}[];
+          other:  {ingredient: string, quantity: string}[];
         } = {
           meatFish: [],
           dryCorn: [],
@@ -45,30 +45,32 @@ const MyFridgeIngredientsList = () => {
           other: [],
         };
   
-        data.forEach((item: { category: string, ingredient: string }) => {
-          const { category, ingredient } = item;
+        data.forEach((item: { category: string, ingredient: string, quantity: string }) => {
+          const { category, ingredient, quantity } = item;
+
+          const foodItem = { ingredient, quantity }
           
           switch (category) {
             case 'Kjøtt/fisk':
-              ingredientsByCategory.meatFish.push(ingredient);
+              ingredientsByCategory.meatFish.push(foodItem);
               break;
             case 'Tørrvarer/kornvarer':
-              ingredientsByCategory.dryCorn.push(ingredient);
+              ingredientsByCategory.dryCorn.push(foodItem);
               break;
             case 'Grønnsaker og frukt/bær':
-              ingredientsByCategory.veggiesFruits.push(ingredient);
+              ingredientsByCategory.veggiesFruits.push(foodItem);
               break;
             case 'Meieriprodukter':
-              ingredientsByCategory.dairy.push(ingredient);
+              ingredientsByCategory.dairy.push(foodItem);
               break;
             case 'Krydder/urter':
-              ingredientsByCategory.spices.push(ingredient);
+              ingredientsByCategory.spices.push(foodItem);
               break;
             case 'Restemat':
-              ingredientsByCategory.leftovers.push(ingredient);
+              ingredientsByCategory.leftovers.push(foodItem);
               break;
             default:
-              ingredientsByCategory.other.push(ingredient);
+              ingredientsByCategory.other.push(foodItem);
               break;
           }
         });
@@ -86,38 +88,6 @@ const MyFridgeIngredientsList = () => {
         console.error('Error fetching ingredients:', error);
       });
   }, [fridge]);
-
-
-  // fiks
-  const removeItem = (category: string, item: string) => {
-    if(window.confirm('Er du sikker på at du vil slette dette produktet?')){
-      switch (category){
-        case 'meatFish': // lager ny liste, med alle objektene untatt det valgte objektet (dermed "sletter det") og setter inn ny liste med useState           <------
-          setMeatFish(prevList => prevList.filter(i => i !== item));
-          break;
-        case 'dryCorn':
-          setDryCorn(prevList => prevList.filter(i => i !== item));
-          break;
-        case 'veggiesFruits':
-          setVeggiesFruits(prevList => prevList.filter(i => i !== item));
-          break;
-        case 'dairy':
-          setDairy(prevList => prevList.filter(i => i !== item));
-          break;
-        case 'spices':
-          setSpices(prevList => prevList.filter(i => i !== item));
-          break;
-        case 'leftovers':
-          setLeftovers(prevList => prevList.filter(i => i !== item));
-          break;
-        case 'other':
-          setOther(prevList => prevList.filter(i => i !== item));
-          break;
-        default:
-          break;
-      }
-    };
-  }
 
   return (
     <>
@@ -137,10 +107,10 @@ const MyFridgeIngredientsList = () => {
             <ul className='fridge-list'>
               <h2 className='fridge-title'>Kjøtt/fisk:</h2>
               {meatFish.map(product => 
-              <li className='fridge-item' key={product}>
+              <li className='fridge-item'>
                 <TbIcon.TbMeat className="food-icon"/>
-                <span className='fridge-text'>{product}</span>
-                <BsTrash className="trash-icon" onClick={() => removeItem('meatFish', product)}/>
+                <span className='fridge-text'>{product.ingredient} {product.quantity}</span>
+                <BsTrash className="trash-icon"/>
               </li>)}
             </ul>
           </div>
@@ -149,10 +119,10 @@ const MyFridgeIngredientsList = () => {
             <ul className='fridge-list'>
               <h2 className='fridge-title'>Tørrvarer/kornvarer:</h2>
               {dryCorn.map(product => 
-              <li className='fridge-item' key={product}>
+              <li className='fridge-item'>
                 <TbIcon.TbBread className="food-icon"/>
-                <span className='fridge-text'>{product}</span>
-                <BsTrash className="trash-icon" onClick={() => removeItem('dryCorn', product)}/>
+                <span className='fridge-text'>{product.ingredient} {product.quantity}</span>
+                <BsTrash className="trash-icon"/>
               </li>)}
             </ul>
           </div>
@@ -161,10 +131,10 @@ const MyFridgeIngredientsList = () => {
             <ul className='fridge-list'>
               <h2 className='fridge-title'>Grønnsaker og frukt/bær: </h2>
               {veggiesFruits.map(product => 
-              <li className='fridge-item' key={product}>
+              <li className='fridge-item'>
                 <TbIcon.TbSalad className="food-icon"/>
-                <span className='fridge-text'>{product}</span>
-                <BsTrash className="trash-icon" onClick={() => removeItem('veggiesFruits', product)}/>
+                <span className='fridge-text'>{product.ingredient} {product.quantity}</span>
+                <BsTrash className="trash-icon"/>
               </li>)}
             </ul>
           </div>
@@ -173,10 +143,10 @@ const MyFridgeIngredientsList = () => {
             <ul className='fridge-list'>
               <h2 className='fridge-title'>Meieriprodukter:</h2>
               {dairy.map(product => 
-              <li className='fridge-item' key={product}>
+              <li className='fridge-item'>
                 <LuIcons.LuMilk className="food-icon"/>
-                <span className='fridge-text'>{product}</span>
-                <BsTrash className="trash-icon" onClick={() => removeItem('dairy', product)}/>
+                <span className='fridge-text'>{product.ingredient} {product.quantity}</span>
+                <BsTrash className="trash-icon"/>
               </li>)}
             </ul>
           </div>
@@ -185,10 +155,10 @@ const MyFridgeIngredientsList = () => {
             <ul className='fridge-list'>
               <h2 className='fridge-title'>Krydder/urter:</h2>
               {spices.map(product => 
-              <li className='fridge-item' key={product}>
+              <li className='fridge-item'>
                 <GiSaltShaker className="food-icon"/>
-                <span className='fridge-text'>{product}</span>
-                <BsTrash className="trash-icon" onClick={() => removeItem('spices', product)}/>
+                <span className='fridge-text'>{product.ingredient} + {product.quantity}</span>
+                <BsTrash className="trash-icon"/>
               </li>)}
             </ul>
           </div>
@@ -197,10 +167,10 @@ const MyFridgeIngredientsList = () => {
             <ul className='fridge-list'>
               <h2 className='fridge-title'>Restemat:</h2>
               {leftovers.map(product => 
-              <li className='fridge-item' key={product}>
+              <li className='fridge-item'>
                 <LuIcons.LuPizza className="food-icon"/>
-                <span className='fridge-text'>{product}</span>
-                <BsTrash className="trash-icon" onClick={() => removeItem('leftovers', product)}/>
+                <span className='fridge-text'>{product.ingredient} {product.quantity}</span>
+                <BsTrash className="trash-icon"/>
               </li>)}
             </ul>
           </div>
@@ -209,10 +179,10 @@ const MyFridgeIngredientsList = () => {
             <ul className='fridge-list'>
               <h2 className='fridge-title'>Annet:</h2>
               {other.map(product => 
-              <li className='fridge-item' key={product}>
+              <li className='fridge-item'>
                 <LuIcons.LuFileQuestion className="food-icon"/>
-                <span className='fridge-text'>{product}</span>
-                <BsTrash className="trash-icon" onClick={() => removeItem('other', product)}/>
+                <span className='fridge-text'>{product.ingredient} {product.quantity}</span>
+                <BsTrash className="trash-icon"/>
               </li>)}
             </ul>
           </div>

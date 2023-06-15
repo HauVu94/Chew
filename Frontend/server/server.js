@@ -96,7 +96,7 @@ app.get("/api/ingredients", (req, res) => {
 
 app.get("/api/foodItems", (req, res) => {
   const { fridgeId } = req.query;
-  const sql = `SELECT * FROM foodItem WHERE fridgeId = ?;`
+  const sql = `SELECT * FROM foodItem WHERE fridgeId = 1;` // only fridge 1
   db.all(sql, [fridgeId], (err, rows) => {
     if (err) {
       console.error(err);

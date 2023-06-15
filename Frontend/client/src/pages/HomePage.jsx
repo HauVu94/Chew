@@ -29,6 +29,11 @@ export const HomePage = () => {
     return <div>Loading...</div>;
   }
 
+  const logOut = () => {
+    setUser(null);
+    window.location.reload;
+  }
+
   return (
     <>
       <Navbar avatarSrc={require("../../public/images/profile.png")} />
@@ -37,11 +42,16 @@ export const HomePage = () => {
       <SchoolPrivate />
       {user ? <h1>{user.username}</h1> : <h1>Not logged in</h1>}
 
+      {user == null ? 
       <div className='footer'>
-        <Link to="/ProfilePage">Profile Page</Link> |
-        | <Link to="/LoginPage">Logg inn</Link> |
-        | <Link to="/IngredientSearchPage">Ingredient Search</Link>
+        <Link to="/LoginPage">Logg inn</Link>
       </div>
+      :
+      <div className='footer' >
+        <button onClick={logOut}> Logg ut</button>
+      </div> 
+      }
+      
     </>
   );
 }

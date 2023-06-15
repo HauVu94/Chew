@@ -157,10 +157,10 @@ const IngredientSearch = () => {
 				<div className="output">Legg til {selectedQuantity ? selectedQuantity + selectedMeasure : ""} {selectedIngredient ? selectedIngredient : "..."}{selectedCategory ? " i " + selectedCategory  : "..."}</div>
 
 					{selectedCategory && selectedIngredient && selectedQuantity ? 
-					<Link to="/MyFridge">
-						<button className={selectedCategory && selectedIngredient && selectedQuantity ? "add-btn-active" : 'add-btn-inactive'} onClick={confirmHandler}> Bekreft </button>
+					<Link to="/MyFridge" className='add-btn-active' onClick={confirmHandler}>
+						<span className="align-center">Bekreft</span>
 					</Link> : 
-						<button className={selectedCategory && selectedIngredient && selectedQuantity ? "add-btn-active" : 'add-btn-inactive'}> Bekreft </button>
+						<button className='add-btn-inactive'>Fyll ut alle feltene først</button>
 					}
 				
 
